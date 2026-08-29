@@ -1,58 +1,60 @@
-<div align="center" style="text-align: center;">
-<img src="./assets/logos/UPC-logo.png" alt="Logo UPC" width="150">
-<h3>Universidad Peruana de Ciencias Aplicadas</h3>
-<h4>Facultad de Ingeniería</h4>
-<h4>Carrera de Ingeniería de Software</h4>
-<h4>Periodo 202620</h4>
-<h4>1ASI0730 Aplicaciones Web</h4>
-<h4>NRC: (por completar)</h4>
-<h4>Docente: (por completar)</h4>
-<h4>Informe del Trabajo Final</h4>
-<h4>Startup: SoliDevs</h4>
-<h4>Producto: (por definir)</h4>
+<p align = "center">
+  <img src="/assets/logos/UPC-logo.png" width ="20%">
+</p>
+<p align = "center">
+  Universidad Peruana de Ciencias Aplicadas<br>
+  Carrera de Ingeniería de Software
+</p>
+<h4 align = "center">
+  1ASI0730
+</h4>
+<h4 align = "center">
+  Aplicaciones Web
+</h4>
+<p align = "center">
+  NRC
+</p>
+<h4 align = "center">
+  8155
+</h4>
+<h3 align = "center">
+  Informe del Trabajo Final
+</h3>
+<p align = "center">
+  Docente
+</p>
+<h4 align = "center">
+  Velásquez Nuñez, Angel Augusto
+</h4>
+  <p align = "center">Equipo<br>
+  </p>
+  <h4 align = "center">
+  SolidDevs
+  </h4>
+  <p align = "center">Proyecto</p>
+  <h4 align = "center">
+  ---
+  </h4>
+<h4 align = "center">
+  Integrantes
+</h4>
+<div align = "center">
 
-<br>
-
-<h2 style="text-align: center;">Team members:</h2>
-
-<table style="margin: 0 auto; text-align: center;">
-  <thead>
-    <tr>
-      <th>Código</th>
-      <th>Nombre</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td>Mitchell Adriano Alva Ayala</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Nicolas Eduardo Castro Solorza</td>
-    </tr>
-    <!-- Espacio reservado para Mauricio (pendiente de presentación) -->
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>U202320776</td>
-      <td>Hernan Gabriel Huayta Fuentes</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Enrique Augusto Ochoa Prado</td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-<h4 style="text-align: center;">Agosto 2026</h4>
+|| Código     | Apellidos y Nombres                           |
+| :--- |:-----------|:----------------------------------------------|
+|1| U202112423 | Alva Ayala Mitchell Adriano                   |
+|2| U20241D428 | Castro Solorza Nicolás Eduardo                |
+|3| U202320776 | Huayta Fuentes, Hernan Gabriel                |
+|4| U202411222 | Ochoa Prado, Enrique Augusto                  |
+|5|            |                                               |
 
 </div>
-
-<div style="page-break-after: always;"></div>
+<h4 align = "center">
+  Período 202620
+</h4>
+<h4 align = "center">
+  Agosto 2026
+</h4>
 
 ## Registro de Versiones del Informe
 
