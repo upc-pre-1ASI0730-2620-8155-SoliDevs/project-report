@@ -9,7 +9,7 @@
 <h4>Docente: (por completar)</h4>
 <h4>Informe del Trabajo Final</h4>
 <h4>Startup: SoliDevs</h4>
-<h4>Producto: (por definir)</h4>
+<h4>Producto: Tri-Aid</h4>
 
 <br>
 
