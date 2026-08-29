@@ -5,8 +5,8 @@
 <h4>Carrera de Ingeniería de Software</h4>
 <h4>Periodo 202620</h4>
 <h4>1ASI0730 Aplicaciones Web</h4>
-<h4>NRC: (por completar)</h4>
-<h4>Docente: (por completar)</h4>
+<h4>NRC: 8155</h4>
+<h4>Docente: Ángel Augusto Velásquez Núñez</h4>
 <h4>Informe del Trabajo Final</h4>
 <h4>Startup: SoliDevs</h4>
 <h4>Producto: Tri-Aid</h4>
