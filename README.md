@@ -41,7 +41,7 @@
       <td>Hernan Gabriel Huayta Fuentes</td>
     </tr>
     <tr>
-      <td></td>
+      <td>U202411222</td>
       <td>Enrique Augusto Ochoa Prado</td>
     </tr>
   </tbody>
