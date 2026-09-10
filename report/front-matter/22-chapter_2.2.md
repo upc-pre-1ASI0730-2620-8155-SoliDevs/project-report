@@ -1,5 +1,7 @@
 ## 2.2. Entrevistas
 
+---
+
 <div style="text-align: justify">
 
 Como técnica de indagación de requerimientos, el equipo aplicará **entrevistas semiestructuradas** a representantes de los dos segmentos objetivo. Para cada segmento se realizarán **entre 3 y 5 entrevistas**, grabadas en video (evidencia subida a Microsoft Stream) con una duración objetivo de 15 a 20 minutos por sesión. Las entrevistas combinan preguntas de caracterización (para la construcción posterior de los User Personas) con preguntas de profundización sobre el proceso de triaje y los puntos de dolor identificados en el Lean UX Process del Capítulo I.
@@ -7,6 +9,8 @@ Como técnica de indagación de requerimientos, el equipo aplicará **entrevista
 </div>
 
 ### 2.2.1. Diseño de entrevistas
+
+---
 
 #### Segmento 1 — Personal de triaje de hospitales y clínicas
 
@@ -82,3 +86,20 @@ Como técnica de indagación de requerimientos, el equipo aplicará **entrevista
 - ¿Qué es lo primero que pregunta un familiar cuando lo acompañan a emergencia?
 
 <!-- TODO (equipo): ejecutar las entrevistas grabadas (3-5 por segmento), subir los videos a Microsoft Stream y completar las secciones 2.2.2 (Registro de entrevistas) y 2.2.3 (Análisis de entrevistas) en la siguiente iteración del informe. -->
+
+### 2.2.2. Registro de entrevistas
+
+---
+
+#### Segmento 1: Personal de triaje de hospitales y clínicas
+
+#### Segmento 2: Pacientes que acuden a emergencia
+
+
+### 2.2.3. Análisis de entrevistas
+
+---
+
+#### Segmento 1: Personal de triaje de hospitales y clínicas
+
+#### Segmento 2: Pacientes que acuden a emergencia
