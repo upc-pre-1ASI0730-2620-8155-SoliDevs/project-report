@@ -35,4 +35,7 @@
     
 ---
 
-## Capítulo III:
+## Capítulo III: Requirements Specification
+- [3.1. User Stories](31-chapter_3.1.md)
+- [3.2. Impact Mapping](32-chapter_3.2.md)
+- [3.3. Product Backlog](33-chapter_3.3.md)
