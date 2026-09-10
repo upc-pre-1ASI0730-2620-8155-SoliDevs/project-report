@@ -1,6 +1,10 @@
 ## 1.2. Solution Profile
 
+---
+
 ### 1.2.1. Antecedentes y problemática
+
+---
 
 #### Antecedentes
 
@@ -65,6 +69,8 @@ Cada minuto adicional de triaje retrasa la atención de todos los pacientes en c
 
 ### 1.2.2. Lean UX Process
 
+---
+
 #### 1.2.2.1. Lean UX Problem Statements
 
 <div style="text-align: justify">
@@ -126,6 +132,8 @@ Cada minuto adicional de triaje retrasa la atención de todos los pacientes en c
 Estos enunciados de creencias se combinan en la siguiente sección mediante la plantilla de *hypothesis statements* del Lean UX Canvas ("We believe that [business outcomes] will be achieved if [user] attains [benefit] with [feature]"), generando una hipótesis por cada *feature assumption*.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
+
+---
 
 <!-- Regla del enunciado: un hypothesis statement por cada feature assumption (plantilla oficial) -->
 
