@@ -47,7 +47,6 @@
 |2| U20241D428 | Castro Solorza Nicolás Eduardo                |
 |3| U202320776 | Huayta Fuentes, Hernan Gabriel                |
 |4| U202411222 | Ochoa Prado, Enrique Augusto                  |
-|5|            |                                               |
 
 </div>
 <h4 align = "center">

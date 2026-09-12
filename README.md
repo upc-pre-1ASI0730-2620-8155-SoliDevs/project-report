@@ -4,11 +4,10 @@
 
 | # | Código | Apellidos y Nombres | GitHub |
 |---|--------|---------------------|--------|
-| 1 | U202112423 | Alva Ayala, Mitchell Adriano | <!-- TODO: @usuario --> |
-| 2 | U20241D428 | Castro Solorza, Nicolás Eduardo | <!-- TODO: @usuario --> |
+| 1 | U202112423 | Alva Ayala, Mitchell Adriano | [@Upcino](https://github.com/Upcino) |
+| 2 | U20241D428 | Castro Solorza, Nicolás Eduardo | [@NicoCSE](https://github.com/NicoCSE) |
 | 3 | U202320776 | Huayta Fuentes, Hernan Gabriel | [@Homesman](https://github.com/Homesman) |
-| 4 | U202411222 | Ochoa Prado, Enrique Augusto | <!-- TODO: @usuario --> |
-| 5 | (pendiente) | Diaz Nuñez, Mauricio | <!-- TODO --> |
+| 4 | U202411222 | Ochoa Prado, Enrique Augusto | [@EnriqueO-18](https://github.com/EnriqueO-18) |
 
 ## ¿En qué consiste el proyecto?
 

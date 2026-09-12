@@ -25,12 +25,10 @@ Consolidarse como la plataforma de referencia en triaje asistido por datos dentr
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <!-- TODO: Agregar la foto de cada integrante en images/members/ y completar los códigos de estudiante -->
-<!-- TODO: Mauricio: pendiente de presentación — su fila queda reservada -->
 
 | Integrante | Código Estudiante | Carrera | Conocimientos y Habilidades que aporta |
 |---|---|---|---|
-| <img src="images/members/mitchell.jpeg" width="100"> Mitchell Adriano Alva Ayala | U<!-- TODO --> | Ingeniería de Software | <!-- TODO: reemplazar con skills reales --> Desarrollo backend con C#/.NET, trabajo colaborativo con Git y aprendizaje rápido de nuevas tecnologías. |
-| <img src="images/members/nicolas.jpeg" width="100"> Nicolas Eduardo Castro Solorza | U<!-- TODO --> | Ingeniería de Software | <!-- TODO --> Desarrollo frontend con Vue y JavaScript, diseño de interfaces con Figma y atención al detalle en UX. |
-| <!-- Espacio reservado para Mauricio (pendiente de presentación) --> | | | |
+| <img src="images/members/mitchell.jpeg" width="100"> Mitchell Adriano Alva Ayala | U202112423 | Ingeniería de Software | <!-- TODO: reemplazar con skills reales --> Desarrollo backend con C#/.NET, trabajo colaborativo con Git y aprendizaje rápido de nuevas tecnologías. |
+| <img src="images/members/nicolas.jpeg" width="100"> Nicolas Eduardo Castro Solorza | U20241D428 | Ingeniería de Software | <!-- TODO --> Desarrollo frontend con Vue y JavaScript, diseño de interfaces con Figma y atención al detalle en UX. |
 | <img src="images/members/hernan.jpeg" width="100"> Hernan Gabriel Huayta Fuentes *(Team Leader)* | U202320776 | Ingeniería de Software | Desarrollo fullstack (JavaScript, TypeScript, HTML, CSS), SQL y PostgreSQL, gestión de bases de datos y coordinación de equipos con enfoque ágil. |
-| <img src="images/members/enrique.jpeg" width="100"> Enrique Augusto Ochoa Prado | U<!-- TODO --> | Ingeniería de Software | <!-- TODO --> Desarrollo backend con ASP.NET Core y Entity Framework, modelado de bases de datos y pruebas de software. |
+| <img src="images/members/enrique.jpeg" width="100"> Enrique Augusto Ochoa Prado | U202411222 | Ingeniería de Software | <!-- TODO --> Desarrollo backend con ASP.NET Core y Entity Framework, modelado de bases de datos y pruebas de software. |
