@@ -83,13 +83,15 @@ Cada minuto adicional de triaje retrasa la atención de todos los pacientes en c
 >
 > *Our product/service will address this gap by **a responsive web platform that digitally registers patients, captures vital signs automatically from connected measurement instruments, classifies patient priority with validation by triage staff, raises immediate alerts on out-of-range values, and assigns patients to the corresponding medical specialty**.*
 >
-> *Our initial focus will be **triage personnel and patients in the emergency services of hospitals and clinics in Lima Metropolitan Area**.*
+> *Our initial focus will be **triage personnel** (nurses and technicians) who need to classify patients quickly and accurately, and **patients** in the emergency services of hospitals and clinics in the Lima Metropolitan Area who need visibility and prompt care.*
 >
 > *We'll know we are successful when we see **faster triage registrations, fewer transcription and prioritization errors, out-of-range values detected and attended earlier, and patients routed to the correct specialty on the first pass**.*
 
 </div>
 
 #### 1.2.2.2. Lean UX Assumptions
+
+Para guiar el desarrollo del producto, se han planteado supuestos fundamentales categorizados en cinco áreas clave: negocio, resultados de negocio, usuarios, beneficios del usuario y características del producto.
 
 <!-- TODO: validar estos enunciados en la sesión del equipo; son la base de las hypotheses -->
 
@@ -101,11 +103,11 @@ Cada minuto adicional de triaje retrasa la atención de todos los pacientes en c
 5. La integración con instrumentos de medición es el diferenciador competitivo de la solución frente a los sistemas hospitalarios actuales.
 
 **Business Outcome Assumptions**
-1. Las instituciones reducirán el tiempo promedio de registro y clasificación por paciente en el módulo de triaje.
-2. El número de errores de transcripción de signos vitales disminuirá de forma medible tras la adopción.
-3. La institución aumentará la detección temprana de valores críticos (alertas atendidas) mes a mes.
-4. La retención anual de instituciones suscritas será alta si los indicadores de triaje mejoran.
-5. Reducir derivaciones a especialidad equivocada disminuirá reprocesos y costos operativos del servicio de emergencia.
+1. Las instituciones reducirán el tiempo promedio de registro y clasificación por paciente en el módulo de triaje en al menos un 30%.
+2. El número de errores de transcripción de signos vitales disminuirá en un 95% tras la implementación de la lectura automática.
+3. La institución aumentará la detección temprana de valores críticos, atendiendo las alertas generadas en menos de 2 minutos tras la lectura.
+4. La retención anual de instituciones suscritas será superior al 85% si los indicadores de atención en triaje mejoran durante los primeros 6 meses.
+5. La reducción de derivaciones a especialidades equivocadas disminuirá los costos operativos del servicio de emergencia en un 15% anual.
 
 **User Assumptions**
 1. El personal de triaje está compuesto principalmente por enfermeras y técnicos de enfermería con competencia digital intermedia, familiarizados con sistemas hospitalarios.
@@ -135,6 +137,7 @@ Estos enunciados de creencias se combinan en la siguiente sección mediante la p
 
 ---
 
+En base a las características (Feature Assumptions) identificadas previamente, se han formulado las siguientes hipótesis empleando el formato estándar de Lean UX, las cuales establecen el resultado esperado al brindar un beneficio específico a nuestros usuarios.
 <!-- Regla del enunciado: un hypothesis statement por cada feature assumption (plantilla oficial) -->
 
 **H1 — Patient Registration:**
