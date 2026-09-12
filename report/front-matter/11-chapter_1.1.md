@@ -24,8 +24,6 @@ Consolidarse como la plataforma de referencia en triaje asistido por datos dentr
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-<!-- TODO: Agregar la foto de cada integrante en images/members/ y completar los códigos de estudiante -->
-<!-- TODO: Mauricio: pendiente de presentación — su fila queda reservada -->
 
 
 | Integrante| Código Estudiante| Conocimientos y Habilidades que aporta                                                                                                                                                                                                                                                                                                                                                                                                                             |
