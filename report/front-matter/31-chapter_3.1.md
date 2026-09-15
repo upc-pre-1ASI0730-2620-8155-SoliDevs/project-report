@@ -150,7 +150,7 @@
         </tr>
         <tr>
             <td>US12</td>
-            <td>Conectar dispositivo médico</td>
+            <td>Conexión de dispositivo médico</td>
             <td>Como técnico de enfermería deseo vincular el instrumento de medición con la plataforma para habilitar la captura automática de datos.</td>
             <td><strong>Escenario 1: Vinculación exitosa</strong><br>Dado que el instrumento de medición está activo, Cuando el técnico inicia la vinculación, Entonces el sistema confirma la conexión exitosa con el hardware.<br><br><strong>Escenario 2: Fallo de vinculación</strong><br>Dado que el instrumento de medición está apagado o sin señal, Cuando el técnico intenta conectarlo, Entonces el sistema agota el tiempo de espera y emite una advertencia de fallo de conexión.</td>
             <td>EP03</td>
@@ -246,7 +246,6 @@
             <td><strong>Escenario 1: Activación de advertencia</strong><br>Dado que el sistema registra un signo vital fuera del umbral seguro, Cuando detecta la anomalía, Entonces emite una advertencia visual destacada para notificar al personal.<br><br><strong>Escenario 2: Restablecimiento visual</strong><br>Dado que la lectura anómala se corrige o demuestra ser un error de lectura, Cuando los valores vuelven a parámetros normales, Entonces el sistema desactiva la advertencia visual.</td>
             <td>EP05</td>
         </tr>
-<!-- HISTORIAS DE USUARIO (Parte 2: US26 a US50) -->
         <tr>
             <td>US26</td>
             <td>Notificación sonora de emergencia</td>
