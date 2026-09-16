@@ -1,0 +1,25 @@
+@startuml C4_Context
+!include <C4/C4_Context>
+title Tri-Aid - System Context (C4 Nivel 1)
+
+Person(triageStaff, "Personal de Triaje", "Tecnico de enfermeria y personal medico que registra, captura signos vitales, clasifica y deriva pacientes en emergencias.")
+Person(patient, "Paciente", "Consulta su estado de atencion, prioridad y comprobante desde el portal movil EP07.")
+Person(institutionAdmin, "Administrador de Institucion", "Gestiona cuentas del personal, dispositivos y la suscripcion de la institucion.")
+
+System(triAid, "Tri-Aid", "Plataforma SaaS de triaje asistido por IoT: captura automatica de signos vitales, clasificacion NT-158, alertas en tiempo real y derivacion a especialidades.")
+
+System_Ext(iot, "Dispositivos IoT", "Tensiometro, oximetro, pulsimetro y termometro digitales que transmiten lecturas via BLE.")
+System_Ext(sms, "SMS Gateway", "Servicio de mensajeria para entregar comprobantes de derivacion.")
+System_Ext(email, "Email Service", "Servicio de correo para enlaces de recuperacion de credenciales.")
+System_Ext(his, "HIS Hospitalario", "Sistema de informacion hospitalaria existente (integracion en plan Institucional).")
+
+Rel(triageStaff, triAid, "Usa el Panel de Triaje (HTTPS)")
+Rel(patient, triAid, "Consulta el Portal del Paciente (HTTPS)")
+Rel(institutionAdmin, triAid, "Administra cuentas, dispositivos y suscripcion")
+Rel(iot, triAid, "Envia lecturas de signos vitales (ingestion REST)")
+Rel(triAid, sms, "Envia comprobantes por SMS")
+Rel(triAid, email, "Envia enlaces de recuperacion")
+Rel(triAid, his, "Exporta episodios de triaje (plan Institucional)")
+
+SHOW_LEGEND()
+@enduml
