@@ -1,0 +1,39 @@
+@startuml
+title Database Diagram - Bounded Context: Identity and Access Management
+hide circle
+skinparam linetype ortho
+
+entity "users" as users {
+  * id : INT <<PK>>
+  --
+  * username : VARCHAR(50) <<UK>>
+  * email : VARCHAR(100) <<UK>>
+  * password_hash : VARCHAR(255)
+  * role_id : INT <<FK>>
+  * status_id : INT <<FK>>
+  * failed_attempts : INT
+  locked_until : DATETIME2
+  * created_at : DATETIME2
+}
+entity "user_roles" as roles {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(30)
+}
+entity "user_statuses" as statuses {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(30)
+}
+entity "recovery_tokens" as tokens {
+  * id : INT <<PK>>
+  --
+  * user_id : INT <<FK>>
+  * token : VARCHAR(128) <<UK>>
+  * expires_at : DATETIME2
+  * is_used : BIT
+}
+users }o--|| roles
+users }o--|| statuses
+users ||--o{ tokens
+@enduml
