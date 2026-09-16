@@ -1,0 +1,46 @@
+@startuml
+title Database Diagram - Bounded Context: Specialty Assignment
+hide circle
+skinparam linetype ortho
+
+entity "referrals" as ref {
+  * id : INT <<PK>>
+  --
+  * episode_id : INT <<FK>> <<UK>>
+  * specialty_id : INT <<FK>>
+  * room : VARCHAR(10)
+  * queue_position : INT
+  * state_id : INT <<FK>>
+  change_reason : VARCHAR(300)
+  * referred_at : DATETIME2
+}
+entity "specialties" as spec {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(50)
+  * min_age_years : TINYINT
+  * max_age_years : TINYINT
+}
+entity "referral_states" as rstates {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(20)
+}
+entity "vouchers" as vou {
+  * id : INT <<PK>>
+  --
+  * referral_id : INT <<FK>> <<UK>>
+  * qr_code : VARCHAR(64) <<UK>>
+  * channel_id : INT <<FK>>
+  sent_at : DATETIME2
+}
+entity "delivery_channels" as dch {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(20)
+}
+ref }o--|| spec
+ref }o--|| rstates
+ref ||--o| vou
+vou }o--|| dch
+@enduml
