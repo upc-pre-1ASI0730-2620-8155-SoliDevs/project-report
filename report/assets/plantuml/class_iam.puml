@@ -1,0 +1,98 @@
+@startuml IAM
+title Class Diagram - Bounded Context: Identity and Access Management
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+
+package "API Layer" {
+  class UsersController <<Controller>> {
+    +LoginAsync(command: LoginRequest) : Task<ActionResult<TokenResponse>>
+    +RefreshTokenAsync(token: string) : Task<ActionResult<TokenResponse>>
+    +RequestPasswordRecoveryAsync(email: string) : Task<ActionResult<RecoveryLinkResponse>>
+    +ResetPasswordAsync(command: ResetPasswordCommand) : Task<ActionResult<ResetPasswordResponse>>
+    +LogoutAsync(userId: int) : Task<IActionResult>
+  }
+}
+
+package "Application Layer" {
+  interface IAuthService <<interface>> {
+    +LoginAsync(command: LoginRequest) : Task<Result<TokenResponse>>
+    +RegisterFailedAttemptAsync(userId: int) : Task<Result<bool>>
+    +RequestRecoveryAsync(email: string) : Task<Result<RecoveryLinkResponse>>
+    +ResetPasswordAsync(command: ResetPasswordCommand) : Task<Result<bool>>
+  }
+  class AuthService {
+    -_maxFailedAttempts : const int = 3
+    -_lockoutMinutes : const int = 15
+    +LoginAsync(command: LoginRequest) : Task<Result<TokenResponse>>
+    +RegisterFailedAttemptAsync(userId: int) : Task<Result<bool>>
+  }
+  interface IJwtTokenGenerator <<interface>> {
+    +GenerateToken(user: User) : TokenResponse
+  }
+  class JwtTokenGenerator {
+    -_signingKey : SecurityKey
+    -_expiryMinutes : int
+  }
+}
+
+package "Domain Layer" {
+  class User <<Aggregate Root>> {
+    -Id : int
+    -Username : string
+    -Email : string
+    -PasswordHash : string
+    -Role : UserRole <<enum>>
+    -Status : UserStatus <<enum>>
+    -FailedAttempts : int
+    -LockedUntil : DateTime?
+    +IsLocked() : bool
+    +RegisterFailedAttempt() : void
+    +ResetFailedAttempts() : void
+    +Suspend(reason: string) : void
+  }
+  enum UserRole {
+    TriageStaff
+    Patient
+  }
+  enum UserStatus {
+    Active
+    Locked
+    Suspended
+  }
+}
+
+package "Infrastructure Layer" {
+  interface IUserRepository <<interface>> {
+    +GetByUsernameOrEmailAsync(id: string) : Task<User?>
+    +GetByIdAsync(id: int) : Task<User?>
+    +UpdateAsync(user: User) : Task<void>
+  }
+  class UserRepository {
+    -_context : AppDbContext
+  }
+  class RecoveryToken {
+    -Id : int
+    -UserId : int
+    -Token : string
+    -ExpiresAt : DateTime
+    -IsUsed : bool
+  }
+  class AppDbContext <<DbContext>> {
+  }
+}
+
+UsersController --> IAuthService
+AuthService ..|> IAuthService
+AuthService --> IJwtTokenGenerator
+JwtTokenGenerator ..|> IJwtTokenGenerator
+AuthService --> User
+User --> UserRole
+User --> UserStatus
+AuthService --> IUserRepository
+UserRepository ..|> IUserRepository
+UserRepository --> AppDbContext
+AppDbContext o-- User
+AppDbContext o-- RecoveryToken
+@enduml

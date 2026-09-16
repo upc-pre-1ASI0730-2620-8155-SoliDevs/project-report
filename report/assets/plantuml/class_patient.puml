@@ -1,0 +1,74 @@
+@startuml PatientRegistration
+title Class Diagram - Bounded Context: Patient Registration
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+
+package "API Layer" {
+  class PatientsController <<Controller>> {
+    +GetByDniAsync(dni: string) : Task<ActionResult<PatientDto>>
+    +CreateAsync(command: CreatePatientCommand) : Task<ActionResult<PatientDto>>
+    +CreateTemporaryProfileAsync(command: CreateTemporaryProfileCommand) : Task<ActionResult<PatientDto>>
+    +RegularizeIdentityAsync(patientId: int, command: RegularizeIdentityCommand) : Task<ActionResult<PatientDto>>
+    +UpdateContactDataAsync(patientId: int, command: UpdateContactCommand) : Task<ActionResult<PatientDto>>
+  }
+}
+
+package "Application Layer" {
+  interface IPatientRegistrationService <<interface>> {
+    +FindByDniAsync(dni: string) : Task<PatientDto?>
+    +RegisterAsync(command: CreatePatientCommand) : Task<Result<PatientDto>>
+    +CreateTemporaryProfileAsync(command: CreateTemporaryProfileCommand) : Task<Result<PatientDto>>
+    +RegularizeIdentityAsync(patientId: int, command: RegularizeIdentityCommand) : Task<Result<PatientDto>>
+  }
+  class PatientRegistrationService {
+    +FindByDniAsync(dni: string) : Task<PatientDto?>
+  }
+}
+
+package "Domain Layer" {
+  class Patient <<Aggregate Root>> {
+    -Id : int
+    -Dni : string?
+    -FirstName : string
+    -LastName : string
+    -BirthDate : DateOnly
+    -Sex : Sex <<enum>>
+    -Phone : string?
+    -Address : string?
+    -IsTemporary : bool
+    -TemporaryCode : string?
+    +RegularizeIdentity(dni: string) : void
+    +UpdateContactData(phone: string, address: string) : void
+  }
+  enum Sex {
+    Male
+    Female
+  }
+  class PatientRegisteredEvent <<Domain Event>> {
+    +PatientId : int
+    +OccurredAt : DateTime
+  }
+}
+
+package "Infrastructure Layer" {
+  interface IPatientRepository <<interface>> {
+    +GetByDniAsync(dni: string) : Task<Patient?>
+    +GetByTemporaryCodeAsync(code: string) : Task<Patient?>
+    +AddAsync(patient: Patient) : Task<void>
+    +UpdateAsync(patient: Patient) : Task<void>
+  }
+  class PatientRepository {
+    -_context : AppDbContext
+  }
+}
+
+PatientsController --> IPatientRegistrationService
+PatientRegistrationService ..|> IPatientRegistrationService
+PatientRegistrationService --> Patient
+PatientRegistrationService --> IPatientRepository
+PatientRepository ..|> IPatientRepository
+Patient --> Sex
+Patient ..> PatientRegisteredEvent
+@enduml
