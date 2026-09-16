@@ -1,5 +1,5 @@
 ### 4.7. Software Object-Oriented Design
-<p style="text-align: justify;">
+<p align="justify">
 El desarrollo estructural de nuestra plataforma se fundamenta estrictamente en el paradigma orientado a objetos. Esta decisión metodológica nos brinda la capacidad de segmentar los distintos procesos del negocio de triaje hospitalario, garantizando una expansión futura sin fricciones. A través de la correcta aplicación del encapsulamiento para proteger la información sensible de pacientes y personal, sumado a la herencia y el uso de interfaces para jerarquizar nuestras entidades de monitoreo y notificación, diseñamos componentes de software robustos, facilitando enormemente las labores de actualización técnica.
 </p>
 
