@@ -1,0 +1,58 @@
+@startuml
+title Database Diagram - Bounded Context: Subscription and Payment Management
+hide circle
+skinparam linetype ortho
+
+entity "institutions" as inst {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(120)
+  * ruc : VARCHAR(11) <<UK>>
+  * contact_email : VARCHAR(100)
+}
+entity "plans" as plans {
+  * id : INT <<PK>>
+  --
+  * code : VARCHAR(20) <<UK>>
+  * name : VARCHAR(50)
+  * monthly_price : DECIMAL(10,2)
+  * annual_price : DECIMAL(10,2)
+  * includes_patient_portal : BIT
+  * includes_his_integration : BIT
+}
+entity "subscriptions" as subs {
+  * id : INT <<PK>>
+  --
+  * institution_id : INT <<FK>> <<UK>>
+  * plan_id : INT <<FK>>
+  * state_id : INT <<FK>>
+  * start_date : DATE
+  * renewal_date : DATE
+  cancelled_at : DATETIME2
+}
+entity "payments" as pay {
+  * id : INT <<PK>>
+  --
+  * subscription_id : INT <<FK>>
+  * amount : DECIMAL(10,2)
+  * status_id : INT <<FK>>
+  gateway_reference : VARCHAR(64) <<UK>>
+  * due_date : DATE
+  paid_at : DATETIME2
+}
+entity "subscription_states" as sstates {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(20)
+}
+entity "payment_statuses" as pstates {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(20)
+}
+inst ||--o| subs
+plans ||--o{ subs
+subs ||--o{ pay
+subs }o--|| sstates
+pay }o--|| pstates
+@enduml
