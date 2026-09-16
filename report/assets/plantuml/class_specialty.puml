@@ -1,0 +1,100 @@
+@startuml SpecialtyAssignment
+title Class Diagram - Bounded Context: Specialty Assignment
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+
+package "API Layer" {
+  class ReferralsController <<Controller>> {
+    +SuggestSpecialtyAsync(episodeId: int) : Task<ActionResult<SpecialtySuggestionDto>>
+    +ReferAsync(episodeId: int, command: ReferPatientCommand) : Task<ActionResult<ReferralDto>>
+    +ChangeSpecialtyAsync(referralId: int, command: ChangeSpecialtyCommand) : Task<ActionResult<ReferralDto>>
+    +GenerateVoucherAsync(referralId: int) : Task<ActionResult<VoucherDto>>
+    +SendVoucherAsync(referralId: int, command: SendVoucherCommand) : Task<IActionResult>
+  }
+}
+
+package "Application Layer" {
+  interface IReferralService <<interface>> {
+    +SuggestSpecialtyAsync(episodeId: int) : Task<Result<SpecialtySuggestionDto>>
+    +ReferAsync(episodeId: int, command: ReferPatientCommand, userId: int) : Task<Result<ReferralDto>>
+    +ChangeSpecialtyAsync(referralId: int, command: ChangeSpecialtyCommand, userId: int) : Task<Result<ReferralDto>>
+    +GenerateVoucherAsync(referralId: int) : Task<Result<VoucherDto>>
+    +SendVoucherAsync(referralId: int, command: SendVoucherCommand) : Task<Result<bool>>
+  }
+  class ReferralService {
+    +ReferAsync(episodeId: int, command: ReferPatientCommand, userId: int) : Task<Result<ReferralDto>>
+  }
+  interface ISmsDispatcher <<interface>> {
+    +SendVoucherAsync(phone: string, voucher: VoucherDto) : Task<Result>
+  }
+  class SmsDispatcher {
+    -_httpClient : HttpClient
+  }
+}
+
+package "Domain Layer" {
+  class Referral <<Aggregate Root>> {
+    -Id : int
+    -EpisodeId : int
+    -Specialty : Specialty <<enum>>
+    -Room : string
+    -QueuePosition : int
+    -State : ReferralState <<enum>>
+    -ChangeReason : string?
+    -ReferredAt : DateTime
+    +ChangeSpecialty(newSpecialty: Specialty, reason: string) : Result
+    +UpdateQueuePosition(position: int) : void
+  }
+  class Voucher {
+    -Id : int
+    -ReferralId : int
+    -QrCode : string
+    -Channel : DeliveryChannel <<enum>>
+    -SentAt : DateTime?
+    +MarkSent() : void
+  }
+  enum Specialty {
+    MedicinaInterna
+    Cirugia
+    Traumatologia
+    Pediatria
+    Ginecologia
+    Neurologia
+  }
+  enum ReferralState {
+    Referred
+    Reassigned
+    InAttention
+    Attended
+  }
+  enum DeliveryChannel {
+    Sms
+    QrPortal
+  }
+}
+
+package "Infrastructure Layer" {
+  interface IReferralRepository <<interface>> {
+    +GetByIdAsync(id: int) : Task<Referral?>
+    +CountWaitingBySpecialtyAsync(specialty: Specialty) : Task<int>
+    +AddAsync(referral: Referral) : Task<void>
+    +UpdateAsync(referral: Referral) : Task<void>
+  }
+  class ReferralRepository {
+    -_context : AppDbContext
+  }
+}
+
+ReferralsController --> IReferralService
+ReferralService ..|> IReferralService
+ReferralService --> Referral
+ReferralService --> Voucher
+Referral --> Specialty
+Referral --> ReferralState
+Voucher --> DeliveryChannel
+ReferralService --> IReferralRepository
+ReferralService --> ISmsDispatcher
+SmsDispatcher ..|> ISmsDispatcher
+@enduml
