@@ -1,0 +1,98 @@
+@startuml VitalSignsCapture
+title Class Diagram - Bounded Context: Vital Signs Capture
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+
+package "API Layer" {
+  class VitalSignsController <<Controller>> {
+    +LinkDeviceAsync(patientId: int, command: LinkDeviceCommand) : Task<ActionResult<DeviceLinkDto>>
+    +IngestReadingAsync(command: IngestReadingCommand) : Task<IActionResult>
+    +ConfirmReadingsAsync(episodeId: int) : Task<ActionResult<VitalsSummaryDto>>
+    +RejectReadingsAsync(episodeId: int) : Task<ActionResult<ReadingsRejectedResponse>>
+    +IngressManualAsync(episodeId: int, command: ManualReadingCommand) : Task<ActionResult<VitalSignsReadingDto>>
+  }
+}
+
+package "Application Layer" {
+  interface IVitalSignsService <<interface>> {
+    +LinkDeviceAsync(command: LinkDeviceCommand) : Task<Result<DeviceLinkDto>>
+    +IngestReadingAsync(command: IngestReadingCommand) : Task<Result<VitalSignsReadingDto>>
+    +IngressManualAsync(command: ManualReadingCommand) : Task<Result<VitalSignsReadingDto>>
+    +ConfirmReadingsAsync(episodeId: int) : Task<Result<VitalsSummaryDto>>
+    +RejectReadingsAsync(episodeId: int) : Task<Result<bool>>
+  }
+  class VitalSignsService {
+    +IngestReadingAsync(command: IngestReadingCommand) : Task<Result<VitalSignsReadingDto>>
+  }
+}
+
+package "Domain Layer" {
+  class VitalSignsReading <<Aggregate Root>> {
+    -Id : int
+    -EpisodeId : int
+    -DeviceId : int?
+    -Systolic : short?
+    -Diastolic : short?
+    -SpO2 : byte?
+    -HeartRate : short?
+    -Temperature : decimal?
+    -Source : ReadingSource <<enum>>
+    -Status : ReadingStatus <<enum>>
+    -CapturedAt : DateTime
+    +ValidatePhysiologicalRange() : Result
+    +Confirm(userId: int) : void
+    +Reject() : void
+  }
+  class DeviceLink {
+    -Id : int
+    -EpisodeId : int
+    -DeviceId : int
+    -DeviceType : DeviceType <<enum>>
+    -LinkedAt : DateTime
+    -IsActive : bool
+  }
+  enum ReadingSource {
+    Automatic
+    Manual
+  }
+  enum ReadingStatus {
+    Captured
+    Confirmed
+    Rejected
+  }
+  enum DeviceType {
+    BloodPressureMonitor
+    PulseOximeter
+    HeartRateMonitor
+    Thermometer
+  }
+  class VitalsConfirmedEvent <<Domain Event>> {
+    +EpisodeId : int
+    +ReadingId : int
+    +OccurredAt : DateTime
+  }
+}
+
+package "Infrastructure Layer" {
+  interface IVitalSignsRepository <<interface>> {
+    +AddAsync(reading: VitalSignsReading) : Task<void>
+    +GetPendingByEpisodeAsync(episodeId: int) : Task<IEnumerable<VitalSignsReading>>
+    +ConfirmForEpisodeAsync(episodeId: int) : Task<void>
+  }
+  class VitalSignsRepository {
+    -_context : AppDbContext
+  }
+}
+
+VitalSignsController --> IVitalSignsService
+VitalSignsService ..|> IVitalSignsService
+VitalSignsService --> VitalSignsReading
+VitalSignsService --> DeviceLink
+VitalSignsService --> IVitalSignsRepository
+VitalSignsReading --> ReadingSource
+VitalSignsReading --> ReadingStatus
+DeviceLink --> DeviceType
+VitalSignsReading ..> VitalsConfirmedEvent
+@enduml

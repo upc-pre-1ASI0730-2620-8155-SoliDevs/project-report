@@ -1,0 +1,91 @@
+@startuml TriageClassification
+title Class Diagram - Bounded Context: Triage Classification
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+
+package "API Layer" {
+  class ClassificationController <<Controller>> {
+    +SuggestPriorityAsync(episodeId: int) : Task<ActionResult<PrioritySuggestionDto>>
+    +ApproveSuggestionAsync(episodeId: int) : Task<ActionResult<ClassificationDto>>
+    +ModifyLevelAsync(episodeId: int, command: ModifyLevelCommand) : Task<ActionResult<ClassificationDto>>
+    +ResetToSuggestionAsync(episodeId: int) : Task<ActionResult<ClassificationDto>>
+    +ConfirmClassificationAsync(episodeId: int) : Task<ActionResult<ClassificationDto>>
+  }
+}
+
+package "Application Layer" {
+  interface IClassificationService <<interface>> {
+    +SuggestPriorityAsync(episodeId: int) : Task<Result<PrioritySuggestionDto>>
+    +ApproveSuggestionAsync(episodeId: int, userId: int) : Task<Result<ClassificationDto>>
+    +ModifyLevelAsync(episodeId: int, command: ModifyLevelCommand, userId: int) : Task<Result<ClassificationDto>>
+    +ResetToSuggestionAsync(episodeId: int, userId: int) : Task<Result<ClassificationDto>>
+    +ConfirmAsync(episodeId: int, userId: int) : Task<Result<ClassificationDto>>
+  }
+  class ClassificationService {
+    +ModifyLevelAsync(episodeId: int, command: ModifyLevelCommand, userId: int) : Task<Result<ClassificationDto>>
+  }
+}
+
+package "Domain Layer" {
+  class Classification <<Aggregate Root>> {
+    -Id : int
+    -EpisodeId : int
+    -Level : TriageLevel <<enum>>
+    -SuggestedLevel : TriageLevel <<enum>>
+    -State : ClassificationState <<enum>>
+    -OverriddenBy : int?
+    -Justification : string?
+    -SuggestedAt : DateTime
+    -ConfirmedAt : DateTime?
+    +Approve(userId: int) : void
+    +Override(newLevel: TriageLevel, justification: string, userId: int) : Result
+    +ResetToSuggestion(userId: int) : void
+    +Confirm(userId: int) : void
+  }
+  class Nt158Engine <<Domain Service>> {
+    -_priorityRanges : IReadOnlyDictionary<TriageLevel, Range[]>
+    +CalculatePriority(vitals: VitalsSummary) : Result<TriageLevel>
+    +MissingMetrics(vitals: VitalsSummary) : IReadOnlyList<string>
+  }
+  enum TriageLevel {
+    I_Resuscitation
+    II_Emergency
+    III_Urgent
+    IV_LessUrgent
+    V_NonUrgent
+  }
+  enum ClassificationState {
+    PendingConfirmation
+    Assigned
+    Overridden
+    Confirmed
+  }
+  class ClassificationConfirmedEvent <<Domain Event>> {
+    +EpisodeId : int
+    +Level : TriageLevel
+    +ConfirmedAt : DateTime
+  }
+}
+
+package "Infrastructure Layer" {
+  interface IClassificationRepository <<interface>> {
+    +GetByEpisodeAsync(episodeId: int) : Task<Classification?>
+    +AddAsync(classification: Classification) : Task<void>
+  }
+  class ClassificationRepository {
+    -_context : AppDbContext
+  }
+}
+
+ClassificationController --> IClassificationService
+ClassificationService ..|> IClassificationService
+ClassificationService --> Nt158Engine
+ClassificationService --> Classification
+Classification --> TriageLevel
+Classification --> ClassificationState
+Nt158Engine --> TriageLevel
+Classification ..> ClassificationConfirmedEvent
+ClassificationService --> IClassificationRepository
+@enduml
