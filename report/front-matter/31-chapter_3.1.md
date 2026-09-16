@@ -421,5 +421,32 @@
             <td><strong>Escenario 1: Emisión JWT exitosa</strong><br>Dado que el cliente envía credenciales correctas a `/api/auth/login`, Cuando el API verifica los datos de acceso, Entonces emite un token JWT válido con un código de respuesta 200 OK.<br><br><strong>Escenario 2: Validación fallida</strong><br>Dado que se envían datos de acceso incorrectos o incompletos, Cuando el API procesa la validación de identidad, Entonces deniega la generación del token y retorna un status 401 Unauthorized.</td>
             <td>EP08</td>
         </tr>
+        <tr>
+            <td>EP09</td>
+            <td>Gestión de Suscripción</td>
+            <td>Como administrador de triaje, quiero gestionar la suscripción de mi institución, para mantener el acceso de mi equipo a la plataforma según el plan contratado.</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>US51</td>
+            <td>Contratación de plan institucional</td>
+            <td>Como administrador de triaje deseo registrar la suscripción de mi institución a uno de los planes disponibles para habilitar la plataforma para todo mi equipo.</td>
+            <td><strong>Escenario 1: Activación</strong><br>Dado que registro un plan para mi institución, Cuando se confirma el pago mediante el gateway de pagos, Entonces la suscripción queda activa con su fecha de renovación y el sistema emite la confirmación.<br><br><strong>Escenario 2: Pago rechazado</strong><br>Dado que el gateway rechaza el cobro, Cuando se intenta activar la suscripción, Entonces esta queda pendiente y el sistema notifica para reintentar el pago.</td>
+            <td>EP09</td>
+        </tr>
+        <tr>
+            <td>US52</td>
+            <td>Renovación y estado de la suscripción</td>
+            <td>Como administrador de triaje deseo que la suscripción se renueve automáticamente y consultar su estado para garantizar que el equipo no pierda acceso al servicio.</td>
+            <td><strong>Escenario 1: Renovación</strong><br>Dado que la suscripción está activa y llega su fecha de renovación, Cuando el cobro recurrente se confirma, Entonces la suscripción se extiende y el historial de pagos registra el cobro.<br><br><strong>Escenario 2: Mora</strong><br>Dado que un cobro falla y vence el periodo de gracia sin regularizar, Cuando se consulta el estado de la suscripción, Entonces el sistema la muestra como morosa con la indicación de regularizar el pago.</td>
+            <td>EP09</td>
+        </tr>
+        <tr>
+            <td>US53</td>
+            <td>Acceso al portal según plan</td>
+            <td>Como paciente adulto deseo acceder al portal web cuando mi institución lo tiene contratado para conocer mi estado de atención desde mi celular.</td>
+            <td><strong>Escenario 1: Plan con portal</strong><br>Dado que mi institución tiene un plan que incluye el portal del paciente, Cuando ingreso con mis credenciales, Entonces el sistema me permite consultar mi estado, turno y comprobante.<br><br><strong>Escenario 2: Plan sin portal</strong><br>Dado que el plan de mi institución no incluye el portal, Cuando intento acceder con credenciales válidas, Entonces el sistema me informa que el portal no está disponible para mi institución.</td>
+            <td>EP09</td>
+        </tr>
     </tbody>
 </table>
