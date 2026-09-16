@@ -36,3 +36,23 @@ Este diagrama define el almacenamiento de las lecturas de signos vitales, la vin
 * **Columnas principales:** `systolic`, `diastolic`, `spo2`, `heart_rate` y `temperature` para los valores medidos; `captured_at` como estampa de tiempo de la medición; `confirmed_by` y `confirmed_at` para la validación del personal.
 * **Constraints o Relaciones:** Cada lectura pertenece a un episodio (`episode_id`), registra su origen mediante `source_id` (automático o manual) y su estado mediante `status_id` (capturada, confirmada o rechazada). La tabla `device_links` materializa la vinculación de un dispositivo a un episodio, y `devices` referencia su tipo a través de `device_type_id`.
 
+#### 4. Bounded Context: Triage Classification
+Este diagrama persiste la clasificación de prioridad NT-158 de cada episodio, incluyendo la sugerencia del sistema y el override del personal.
+
+<div align="center"><img src="../assets/erd_diagrams/erd_triage.png" width ="100%"></div>
+
+**Explicación del esquema:**
+* **Tablas:** `classifications`, `triage_levels`, `classification_states`.
+* **Columnas principales:** `suggested_level_id` (nivel calculado por el sistema) y `level_id` (nivel final asignado) permiten distinguir la sugerencia original de la decisión del personal; `justification` es obligatoria cuando existe override; `suggested_at` y `confirmed_at` registran las estampas de tiempo.
+* **Constraints o Relaciones:** `episode_id` es llave foránea y unique al mismo tiempo: cada episodio tiene exactamente una clasificación. Ambas referencias a niveles apuntan al catálogo `triage_levels`, que almacena los rangos de la guía NT-158.
+
+#### 5. Bounded Context: Alerting
+Este diagrama modela la persistencia de las alertas generadas por valores fuera de rango, su ciclo de vida y su auditoría.
+
+<div align="center"><img src="../assets/erd_diagrams/erd_alerts.png" width ="100%"></div>
+
+**Explicación del esquema:**
+* **Tablas:** `alerts`, `alert_states`, `vital_metrics`.
+* **Columnas principales:** `observed_value` guarda el valor que disparó la alerta; `raised_at`, `acknowledged_at` y `resolved_at` documentan el ciclo de vida completo; `acknowledged_by` registra al usuario responsable de reconocer la alerta.
+* **Constraints o Relaciones:** Cada alerta se origina en una lectura (`reading_id`) de un episodio (`episode_id`). El catálogo `vital_metrics` almacena además los rangos seguros (`min_safe`, `max_safe`) que utiliza el sistema para la resolución automática de alertas.
+
