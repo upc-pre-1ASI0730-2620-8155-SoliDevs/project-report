@@ -71,7 +71,14 @@
             <td>N/A</td>
             <td>N/A</td>
         </tr>
-<tr>
+        <tr>
+            <td>EP09</td>
+            <td>Gestión de Suscripción</td>
+            <td>Como administrador de triaje, quiero gestionar la suscripción de mi institución, para mantener el acceso de mi equipo a la plataforma según el plan contratado.</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
             <td>US01</td>
             <td>Propuesta de valor en Landing</td>
             <td>Como visitante deseo ver la propuesta de valor principal para entender rápidamente el propósito de la plataforma Tri-Aid.</td>
@@ -420,12 +427,6 @@
             <td>Como Developer deseo un endpoint POST de inicio de sesión que valide identidades y genere tokens seguros para el control de acceso de las aplicaciones.</td>
             <td><strong>Escenario 1: Emisión JWT exitosa</strong><br>Dado que el cliente envía credenciales correctas a `/api/auth/login`, Cuando el API verifica los datos de acceso, Entonces emite un token JWT válido con un código de respuesta 200 OK.<br><br><strong>Escenario 2: Validación fallida</strong><br>Dado que se envían datos de acceso incorrectos o incompletos, Cuando el API procesa la validación de identidad, Entonces deniega la generación del token y retorna un status 401 Unauthorized.</td>
             <td>EP08</td>
-        </tr>
-        <tr>
-            <td>EP09</td>
-            <td>Gestión de Suscripción</td>
-            <td>Como administrador de triaje, quiero gestionar la suscripción de mi institución, para mantener el acceso de mi equipo a la plataforma según el plan contratado.</td>
-            <td>N/A</td>
         </tr>
         <tr>
             <td>US51</td>
