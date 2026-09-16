@@ -1,0 +1,58 @@
+@startuml
+title Database Diagram - Bounded Context: Vital Signs Capture
+hide circle
+skinparam linetype ortho
+
+entity "vital_signs_readings" as readings {
+  * id : INT <<PK>>
+  --
+  * episode_id : INT <<FK>>
+  device_id : INT <<FK>>
+  systolic : SMALLINT
+  diastolic : SMALLINT
+  spo2 : TINYINT
+  heart_rate : SMALLINT
+  temperature : DECIMAL(4,1)
+  * source_id : INT <<FK>>
+  * status_id : INT <<FK>>
+  * captured_at : DATETIME2
+  * confirmed_by : INT <<FK>>
+  confirmed_at : DATETIME2
+}
+entity "devices" as devices {
+  * id : INT <<PK>>
+  --
+  * serial_number : VARCHAR(50) <<UK>>
+  * device_type_id : INT <<FK>>
+  * is_active : BIT
+  last_sync_at : DATETIME2
+}
+entity "device_types" as dtypes {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(40)
+}
+entity "device_links" as links {
+  * id : INT <<PK>>
+  --
+  * episode_id : INT <<FK>>
+  * device_id : INT <<FK>>
+  * linked_at : DATETIME2
+  * is_active : BIT
+}
+entity "reading_sources" as rsrc {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(20)
+}
+entity "reading_statuses" as rstat {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(20)
+}
+readings }o--|| rsrc
+readings }o--|| rstat
+readings }o--o| devices
+devices }o--|| dtypes
+links }o--|| devices
+@enduml
