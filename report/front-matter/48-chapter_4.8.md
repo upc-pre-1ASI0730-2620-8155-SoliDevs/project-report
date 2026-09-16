@@ -56,3 +56,22 @@ Este diagrama modela la persistencia de las alertas generadas por valores fuera 
 * **Columnas principales:** `observed_value` guarda el valor que disparó la alerta; `raised_at`, `acknowledged_at` y `resolved_at` documentan el ciclo de vida completo; `acknowledged_by` registra al usuario responsable de reconocer la alerta.
 * **Constraints o Relaciones:** Cada alerta se origina en una lectura (`reading_id`) de un episodio (`episode_id`). El catálogo `vital_metrics` almacena además los rangos seguros (`min_safe`, `max_safe`) que utiliza el sistema para la resolución automática de alertas.
 
+#### 6. Bounded Context: Specialty Assignment
+Este diagrama define la persistencia de las derivaciones a especialidades, las colas por área y los comprobantes digitales.
+
+<div align="center"><img src="../assets/erd_diagrams/erd_specialty.png" width ="100%"></div>
+
+**Explicación del esquema:**
+* **Tablas:** `referrals`, `specialties`, `referral_states`, `vouchers`, `delivery_channels`.
+* **Columnas principales:** `room` y `queue_position` para la asignación al consultorio y la posición en cola; `change_reason` documenta la justificación de las reasignaciones; `qr_code` (unique) identifica el comprobante digital.
+* **Constraints o Relaciones:** `episode_id` es llave foránea y unique: cada episodio deriva a una sola especialidad vigente. El catálogo `specialties` incluye los rangos de edad compatibles (`min_age_years`, `max_age_years`) que sustentan el bloqueo por incompatibilidad demográfica. Cada comprobante se vincula a una única derivación (`referral_id`, unique) y registra su canal de entrega mediante `channel_id`.
+
+#### 7. Bounded Context: Subscription and Payment Management
+Este diagrama define la persistencia del modelo comercial: instituciones cliente, catálogo de planes, suscripciones e historial de pagos.
+
+<div align="center"><img src="../assets/erd_diagrams/erd_subscription.png" width ="100%"></div>
+
+**Explicación del esquema:**
+* **Tablas:** `institutions`, `plans`, `subscriptions`, `subscription_states`, `payments`, `payment_statuses`.
+* **Columnas principales:** `monthly_price` y `annual_price` en el catálogo de planes (que soporta el toggle de facturación de la landing); `renewal_date` para la renovación del ciclo; `gateway_reference` (unique) como referencia del cobro devuelta por **Stripe**.
+* **Constraints o Relaciones:** `subscriptions.institution_id` es llave foránea y unique: cada institución posee una única suscripción vigente. La tabla `payments` mantiene el historial completo de cobros por suscripción (`subscription_id`), con su estado (`status_id`) y fecha de pago (`paid_at`). Los flags `includes_patient_portal` e `includes_his_integration` del plan determinan las características habilitadas para la institución.
