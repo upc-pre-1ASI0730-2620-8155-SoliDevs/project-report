@@ -1,0 +1,34 @@
+@startuml
+title Database Diagram - Bounded Context: Triage Classification
+hide circle
+skinparam linetype ortho
+
+entity "classifications" as cls {
+  * id : INT <<PK>>
+  --
+  * episode_id : INT <<FK>> <<UK>>
+  * suggested_level_id : INT <<FK>>
+  * level_id : INT <<FK>>
+  * state_id : INT <<FK>>
+  overridden_by : INT <<FK>>
+  justification : VARCHAR(300)
+  * suggested_at : DATETIME2
+  confirmed_at : DATETIME2
+}
+entity "triage_levels" as levels {
+  * id : INT <<PK>>
+  --
+  * code : CHAR(1)
+  * name : VARCHAR(30)
+  * min_spo2 : TINYINT
+  * max_wait_minutes : INT
+}
+entity "classification_states" as cstates {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(30)
+}
+cls }o--|| levels : "suggested"
+cls }o--|| levels : "assigned"
+cls }o--|| cstates
+@enduml
