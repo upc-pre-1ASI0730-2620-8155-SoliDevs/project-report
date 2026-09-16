@@ -1,0 +1,90 @@
+@startuml Alerting
+title Class Diagram - Bounded Context: Alerting
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+
+package "API Layer" {
+  class AlertsController <<Controller>> {
+    +GetActiveAsync() : Task<ActionResult<IEnumerable<AlertDto>>>
+    +AcknowledgeAsync(alertId: int, userId: int) : Task<IActionResult>
+    +EscalateAsync(alertId: int, command: EscalationCommand) : Task<ActionResult<EscalationResponse>>
+  }
+  class AlertsHub <<SignalR Hub>> {
+    +JoinTriageGroup() : Task
+    +JoinPatientGroup(episodeId: int) : Task
+  }
+}
+
+package "Application Layer" {
+  interface IAlertingService <<interface>> {
+    +EvaluateVitalRangesAsync(readingId: int) : Task<Result<Alert?>>
+    +AcknowledgeAsync(alertId: int, userId: int) : Task<Result<bool>>
+    +ResolveIfSafeAsync(alertId: int) : Task<Result<bool>>
+    +EscalateAsync(alertId: int, command: EscalationCommand) : Task<Result<EscalationResponse>>
+  }
+  class AlertingService {
+    -_criticalLevel : TriageLevel = TriageLevel.I_Resuscitation
+    +EvaluateVitalRangesAsync(readingId: int) : Task<Result<Alert?>>
+    +AcknowledgeAsync(alertId: int, userId: int) : Task<Result<bool>>
+  }
+  interface IAlertBroadcaster <<interface>> {
+    +BroadcastAlertAsync(alert: Alert) : Task
+    +BroadcastResolutionAsync(alert: Alert) : Task
+  }
+  class SignalRAlertBroadcaster {
+    -_hubContext : IHubContext<AlertsHub>
+  }
+}
+
+package "Domain Layer" {
+  class Alert <<Aggregate Root>> {
+    -Id : int
+    -ReadingId : int
+    -EpisodeId : int
+    -Level : TriageLevel <<enum>>
+    -Metric : VitalMetric <<enum>>
+    -ObservedValue : decimal
+    -State : AlertState <<enum>>
+    -RaisedAt : DateTime
+    -AcknowledgedBy : int?
+    -AcknowledgedAt : DateTime?
+    +Acknowledge(userId: int) : void
+    +ResolveIfSafe(safeRange: Range) : bool
+  }
+  enum AlertState {
+    Active
+    Acknowledged
+    Resolved
+  }
+  enum VitalMetric {
+    Systolic
+    Diastolic
+    SpO2
+    HeartRate
+    Temperature
+  }
+}
+
+package "Infrastructure Layer" {
+  interface IAlertRepository <<interface>> {
+    +GetActiveAsync() : Task<IEnumerable<Alert>>
+    +AddAsync(alert: Alert) : Task<void>
+    +UpdateAsync(alert: Alert) : Task<void>
+  }
+  class AlertRepository {
+    -_context : AppDbContext
+  }
+}
+
+AlertsController --> IAlertingService
+AlertingService ..|> IAlertingService
+AlertingService --> IAlertBroadcaster
+SignalRAlertBroadcaster ..|> IAlertBroadcaster
+AlertingService --> Alert
+Alert --> AlertState
+Alert --> VitalMetric
+AlertingService --> IAlertRepository
+AlertsHub ..> SignalRAlertBroadcaster
+@enduml
