@@ -1,0 +1,107 @@
+@startuml Subscription
+title Class Diagram - Bounded Context: Subscription and Payment Management
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+hide empty methods
+
+package "API Layer" {
+  class SubscriptionsController <<Controller>> {
+    +GetPlansAsync() : Task<ActionResult<IEnumerable<PlanDto>>>
+    +ContractPlanAsync(command: ContractPlanCommand) : Task<ActionResult<SubscriptionDto>>
+    +ProcessPaymentAsync(subscriptionId: int, command: ProcessPaymentCommand) : Task<ActionResult<PaymentDto>>
+    +RenewAsync(subscriptionId: int) : Task<ActionResult<SubscriptionDto>>
+    +CancelAsync(subscriptionId: int) : Task<IActionResult>
+    +ChangeTierAsync(subscriptionId: int, command: ChangeTierCommand) : Task<ActionResult<SubscriptionDto>>
+  }
+}
+
+package "Application Layer" {
+  interface ISubscriptionService <<interface>> {
+    +ContractPlanAsync(command: ContractPlanCommand) : Task<Result<SubscriptionDto>>
+    +ProcessPaymentAsync(command: ProcessPaymentCommand) : Task<Result<PaymentDto>>
+    +RenewAsync(subscriptionId: int) : Task<Result<SubscriptionDto>>
+    +CancelAsync(subscriptionId: int) : Task<Result<bool>>
+    +ChangeTierAsync(subscriptionId: int, command: ChangeTierCommand) : Task<Result<SubscriptionDto>>
+  }
+  class SubscriptionService {
+    -_gracePeriodDays : const int = 5
+    +ProcessPaymentAsync(command: ProcessPaymentCommand) : Task<Result<PaymentDto>>
+  }
+  interface IPaymentGateway <<interface>> {
+    +ChargeAsync(institutionId: int, amount: decimal) : Task<GatewayResult>
+  }
+  class PaymentGatewayAdapter {
+    -_httpClient : HttpClient
+  }
+}
+
+package "Domain Layer" {
+  class Subscription <<Aggregate Root>> {
+    -Id : int
+    -InstitutionId : int
+    -PlanId : int
+    -State : SubscriptionState <<enum>>
+    -StartDate : DateOnly
+    -RenewalDate : DateOnly
+    -CancelledAt : DateTime?
+    +Activate(payment: Payment) : void
+    +MarkPastDue() : void
+    +Renew() : void
+    +Cancel() : void
+    +ChangeTier(plan: Plan) : void
+  }
+  class Plan {
+    -Id : int
+    -Code : string
+    -Name : string
+    -MonthlyPrice : decimal
+    -AnnualPrice : decimal
+    -IncludesPatientPortal : bool
+    -IncludesHisIntegration : bool
+  }
+  class Payment {
+    -Id : int
+    -SubscriptionId : int
+    -Amount : decimal
+    -State : PaymentStatus <<enum>>
+    -GatewayReference : string?
+    -PaidAt : DateTime?
+    +MarkConfirmed(reference: string) : void
+    +MarkFailed() : void
+  }
+  enum SubscriptionState {
+    Active
+    PastDue
+    Cancelled
+  }
+  enum PaymentStatus {
+    Pending
+    Confirmed
+    Failed
+  }
+}
+
+package "Infrastructure Layer" {
+  interface ISubscriptionRepository <<interface>> {
+    +GetByIdAsync(id: int) : Task<Subscription?>
+    +GetByInstitutionAsync(institutionId: int) : Task<Subscription?>
+    +AddAsync(subscription: Subscription) : Task<void>
+    +UpdateAsync(subscription: Subscription) : Task<void>
+  }
+  class SubscriptionRepository {
+    -_context : AppDbContext
+  }
+}
+
+SubscriptionsController --> ISubscriptionService
+SubscriptionService ..|> ISubscriptionService
+SubscriptionService --> Subscription
+SubscriptionService --> Plan
+SubscriptionService --> Payment
+SubscriptionService --> IPaymentGateway
+PaymentGatewayAdapter ..|> IPaymentGateway
+Subscription --> SubscriptionState
+Payment --> PaymentStatus
+SubscriptionService --> ISubscriptionRepository
+@enduml
