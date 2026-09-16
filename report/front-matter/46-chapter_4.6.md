@@ -24,3 +24,13 @@ Este diagrama desglosa el sistema Tri-Aid en sus unidades de ejecución principa
 > - **Sistemas externos**: La API Application procesa pagos a través de Stripe y envía alertas mediante Google Notifications, ambos vía HTTPS/REST. El Measurement Instrument envía automáticamente los datos de los 4 signos vitales a la API mediante HTTPS/Webhook.
 
 ### 4.6.4. Software Architecture Component Diagram
+
+Este diagrama profundiza en el contenedor API Application, revelando cómo se organiza internamente la lógica de negocio basada en los Bounded Contexts identificados en el proceso de diseño.
+
+![Component Diagram - Tri-Aid](../assets/c4-diagrams/component-diagram.png)
+
+> - **Patient Registration**: Componente encargado de registrar al paciente mediante DNI o perfil temporal, generando su registro digital al ingreso a emergencias.
+> - **Vital Signs**: Componente que vincula el dispositivo de medición, captura los signos vitales de forma automática (IoT) o manual como respaldo, y gestiona la confirmación de las lecturas por parte del personal.
+> - **Triage Classification**: Componente que asigna la prioridad del paciente según la escala NT-158 de forma asistida, y gestiona la reevaluación mientras permanece en sala de espera.
+> - **Alerting**: Componente que dispara alertas en tiempo real ante un deterioro crítico del paciente y escala la atención inmediata.
+> - **Specialty Assignment**: Componente que asigna la especialidad correspondiente al paciente mediante ruteo asistido por el sistema.
