@@ -93,8 +93,25 @@ Como técnica de indagación de requerimientos, el equipo aplicará **entrevista
 
 #### Segmento 1: Personal de triaje de hospitales y clínicas
 
+**Entrevista 1 — García, Shirley (31 años, San Isidro)**
+
+Licenciada en enfermería, coordinadora y jefa del departamento de enfermería de una clínica privada. Describió el flujo actual: el paciente pasa por admisión donde se verifican sus datos, luego a triaje donde se le toman los signos vitales con tensiómetro, termómetro y pulsoxímetro (glucómetro en casos de emergencia), se evalúan los valores y se deriva a la especialidad correspondiente. El triaje demora entre 5 y 10 minutos en la toma de signos más 10 minutos de evaluación, y afirmó que **lo que más tiempo consume es el registro de los datos**. Indicó que los errores ocurren cuando hay alta demanda de pacientes y se mezclan los roles ("siempre tiene que ser el triaje licenciado o médico"), detectándose durante la revisión del triaje. La derivación se decide con el motivo de consulta, los signos y los síntomas; si es incorrecta, el médico la corrige mediante interconsulta. Su clínica cuenta con un sistema institucional propio que considera completo (historia clínica, interconsultas, notas de enfermería), aunque utiliza fichas físicas de triaje de forma paralela, generando doble registro. Manifestó que la captura automática de signos vitales reduciría la digitación manual y ahorraría tiempo, y que confiaría en las lecturas si son precisas y si puede visualizar en pantalla los signos vitales, antecedentes, alergias, nivel de prioridad y anamnesia del paciente. Adoptaría una herramienta que sea rápida, segura, confiable e intuitiva, y la rechazaría si es complicada. Usa laptops y PCs con Windows, navegador Chrome, además de Drive, Word y Excel. Recibió capacitación formal en escalas de triaje y puede consultar posteriormente el progreso de los pacientes que clasificó a través del sistema.
+
+<div align="center"><img src="../assets/interviews/Entrevista_ShirleyGarcia.png" width="700"></div>
+
+*URL del video:* [https://shorturl.at/yuHTA](https://shorturl.at/yuHTA)
+
 #### Segmento 2: Pacientes que acuden a emergencia
 
+**Entrevista 1 — Hernández, Pedro (20 años, San Juan de Lurigancho)**
+
+Repartidor en motocicleta que acudió a emergencias tras un accidente de tránsito mientras trabajaba. Fue trasladado por un vecino en auto (no llegó ambulancia) y, con el brazo lastimado, tuvo que llenar él mismo la ficha de admisión en papel. Esperó alrededor de 40 minutos para la evaluación de triaje. Durante la espera nadie lo informó sobre el avance de su atención; acudió dos veces a la ventanilla y solo le indicaron esperar. Recibió un número de prioridad sin explicación de su significado, y su turno fue llamado a voces — estuvo a punto de perderlo porque se había quedado dormido. Relató que el dolor, la incertidumbre y la hora tardía lo llevaron a considerar retirarse sin ser atendido. Al alta recibió la receta en papel y la placa de la radiografía; extravió la receta una semana después y tuvo que solicitarla nuevamente para comprar los antibióticos. Uso de tecnología: celular Samsung A54 (Android), WhatsApp, Yape, Plin, TikTok e Instagram a diario; trámites por Chrome; prefirió una web sin instalar aplicaciones. Declaró que habría usado un enlace del hospital para consultar el tiempo restante de su turno y su comprobante digital, y que desconfiaría si la plataforma se cae, comparte sus datos o exige registros complicados. Si pudiera cambiar una sola cosa: **"que te informen... con solo ver mi turno en el celular todo habría sido distinto"**.
+
+<div align="center"><img src="../assets/interviews/Entrevista_PedroHernandez.png" width="700"></div>
+
+*URL del video:* [https://shorturl.at/om88z](https://shorturl.at/om88z)
+
+*Nota: se encuentran en proceso entrevistas adicionales por segmento hasta alcanzar el rango de 3 a 5 requerido, cuyos registros serán incorporados a esta sección.*
 
 ### 2.2.3. Análisis de entrevistas
 
