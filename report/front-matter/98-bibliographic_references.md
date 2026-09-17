@@ -10,6 +10,7 @@
 - Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781492049588/
 - Google. (s. f.). *Google Meet: Video conferencing*. https://meet.google.com/
 - GitHub. (s. f.). *GitHub: Where the world builds software*. https://github.com/
+- Atlassian. (s. f.). *Jira Software: Plan, track, and manage work*. https://www.atlassian.com/software/jira
 - INEI. (2024). *Perú: Acceso y uso de las Tecnologías de Información y Comunicación en los hogares* (Informe Técnico TIC). https://www.inei.gob.pe/
 - Miro. (s. f.). *Miro: The visual workspace for innovation*. https://miro.com/
 - Microsoft. (s. f.). *ASP.NET Core documentation*. https://learn.microsoft.com/aspnet/core/
