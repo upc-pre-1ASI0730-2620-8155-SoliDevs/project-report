@@ -1,6 +1,8 @@
-﻿## 4.5. Web Applications Prototyping
+## 4.5. Web Applications Prototyping
 
-Se prodeció a desarrollar un prototipo interactivo que simula los flujos principales de la aplicación. A continuacion, se mostrará una imagen de la vista previa del prototipo y tambien un enlace que redirecciona al video del prototipo:
+Se desarrolló un prototipo interactivo en Figma que simula los flujos principales de la plataforma, permitiendo navegar por la Landing Page de Tri-Aid y validar la experiencia del usuario antes de la implementación. La siguiente figura muestra una vista previa del prototipo:
 
+<div align="center"><img src="../assets/landing/Landing-Prototype.png" width ="100%"></div>
 
-Enlace al video del prototipo: 
+Enlace del video del prototipo:
+[https://shorturl.at/6OcrV](https://shorturl.at/6OcrV)
