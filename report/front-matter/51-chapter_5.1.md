@@ -231,9 +231,7 @@ En esta sección se especifica la configuración y los pasos necesarios para el 
   <img src="../assets/development_environment/pagesLanding.png" width="700"/>
 </p>
 
-3. Hosting: La visualización del producto se gestiona a través de GitHub Pages, servicio de la infraestructura de GitHub que publicó la Landing Page de manera pública, accesible desde el siguiente enlace:
-
-https://github.com/upc-pre-1ASI0730-2620-8155-SoliDevs/landing-page
+3. Hosting: La visualización del producto se gestiona a través de la infraestructura de GitHub Pages, asegurando que el HTML, CSS y JavaScript de la Landing Page sean accesibles de forma pública una vez realizado el push de los archivos.
 
 <p align="center">
   <img src="../assets/development_environment/deployLanding.png" width="700"/>
