@@ -1,80 +1,26 @@
-<div align="center" style="text-align: center;">
-<img src="./images/Logo-UPC.png" alt="Logo UPC" width="150">
-<h3>Universidad Peruana de Ciencias Aplicadas</h3>
-<h4>Facultad de Ingeniería</h4>
-<h4>Carrera de Ingeniería de Software</h4>
-<h4>Periodo 202620</h4>
-<h4>1ASI0730 Aplicaciones Web</h4>
-<h4>NRC: (por completar)</h4>
-<h4>Docente: (por completar)</h4>
-<h4>Informe del Trabajo Final</h4>
-<h4>Startup: SoliDevs</h4>
-<h4>Producto: (por definir)</h4>
+# SoliDevs
 
-<br>
+## Autores:
 
-<h2 style="text-align: center;">Team members:</h2>
+| # | Código | Apellidos y Nombres | GitHub |
+|---|--------|---------------------|--------|
+| 1 | U202112423 | Alva Ayala, Mitchell Adriano | [@Upcino](https://github.com/Upcino) |
+| 2 | U20241D428 | Castro Solorza, Nicolás Eduardo | [@NicoCSE](https://github.com/NicoCSE) |
+| 3 | U202320776 | Huayta Fuentes, Hernan Gabriel | [@Homesman](https://github.com/Homesman) |
+| 4 | U202411222 | Ochoa Prado, Enrique Augusto | [@EnriqueO-18](https://github.com/EnriqueO-18) |
 
-<table style="margin: 0 auto; text-align: center;">
-  <thead>
-    <tr>
-      <th>Código</th>
-      <th>Nombre</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td>Mitchell Adriano Alva Ayala</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Nicolas Eduardo Castro Solorza</td>
-    </tr>
-    <!-- Espacio reservado para Mauricio (pendiente de presentación) -->
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>U202320776</td>
-      <td>Hernan Gabriel Huayta Fuentes</td>
-    </tr>
-    <tr>
-      <td>U202411222</td>
-      <td>Enrique Augusto Ochoa Prado</td>
-    </tr>
-  </tbody>
-</table>
+## ¿En qué consiste el proyecto?
 
-<br>
-<h4 style="text-align: center;">Agosto 2026</h4>
+**Tri-Aid** es una plataforma web que da soporte al proceso de triaje en hospitales y clínicas: registra a los pacientes, captura automáticamente sus signos vitales desde los instrumentos de medición de datos médicos, clasifica la prioridad de atención y asigna al paciente a la especialidad médica correspondiente, generando alertas inmediatas cuando algún valor se encuentra fuera del rango habitual.
 
-</div>
+## Características principales:
 
-<div style="page-break-after: always;"></div>
+- Registro digital de pacientes
+- Lectura automática de signos vitales desde los instrumentos de medición
+- Clasificación asistida de prioridad (validada por el personal de triaje)
+- Alertas por valores fuera de rango
+- Asignación dirigida a especialidades médicas
 
-## Registro de Versiones del Informe
+## 📖 Informe del proyecto
 
-| Versión | Fecha | Autor | Descripción de modificación |
-|---------|-------|-------|------------------------------|
-| 0.1 | 27/08/2026 | Equipo SoliDevs | Creación del informe con carátula y estructura de capítulos. |
-
-## Project Report Collaboration Insights
-
-- Repository: `https://github.com/upc-pre-1ASI0730-2620-8155-SoliDevs/project-report`
-- All team members participate in the elaboration of the report, evidenced by GitHub commit analytics.
-
-## Document structure
-
-| File | Content |
-|------|---------|
-| `README.md` | Carátula, Registro de Versiones, Collaboration Insights, Contenido, Student Outcome |
-| `chapter-01-introduction.md` | Capítulo I: Introducción (Startup Profile, Solution Profile, Lean UX, Segmentos objetivo) |
-| `chapter-02-requirements-elicitation.md` | Capítulo II: Requirements Elicitation & Analysis (Competidores, Entrevistas, Needfinding, EventStorming, Ubiquitous Language) |
-| `chapter-03-requirements-specification.md` | Capítulo III: Requirements Specification (User Stories, Impact Mapping, Product Backlog) |
-| `chapter-04-product-design.md` | Capítulo IV: Product Design (Style Guidelines, Information Architecture, UX/UI, C4 Model, Class Diagrams, Database Design) |
-| `chapter-05-implementation.md` | Capítulo V: Product Implementation, Validation & Deployment (Sprints 1–4, Validation Interviews, Videos) |
-| `conclusions.md` | Conclusiones y recomendaciones |
-| `bibliography.md` | Bibliografía (APA) |
-| `appendices.md` | Anexos |
+El informe completo por secciones está en [`report/front-matter/`](report/front-matter/) — de `01-cover.md` a `99-annexes.md` — con los recursos gráficos en [`report/assets/`](report/assets/).

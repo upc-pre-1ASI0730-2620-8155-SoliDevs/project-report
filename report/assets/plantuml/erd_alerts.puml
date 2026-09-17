@@ -1,0 +1,34 @@
+@startuml
+title Database Diagram - Bounded Context: Alerting
+hide circle
+skinparam linetype ortho
+
+entity "alerts" as alerts {
+  * id : INT <<PK>>
+  --
+  * reading_id : INT <<FK>>
+  * episode_id : INT <<FK>>
+  * level_id : INT <<FK>>
+  * metric_id : INT <<FK>>
+  * observed_value : DECIMAL(6,2)
+  * state_id : INT <<FK>>
+  * raised_at : DATETIME2
+  acknowledged_by : INT <<FK>>
+  acknowledged_at : DATETIME2
+  resolved_at : DATETIME2
+}
+entity "alert_states" as astates {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(20)
+}
+entity "vital_metrics" as metrics {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(30)
+  * min_safe : DECIMAL(6,2)
+  * max_safe : DECIMAL(6,2)
+}
+alerts }o--|| astates
+alerts }o--|| metrics
+@enduml

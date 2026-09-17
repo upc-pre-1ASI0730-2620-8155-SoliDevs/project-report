@@ -1,0 +1,32 @@
+@startuml C4_Containers
+!include <C4/C4_Container>
+title Tri-Aid - Container Diagram (C4 Nivel 2)
+
+Person(triageStaff, "Personal de Triaje", "Opera el panel de triaje en desktop.")
+Person(patient, "Paciente", "Consulta su estado desde el movil.")
+Person(institutionAdmin, "Administrador de Institucion", "Gestiona cuentas y suscripcion.")
+
+System_Boundary(c1, "Tri-Aid") {
+  Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Sitio estatico de marketing: propuesta de valor, planes y formulario de contacto.")
+  Container(panel, "Panel de Triaje", "Vue.js 3 SPA", "Aplicacion web del personal de triaje: cola, ficha del paciente, clasificacion, alertas, derivacion y reportes.")
+  Container(portal, "Portal del Paciente", "Vue.js 3 SPA (mobile-first)", "Portal EP07 de consulta en solo lectura: estado, turno y comprobante.")
+  Container(api, "API Application", "ASP.NET Core 8 (C#), REST + SignalR", "API monolito modular: expone REST para las SPA y WebSockets SignalR para alertas y estados en tiempo real. Organizada por bounded contexts.")
+  ContainerDb(db, "Database", "SQL Server", "Persistencia relacional de pacientes, episodios, lecturas, clasificaciones, alertas, derivaciones y usuarios.")
+}
+
+System_Ext(iot, "Dispositivos IoT", "Tensiometro, oximetro, pulsimetro y termometro BLE.")
+System_Ext(sms, "SMS Gateway", "Mensajeria de comprobantes.")
+System_Ext(email, "Email Service", "Correo transaccional.")
+
+Rel(triageStaff, panel, "Usa", "HTTPS")
+Rel(patient, portal, "Usa", "HTTPS")
+Rel(institutionAdmin, panel, "Administra", "HTTPS")
+Rel(panel, api, "Consume REST + SignalR", "JSON/HTTPS, WSS")
+Rel(portal, api, "Consume REST + SignalR", "JSON/HTTPS, WSS")
+Rel(iot, api, "Ingresa lecturas via gateway BLE", "HTTPS/JSON")
+Rel(api, db, "Lee y escribe", "TDS/1433")
+Rel(api, sms, "Envia comprobantes", "HTTPS")
+Rel(api, email, "Envia enlaces", "HTTPS")
+
+SHOW_LEGEND()
+@enduml

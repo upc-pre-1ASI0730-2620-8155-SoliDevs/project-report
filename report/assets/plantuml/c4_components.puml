@@ -1,0 +1,41 @@
+@startuml C4_Components
+!include <C4/C4_Component>
+title Tri-Aid - Component Diagram: API Application (C4 Nivel 3)
+
+Container(panel, "Panel de Triaje", "Vue.js 3 SPA", "Interfaz del personal de triaje.")
+Container(portal, "Portal del Paciente", "Vue.js 3 SPA", "Consulta del paciente.")
+ContainerDb(db, "Database", "SQL Server", "Persistencia del sistema.")
+System_Ext(iot, "Dispositivos IoT", "Gateway BLE de signos vitales.")
+System_Ext(sms, "SMS Gateway", "Mensajeria.")
+System_Ext(email, "Email Service", "Correo transaccional.")
+
+Container_Boundary(api, "API Application (ASP.NET Core 8)") {
+  Component(iam, "IAM Component", "C#, ASP.NET Identity + JWT", "Autenticacion de personal y pacientes, bloqueo por intentos fallidos, recuperacion de contrasena.")
+  Component(patients, "Patient Registration Component", "C#", "Busqueda por DNI, registro, perfiles temporales y regularizacion de identidad.")
+  Component(vitals, "Vital Signs Capture Component", "C#", "Vinculacion de dispositivos, ingestion de lecturas automaticas, ingreso manual, confirmacion y rechazo.")
+  Component(triage, "Triage Classification Component", "C#", "Motor de sugerencia NT-158, aprobacion, override con justificacion y confirmacion de clasificacion.")
+  Component(alerts, "Alerting Component", "C#, SignalR Hub", "Evaluacion de rangos, generacion de alertas y broadcast en tiempo real al panel y portal.")
+  Component(specialty, "Specialty Assignment Component", "C#", "Sugerencia de especialidad, derivacion, colas por area y comprobantes QR/SMS.")
+  Component(reports, "Reports Component", "C#", "Metricas de turno y reporte de alertas del turno.")
+}
+
+Rel(panel, iam, "Inicia sesion", "HTTPS/JSON")
+Rel(panel, patients, "Registra pacientes", "HTTPS/JSON")
+Rel(panel, vitals, "Confirma/rechaza lecturas", "HTTPS/JSON")
+Rel(panel, triage, "Clasifica prioridad", "HTTPS/JSON")
+Rel(panel, alerts, "Recibe alertas en tiempo real", "WSS/SignalR")
+Rel(panel, specialty, "Deriva pacientes", "HTTPS/JSON")
+Rel(portal, iam, "Inicia sesion", "HTTPS/JSON")
+Rel(portal, alerts, "Recibe estado en tiempo real", "WSS/SignalR")
+Rel(iot, vitals, "Ingresa lecturas", "HTTPS/JSON")
+Rel(iam, db, "Lee/escribe usuarios", "TDS")
+Rel(patients, db, "Lee/escribe pacientes", "TDS")
+Rel(vitals, db, "Lee/escribe lecturas", "TDS")
+Rel(triage, db, "Lee/escribe clasificaciones", "TDS")
+Rel(alerts, db, "Lee/escribe alertas", "TDS")
+Rel(specialty, db, "Lee/escribe derivaciones", "TDS")
+Rel(reports, db, "Lee metricas", "TDS")
+Rel(specialty, sms, "Envia comprobante", "HTTPS")
+Rel(iam, email, "Envia enlace de recuperacion", "HTTPS")
+
+@enduml

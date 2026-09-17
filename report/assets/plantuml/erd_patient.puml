@@ -1,0 +1,40 @@
+@startuml
+title Database Diagram - Bounded Context: Patient Registration
+hide circle
+skinparam linetype ortho
+
+entity "patients" as patients {
+  * id : INT <<PK>>
+  --
+  dni : VARCHAR(12) <<UK>>
+  * first_name : VARCHAR(80)
+  * last_name : VARCHAR(80)
+  * birth_date : DATE
+  * sex_id : INT <<FK>>
+  phone : VARCHAR(20)
+  address : VARCHAR(200)
+  * is_temporary : BIT
+  temporary_code : VARCHAR(12) <<UK>>
+  * created_at : DATETIME2
+}
+entity "sexes" as sexes {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(15)
+}
+entity "triage_episodes" as episodes {
+  * id : INT <<PK>>
+  --
+  * patient_id : INT <<FK>>
+  * arrival_time : DATETIME2
+  * state_id : INT <<FK>>
+}
+entity "episode_states" as est {
+  * id : INT <<PK>>
+  --
+  * name : VARCHAR(30)
+}
+patients }o--|| sexes
+episodes }o--|| patients
+episodes }o--|| est
+@enduml
