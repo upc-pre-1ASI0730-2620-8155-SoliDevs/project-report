@@ -1,5 +1,23 @@
 ## Bibliographic References
 
-- Gothelf, J., & Seiden, J. *Lean UX: Designing Great Products with Agile Teams* (3rd ed.). O'Reilly Media. https://leanuxbook.com/
-- INEI. (2024). *Perú: Acceso y uso de las Tecnologías de Información y Comunicación en los hogares* (Informe Técnico TIC, Q4-2024). https://www.inei.gob.pe/
-- MINSA. *Norma Técnica de Salud N.° 158-MINSA/DGSP-V.01: Triaje en emergencias*. <!-- TODO: completar referencias APA usadas en cada capítulo -->
+- Brandolini, A. (2018). *Introducing EventStorming: An act of deliberate collective learning*. Leanpub. https://leanpub.com/introducing_eventstorming
+- Brown, S. (s. f.). *The C4 Model for visualising software architecture*. https://c4model.com/
+- Brown, S. (s. f.). *Structurizr DSL*. https://docs.structurizr.com/dsl/
+- Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/
+- Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.
+- Figma. (s. f.). *Figma: The collaborative interface design tool*. https://www.figma.com/
+- Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781492049588/
+- Google. (s. f.). *Google Meet: Video conferencing*. https://meet.google.com/
+- GitHub. (s. f.). *GitHub: Where the world builds software*. https://github.com/
+- INEI. (2024). *Perú: Acceso y uso de las Tecnologías de Información y Comunicación en los hogares* (Informe Técnico TIC). https://www.inei.gob.pe/
+- Miro. (s. f.). *Miro: The visual workspace for innovation*. https://miro.com/
+- Microsoft. (s. f.). *ASP.NET Core documentation*. https://learn.microsoft.com/aspnet/core/
+- Microsoft. (s. f.). *SignalR documentation*. https://learn.microsoft.com/aspnet/core/signalr/
+- Microsoft. (s. f.). *SQL Server documentation*. https://learn.microsoft.com/sql/sql-server/
+- MINSA. (2022). *Norma Técnica de Salud N.° 158-MINSA/DIGEPRES: Gestión del riesgo en los servicios de emergencia y cuidados críticos*. Ministerio de Salud del Perú. https://www.gob.pe/institucion/minsa/normas-legales
+- PlantUML. (s. f.). *PlantUML: Open-source tool for drawing UML diagrams*. https://plantuml.com/
+- Preston-Werner, T. (2013). *Semantic Versioning 2.0.0*. https://semver.org/
+- Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum*. https://scrumguides.org/
+- UXPressia. (s. f.). *UXPressia: User persona, journey map and empathy map tool*. https://uxpressia.com/
+- Vue.js. (s. f.). *Vue.js: The progressive JavaScript framework*. https://vuejs.org/
