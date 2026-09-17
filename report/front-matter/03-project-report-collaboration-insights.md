@@ -10,6 +10,6 @@ Para la entrega del avance 1, se procede a mostrar el análisis de colaboración
 
 <div align="center"><img src="../assets/insights/contributors-av1.png" width ="100%"></div>
 
-La siguiente imagen representa el resumen de todos los commits realizados en el repositorio a lo largo del periodo comprendido entre el 27 de agosto y el 17 de septiembre: 4 autores, 121 commits a la rama main y 205 commits al total de ramas (incluyendo feature branches), además de 2 pull requests mergeadas.
+La siguiente imagen representa el número de commits por semana realizados en el repositorio a lo largo del periodo comprendido entre agosto y septiembre, evidenciando la concentración del trabajo durante las semanas de desarrollo del primer avance.
 
 <div align="center"><img src="../assets/insights/pulse-av1.png" width ="100%"></div>
