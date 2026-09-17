@@ -86,55 +86,63 @@ En esta sección se explican los avances en implementación con relación a los 
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-En esta sección se presentan las evidencias de la ejecución de la Landing Page desarrollada durante el Sprint. Las siguientes capturas muestran la interacción del usuario con las diferentes secciones, permitiendo validar la estructura de información, la propuesta de valor y la navegación definida para Tri-Aid.
+En esta sección se presentan las evidencias de la ejecución de la Landing Page desarrollada durante el Sprint. Las siguientes capturas muestran la interacción del usuario con las diferentes secciones de la página, permitiendo validar la estructura de información, la propuesta de valor y la navegación definida para Tri-Aid.
 
-**Figura 1. Sección principal de la Landing Page (desktop)**
+**Figura 1. Sección principal de la Landing Page**
 
 <div align="center">
   <img src="../assets/landing/landing-desktop.png" width="700">
 </div>
 
-La figura muestra la sección principal de la Landing Page, donde se presenta la propuesta de valor de Tri-Aid junto con los llamados a la acción dirigidos a los hospitales.
+La figura muestra la sección principal de la Landing Page, donde se presenta la propuesta de valor de Tri-Aid junto con los llamados a la acción dirigidos al personal de triaje y a los pacientes.
 
-**Figura 2. Sección principal de la Landing Page (mobile)**
+**Figura 2. Sección About**
 
 <div align="center">
-  <img src="../assets/landing/landing-mobile.png" width="300">
+  <img src="../assets/landing/landing-about.png" width="700">
 </div>
 
-La figura muestra la versión responsive de la Landing Page para dispositivos móviles, que constituye el canal principal de acceso de los pacientes al Portal EP07.
+En esta sección se describe el problema que aborda Tri-Aid y la solución propuesta, permitiendo al visitante comprender el propósito y los beneficios del servicio.
 
-**Figura 3. Sección de planes de suscripción**
+**Figura 3. Sección Features**
+
+<div align="center">
+  <img src="../assets/landing/landing-features.png" width="700">
+</div>
+
+La figura muestra las principales características de la plataforma: captura automática de signos vitales, clasificación asistida NT-158 y seguimiento del paciente en tiempo real.
+
+**Figura 4. Sección Plans**
 
 <div align="center">
   <img src="../assets/landing/landing-planes.png" width="700">
 </div>
 
-La figura muestra la sección de planes de suscripción con el selector de facturación mensual/anual, dirigida a las instituciones de salud interesadas en la plataforma.
+La figura muestra la sección de planes de suscripción con el toggle de facturación mensual/anual, dirigida a las instituciones de salud interesadas en la plataforma.
+
+**Figura 5. Sección Team**
+
+<div align="center">
+  <img src="../assets/landing/landing-team.png" width="700">
+</div>
+
+La figura presenta al equipo SoliDevs, responsables del desarrollo de la plataforma.
+
+**Figura 6. Sección Contact**
+
+<div align="center">
+  <img src="../assets/landing/landing-contact.png" width="700">
+</div>
+
+La figura muestra el formulario de contacto que permite a las instituciones solicitar una demostración del producto.
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
 Durante este Sprint el alcance se concentró en la Landing Page, por lo que la documentación de servicios del Web Service (RESTful API) se encuentra planificada para sprints posteriores junto con la implementación de los endpoints definidos en las User Stories US44 a US50. La especificación de dichos endpoints se encuentra definida en el Product Backlog del proyecto.
 
-#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review.
 
-El despliegue de la Landing Page se realizó mediante GitHub Pages sobre el repositorio de la Landing Page de la organización del equipo. Los pasos del despliegue fueron:
-
-1. Creación del repositorio público landing-page en la organización SoliDevs.
-2. Sincronización del código fuente desarrollado en VS Code con la rama main mediante Git.
-3. Publicación del sitio a través de GitHub Pages, quedando accesible de forma pública.
-
-<p align="center">
-  <img src="../assets/development_environment/repoLanding.png" width="700">
-</p>
-
-<p align="center">
-  <img src="../assets/development_environment/pagesLanding.png" width="700">
-</p>
-
-<p align="center">
-  <img src="../assets/development_environment/deployLanding.png" width="700">
-</p>
+Esta sección se ha decidido omitir debido a que, para este avance, el equipo se ha enfocado solamente en el diseño y desarrollo de la Landing Page. En futuros entregables se procederá a brindar información más detallada del despliegue de las aplicaciones web y los servicios.
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
