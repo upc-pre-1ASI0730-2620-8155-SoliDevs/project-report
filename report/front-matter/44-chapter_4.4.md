@@ -1,5 +1,7 @@
 ## 4.4. Web Applications UX/UI Design
 
+
+Los wireframes, mockups, wireflows y user flows presentados a continuacion fueron elaborados en **Figma** y pueden visualizarse en el siguiente enlace: https://shorturl.at/MMsBu
 ---
 
 El diseño UX/UI de la aplicación web de Tri-Aid se centra en dar soporte al proceso de triaje hospitalario: registrar pacientes, capturar signos vitales, clasificar la prioridad y derivar al paciente a la especialidad correcta. Desde la perspectiva UX se prioriza la reducción de pasos por paciente y la visibilidad inmediata de alertas; desde la perspectiva UI se emplea un sistema visual propio (papel con retícula de 44 px, tinta verde profunda y acento ECG) sobre componentes limpios y accesibles. A continuación se presentan los wireframes (versión estructural en blanco y negro), el wireflow general, los mock-ups de alta fidelidad y los user flows de los objetivos de usuario principales.
