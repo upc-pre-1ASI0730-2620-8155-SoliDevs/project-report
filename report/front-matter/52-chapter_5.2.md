@@ -55,14 +55,28 @@ A continuación, se detallan las User Stories priorizadas y las tareas asociadas
 
 | US Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 |------|------|--------|------------|------------|-------------------|-------------|--------|
-| US01 | Propuesta de valor en Landing | T01 | Hero y propuesta de valor | Diseño de la sección principal con titular, subtítulo y CTAs | 3 | Mitchell Alva | Done |
-| US02 | Beneficios para personal | T02 | Beneficios del personal de triaje | Redacción y diseño de las tarjetas de beneficios para el personal de triaje | 2 | Nicolás Castro | Done |
-| US03 | Beneficios educativos para pacientes | T03 | Beneficios para pacientes | Redacción y diseño de los beneficios orientados al paciente | 2 | Hernan Huayta | Done |
-| US04 | Planes de suscripción | T04 | Sección de planes | Diseño de los 3 planes con toggle mensual/anual y precios | 2 | Enrique Ochoa | Done |
-| US05 | Formulario de contacto | T05 | Formulario de contacto | Formulario con validación de campos obligatorios y mensaje de éxito | 2 | Mitchell Alva | Done |
-| US51 | Contratación de plan institucional | T06 | Registro de suscripción | Definición del flujo de contratación de planes institucionales | 5 | Hernan Huayta | Done |
-| US52 | Renovación y estado de la suscripción | T07 | Estados de suscripción | Definición de los estados de suscripción (activa, mora, cancelada) | 3 | Enrique Ochoa | Done |
-| US53 | Acceso al portal según plan | T08 | Acceso condicionado al plan | Definición del acceso al portal según las características del plan | 3 | Hernan Huayta | Done |
+| US01 | Propuesta de valor en Landing | T-01 | Diseñar wireframe de la sección hero | Diseñar la sección principal con titular, subtítulo y llamadas a la acción | 1 | Mitchell Alva | Done |
+| US01 | Propuesta de valor en Landing | T-02 | Implementar sección hero | Maquetar en HTML/CSS el hero con la propuesta de valor de Tri-Aid | 1 | Mitchell Alva | Done |
+| US02 | Beneficios para personal | T-03 | Redactar beneficios del personal de triaje | Definir los mensajes de automatización y reducción de errores para el segmento salud | 1 | Nicolás Castro | Done |
+| US02 | Beneficios para personal | T-04 | Diseñar tarjetas de beneficios | Diseñar las tarjetas de beneficios con iconografía para el personal de triaje | 1 | Nicolás Castro | Done |
+| US02 | Beneficios para personal | T-05 | Integrar sección en la landing | Integrar la sección de beneficios al layout responsive de la landing | 1 | Nicolás Castro | Done |
+| US03 | Beneficios educativos para pacientes | T-06 | Redactar beneficios para pacientes | Definir los mensajes de visibilidad del estado y acompañamiento para el segmento paciente | 1 | Hernan Huayta | Done |
+| US03 | Beneficios educativos para pacientes | T-07 | Diseñar sección de beneficios | Diseñar la presentación de beneficios orientados al paciente y su familia | 1 | Hernan Huayta | Done |
+| US03 | Beneficios educativos para pacientes | T-08 | Integrar sección responsive | Adaptar la sección de beneficios a móviles y tablets | 1 | Hernan Huayta | Done |
+| US04 | Planes de suscripción | T-09 | Diseñar los planes de suscripción | Diseñar los 3 planes (Básico, Institucional, Enterprise) con precios y características | 1 | Enrique Ochoa | Done |
+| US04 | Planes de suscripción | T-10 | Implementar toggle mensual/anual | Implementar el conmutador de facturación mensual y anual con descuento | 1 | Enrique Ochoa | Done |
+| US05 | Formulario de contacto | T-11 | Diseñar formulario de contacto | Diseñar el formulario con campos de institución, cargo y mensaje | 1 | Mitchell Alva | Done |
+| US05 | Formulario de contacto | T-12 | Implementar validación de campos | Validar los campos obligatorios y el formato de correo en el cliente | 1 | Mitchell Alva | Done |
+| US05 | Formulario de contacto | T-13 | Implementar mensaje de éxito | Mostrar la confirmación de envío y el canal de respuesta al visitante | 1 | Mitchell Alva | Done |
+| US51 | Contratación de plan institucional | T-14 | Definir flujo de contratación | Definir el flujo de contratación de planes institucionales desde el registro hasta la activación | 2 | Hernan Huayta | Done |
+| US51 | Contratación de plan institucional | T-15 | Modelar registro de suscripción | Modelar el registro de la suscripción con institución, plan y fecha de renovación | 2 | Hernan Huayta | Done |
+| US51 | Contratación de plan institucional | T-16 | Documentar integración con gateway de pagos | Documentar la confirmación del pago mediante el gateway para activar la suscripción | 1 | Enrique Ochoa | Done |
+| US52 | Renovación y estado de la suscripción | T-17 | Definir estados de la suscripción | Definir los estados activa, pendiente, en mora y cancelada con sus transiciones | 1 | Enrique Ochoa | Done |
+| US52 | Renovación y estado de la suscripción | T-18 | Modelar ciclo de renovación | Modelar la renovación automática anual y las notificaciones previas al vencimiento | 1 | Enrique Ochoa | Done |
+| US52 | Renovación y estado de la suscripción | T-19 | Documentar reglas de mora y cancelación | Documentar el tratamiento de pagos rechazados, mora y cancelación del plan | 1 | Enrique Ochoa | Done |
+| US53 | Acceso al portal según plan | T-20 | Definir características por plan | Definir las características del portal habilitadas según el plan contratado | 1 | Hernan Huayta | Done |
+| US53 | Acceso al portal según plan | T-21 | Modelar acceso condicionado | Modelar el acceso condicionado del personal y pacientes según el plan de la institución | 1 | Hernan Huayta | Done |
+| US53 | Acceso al portal según plan | T-22 | Documentar restricciones por plan | Documentar las restricciones y degradación del servicio al vencer el plan | 1 | Enrique Ochoa | Done |
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
