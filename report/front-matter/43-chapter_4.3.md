@@ -1,5 +1,7 @@
 ﻿## 4.3. Landing Page UI Design
 
+Los wireframes y mockups presentados a continuacion fueron elaborados en **Figma** y pueden visualizarse en el siguiente enlace: https://shorturl.at/MMsBu
+
 ---
 El planteamiento del diseño de interfaz de usuario para nuestra Landing Page se considerará como un tema fundamental para el proyecto debido a que es una primera impresión hacia los usuarios del cómo se vizualizará y objetivos presentará.<br> Gracias a esto, nos permitira obtener la informacion necesaria para causar una gran impresión y mayor interés en la navegación de la página.
 
