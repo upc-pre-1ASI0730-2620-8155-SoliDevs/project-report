@@ -10,7 +10,7 @@ workspace {
     sms = softwareSystem "SMS Gateway" "Servicio de mensajería para entregar comprobantes de derivación." {
       tags "External System"
     }
-    email = softwareSystem "Email Service" "Servicio de correo para enlaces de recuperación de credenciales." {
+    email = softwareSystem "Resend" "Servicio de email transaccional (API) para enlaces de recuperación de credenciales." {
       tags "External System"
     }
     stripe = softwareSystem "Stripe" "Servicio externo de pago para el procesamiento de cobros de la suscripción institucional." {
