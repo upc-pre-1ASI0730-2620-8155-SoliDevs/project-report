@@ -6,29 +6,24 @@ skinparam linetype ortho
 entity "alerts" as alerts {
   * id : INT <<PK>>
   --
-  * reading_id : INT <<FK>>
-  * episode_id : INT <<FK>>
-  * level_id : INT <<FK>>
-  * metric_id : INT <<FK>>
-  * observed_value : DECIMAL(6,2)
-  * state_id : INT <<FK>>
-  * raised_at : DATETIME2
-  acknowledged_by : INT <<FK>>
+  * patient_name : VARCHAR(120)
+  dni : VARCHAR(12)
+  * episode : VARCHAR(20) <<FK>>
+  * priority : VARCHAR(20)
+  * vital_sign : VARCHAR(12)
+  * value : VARCHAR(20)
+  safe_range : VARCHAR(30)
+  * severity : VARCHAR(12)
+  * time : VARCHAR(5)
+  * created_at : DATETIME2
   acknowledged_at : DATETIME2
-  resolved_at : DATETIME2
+  escalated_at : DATETIME2
+  escalated_to : VARCHAR(40)
 }
-entity "alert_states" as astates {
-  * id : INT <<PK>>
+entity "episodes" as episodes {
+  * id : VARCHAR(20) <<PK>>
   --
-  * name : VARCHAR(20)
+  * patient_id : INT <<FK>>
 }
-entity "vital_metrics" as metrics {
-  * id : INT <<PK>>
-  --
-  * name : VARCHAR(30)
-  * min_safe : DECIMAL(6,2)
-  * max_safe : DECIMAL(6,2)
-}
-alerts }o--|| astates
-alerts }o--|| metrics
+alerts }o--|| episodes
 @enduml
