@@ -16,7 +16,7 @@ System_Boundary(c1, "Tri-Aid") {
 
 System_Ext(iot, "Dispositivos IoT", "Tensiometro, oximetro, pulsimetro y termometro BLE.")
 System_Ext(sms, "SMS Gateway", "Mensajeria de comprobantes.")
-System_Ext(email, "Email Service", "Correo transaccional.")
+System_Ext(email, "Resend", "Email transaccional (enlaces de recuperacion).", "Resend API")
 
 Rel(triageStaff, panel, "Usa", "HTTPS")
 Rel(patient, portal, "Usa", "HTTPS")
