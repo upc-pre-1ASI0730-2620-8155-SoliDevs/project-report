@@ -103,11 +103,10 @@ Para guiar el desarrollo del producto, se han planteado supuestos fundamentales 
 5. La integración con instrumentos de medición es el diferenciador competitivo de la solución frente a los sistemas hospitalarios actuales.
 
 **Business Outcome Assumptions**
-1. Las instituciones reducirán el tiempo promedio de registro y clasificación por paciente en el módulo de triaje en al menos un 30%.
-2. El número de errores de transcripción de signos vitales disminuirá en un 95% tras la implementación de la lectura automática.
-3. La institución aumentará la detección temprana de valores críticos, atendiendo las alertas generadas en menos de 2 minutos tras la lectura.
-4. La retención anual de instituciones suscritas será superior al 85% si los indicadores de atención en triaje mejoran durante los primeros 6 meses.
-5. La reducción de derivaciones a especialidades equivocadas disminuirá los costos operativos del servicio de emergencia en un 15% anual.
+1. Reducir el tiempo promedio de registro y clasificación por paciente en los módulos de triaje de los hospitales y clínicas clientes en al menos un 30% en un periodo de 8 meses.
+2. Disminuir los errores de transcripción de signos vitales en un 95% mediante la implementación de la lectura automática en los centros de salud afiliados en los próximos 3 meses.
+3. Garantizar la atención de alertas de valores críticos en menos de 2 minutos tras la lectura para aumentar la tasa de detección temprana en los servicios de emergencia asociados dentro de 3 meses.
+4. Alcanzar una tasa de retención anual superior al 85% entre las clínicas y hospitales suscritos a la plataforma (clientes B2B), demostrando mejoras medibles en sus indicadores de atención durante los primeros 6 meses.
 
 **User Assumptions**
 1. El personal de triaje está compuesto principalmente por enfermeras y técnicos de enfermería con competencia digital intermedia, familiarizados con sistemas hospitalarios.
