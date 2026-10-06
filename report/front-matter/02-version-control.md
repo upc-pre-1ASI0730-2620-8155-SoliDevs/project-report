@@ -2,6 +2,7 @@
 
 | Versión | Fecha    | Autor                           | Descripción de modificación |
 |:--------|:---------|:--------------------------------|:----------------------------|
+| 1.0.0   | 17/09/26 | Huayta Fuentes, Hernan Gabriel | Primer release de la version del front-matter |
 | 0.30.0   | 16/09/26 | Ochoa Prado, Enrique Augusto | User Flow, Wireflow y sección 4.4 Web Applications UX/UI Design |
 | 0.29.0   | 16/09/26 | Alva Ayala, Mitchell Adriano | Wireframes del Panel de Triaje y Portal del Paciente con wireframe board |
 | 0.28.0   | 16/09/26 | Huayta Fuentes, Hernan Gabriel | Mockups de la Landing Page y sección 4.3 Landing Page UI Design |

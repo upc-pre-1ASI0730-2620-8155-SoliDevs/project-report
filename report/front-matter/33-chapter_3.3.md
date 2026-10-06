@@ -388,3 +388,13 @@
         </tr>
     </tbody>
 </table>
+
+## Cápturas de pantalla del Product Backlog
+
+---
+<div align="center"><img src="../../report/assets/jira/product-backlog-tb1-1.png" width="100%"></div>
+<div align="center"><img src="../../report/assets/jira/product-backlog-tb1-2.png" width="100%"></div>
+<div align="center"><img src="../../report/assets/jira/product-backlog-tb1-3.png" width="100%"></div>
+<div align="center"><img src="../../report/assets/jira/product-backlog-tb1-4.png" width="100%"></div>
+
+**URL del Product Backlog**: [Product Backlog](https://shorturl.at/TTeko)
