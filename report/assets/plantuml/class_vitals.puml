@@ -6,61 +6,66 @@ skinparam classAttributeIconSize 0
 hide empty methods
 
 package "API Layer" {
-  class VitalSignsController <<Controller>> {
-    +LinkDeviceAsync(patientId: int, command: LinkDeviceCommand) : Task<ActionResult<DeviceLinkDto>>
-    +IngestReadingAsync(command: IngestReadingCommand) : Task<IActionResult>
-    +ConfirmReadingsAsync(episodeId: int) : Task<ActionResult<VitalsSummaryDto>>
-    +RejectReadingsAsync(episodeId: int) : Task<ActionResult<ReadingsRejectedResponse>>
-    +IngressManualAsync(episodeId: int, command: ManualReadingCommand) : Task<ActionResult<VitalSignsReadingDto>>
+  class VitalSignsController <<API Routes>> {
+    +GetDevices() : DeviceDto[]
+    +CreateDevice(command: CreateDeviceCommand) : DeviceDto
+    +UpdateDevice(id: string, command: UpdateDeviceCommand) : DeviceDto
+    +DeleteDevice(id: string) : void
+    +UpdateEpisodeVitals(episodeId: string, episode: EpisodeVitals) : void
   }
 }
 
 package "Application Layer" {
   interface IVitalSignsService <<interface>> {
-    +LinkDeviceAsync(command: LinkDeviceCommand) : Task<Result<DeviceLinkDto>>
-    +IngestReadingAsync(command: IngestReadingCommand) : Task<Result<VitalSignsReadingDto>>
-    +IngressManualAsync(command: ManualReadingCommand) : Task<Result<VitalSignsReadingDto>>
-    +ConfirmReadingsAsync(episodeId: int) : Task<Result<VitalsSummaryDto>>
-    +RejectReadingsAsync(episodeId: int) : Task<Result<bool>>
+    +ConfirmReadings(episode) : void
+    +ReleaseEpisodeDevices(episodeId: string) : void
   }
   class VitalSignsService {
-    +IngestReadingAsync(command: IngestReadingCommand) : Task<Result<VitalSignsReadingDto>>
+    +ReadFromDevice(episode, device) : void
+    +SetManual(episode, key, value) : void
+    +ClearVital(episode, key) : void
+    +ConfirmReadings(episode) : void
+    +RejectReadings(episode) : void
+    +ReleaseEpisodeDevices(episodeId: string) : void
   }
 }
 
 package "Domain Layer" {
-  class VitalSignsReading <<Aggregate Root>> {
-    -Id : int
-    -EpisodeId : int
-    -DeviceId : int?
-    -Systolic : short?
-    -Diastolic : short?
-    -SpO2 : byte?
-    -HeartRate : short?
-    -Temperature : decimal?
+  class VitalSignEntry <<Value Object>> {
+    -Key : VitalKey <<enum>>
+    -Value : string
     -Source : ReadingSource <<enum>>
-    -Status : ReadingStatus <<enum>>
-    -CapturedAt : DateTime
-    +ValidatePhysiologicalRange() : Result
-    +Confirm(userId: int) : void
+    -Model : string?
+    -Time : string
+  }
+  class EpisodeVitals <<Aggregate Root>> {
+    -EpisodeId : string
+    -Confirmed : bool
+    -VitalsConfirmedAt : DateTime?
+    +ReadFromDevice(key, device) : void
+    +SetManual(key, value) : void
+    +Clear(key) : void
+    +Confirm() : void
     +Reject() : void
   }
-  class DeviceLink {
+  class Device {
     -Id : int
-    -EpisodeId : int
-    -DeviceId : int
-    -DeviceType : DeviceType <<enum>>
-    -LinkedAt : DateTime
-    -IsActive : bool
+    -Type : DeviceType <<enum>>
+    -Model : string
+    -Online : bool
+    -LastUse : string?
+    -LinkedEpisode : string?
   }
   enum ReadingSource {
-    Automatic
+    Auto
     Manual
   }
-  enum ReadingStatus {
-    Captured
-    Confirmed
-    Rejected
+
+  enum VitalKey {
+    Pa
+    SpO2
+    Fc
+    Temp
   }
   enum DeviceType {
     BloodPressureMonitor
@@ -77,9 +82,11 @@ package "Domain Layer" {
 
 package "Infrastructure Layer" {
   interface IVitalSignsRepository <<interface>> {
-    +AddAsync(reading: VitalSignsReading) : Task<void>
-    +GetPendingByEpisodeAsync(episodeId: int) : Task<IEnumerable<VitalSignsReading>>
-    +ConfirmForEpisodeAsync(episodeId: int) : Task<void>
+    +UpdateEpisodeVitalsAsync(episodeId: string, episode: EpisodeVitals) : Task<void>
+    +GetDevicesAsync() : Task<IEnumerable<Device>>
+    +AddDeviceAsync(device: Device) : Task<void>
+    +UpdateDeviceAsync(device: Device) : Task<void>
+    +DeleteDeviceAsync(id: int) : Task<void>
   }
   class VitalSignsRepository {
     -_context : AppDbContext
@@ -88,11 +95,12 @@ package "Infrastructure Layer" {
 
 VitalSignsController --> IVitalSignsService
 VitalSignsService ..|> IVitalSignsService
-VitalSignsService --> VitalSignsReading
-VitalSignsService --> DeviceLink
+VitalSignsService --> EpisodeVitals
+VitalSignsService --> Device
 VitalSignsService --> IVitalSignsRepository
-VitalSignsReading --> ReadingSource
-VitalSignsReading --> ReadingStatus
-DeviceLink --> DeviceType
-VitalSignsReading ..> VitalsConfirmedEvent
+EpisodeVitals --> VitalSignEntry
+VitalSignEntry --> ReadingSource
+VitalSignEntry --> VitalKey
+Device --> DeviceType
+EpisodeVitals ..> VitalsConfirmedEvent
 @enduml
