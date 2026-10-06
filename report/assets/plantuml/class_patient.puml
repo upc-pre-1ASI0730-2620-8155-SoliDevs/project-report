@@ -31,6 +31,7 @@ package "Domain Layer" {
   class Patient <<Aggregate Root>> {
     -Id : int
     -Dni : string?
+    -DocType : DocType <<enum>>
     -FirstName : string
     -LastName : string
     -BirthDate : DateOnly
@@ -46,9 +47,24 @@ package "Domain Layer" {
     Male
     Female
   }
+  enum DocType {
+    Dni
+    Ce
+    Pas
+  }
   class PatientRegisteredEvent <<Domain Event>> {
     +PatientId : int
     +OccurredAt : DateTime
+  }
+  class Episode <<Aggregate Root>> {
+    -Id : string
+    -PatientId : int
+    -Arrival : DateTime
+    -Confirmed : bool
+    -VitalsConfirmedAt : DateTime?
+    -Referred : bool
+    +ConfirmVitals() : void
+    +MarkReferred() : void
   }
 }
 
@@ -71,4 +87,5 @@ PatientRegistrationService --> IPatientRepository
 PatientRepository ..|> IPatientRepository
 Patient --> Sex
 Patient ..> PatientRegisteredEvent
+Episode --> Patient
 @enduml
