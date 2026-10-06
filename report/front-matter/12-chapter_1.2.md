@@ -103,10 +103,11 @@ Para guiar el desarrollo del producto, se han planteado supuestos fundamentales 
 5. La integración con instrumentos de medición es el diferenciador competitivo de la solución frente a los sistemas hospitalarios actuales.
 
 **Business Outcome Assumptions**
-1. Reducir el tiempo promedio de registro y clasificación por paciente en los módulos de triaje de los hospitales y clínicas clientes en al menos un 30% en un periodo de 8 meses.
-2. Disminuir los errores de transcripción de signos vitales en un 95% mediante la implementación de la lectura automática en los centros de salud afiliados en los próximos 3 meses.
-3. Garantizar la atención de alertas de valores críticos en menos de 2 minutos tras la lectura para aumentar la tasa de detección temprana en los servicios de emergencia asociados dentro de 3 meses.
-4. Alcanzar una tasa de retención anual superior al 85% entre las clínicas y hospitales suscritos a la plataforma (clientes B2B), demostrando mejoras medibles en sus indicadores de atención durante los primeros 6 meses.
+1. Reducir el tiempo promedio de registro y clasificación de triaje de 10 a 7 minutos por paciente (una reducción del 30%), medido desde el inicio del registro hasta la prioridad asignada mediante marcas de tiempo en el sistema, en un periodo de 8 meses desde su implementación.
+2. Reducir la tasa de errores de transcripción de signos vitales del 5% al 0.25% (una reducción del 95%) en los centros de salud afiliados, medido por auditoría mensual de discrepancias sobre una muestra aleatoria de 10 registros por centro, durante un semestre (considerando tres meses de implementación y tres de estabilización y medición).
+3. Lograr que el 90% de las alertas de valores críticos sean atendidas en menos de 2 minutos tras la lectura del signo vital, medido por la diferencia de tiempo entre la alerta y la confirmación clínica en el sistema, en los servicios de emergencia asociados, dentro de los 3 primeros meses desde el lanzamiento.
+4. Demostrar que el 80% de los clientes B2B muestran una mejora del 20% en al menos dos de sus indicadores de atención (tiempo de triaje, tasa de error de transcripción o precisión de clasificación), medido a través de reportes trimestrales del sistema durante los primeros 6 meses.
+5. Alcanzar una tasa de retención anual del 85% entre clínicas y hospitales suscritos a la plataforma, medido mediante la renovación de contratos al mes 12, durante el primer año desde el lanzamiento.
 
 **User Assumptions**
 1. El personal de triaje está compuesto principalmente por enfermeras y técnicos de enfermería con competencia digital intermedia, familiarizados con sistemas hospitalarios.
