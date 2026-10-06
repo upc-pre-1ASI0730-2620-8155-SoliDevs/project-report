@@ -7,7 +7,7 @@ Container(portal, "Portal del Paciente", "Vue.js 3 SPA", "Consulta del paciente.
 ContainerDb(db, "Database", "SQL Server", "Persistencia del sistema.")
 System_Ext(iot, "Dispositivos IoT", "Gateway BLE de signos vitales.")
 System_Ext(sms, "SMS Gateway", "Mensajeria.")
-System_Ext(email, "Email Service", "Correo transaccional.")
+System_Ext(email, "Resend", "Email transaccional (enlaces de recuperacion).", "Resend API")
 
 Container_Boundary(api, "API Application (ASP.NET Core 8)") {
   Component(iam, "IAM Component", "C#, ASP.NET Identity + JWT", "Autenticacion de personal y pacientes, bloqueo por intentos fallidos, recuperacion de contrasena.")
