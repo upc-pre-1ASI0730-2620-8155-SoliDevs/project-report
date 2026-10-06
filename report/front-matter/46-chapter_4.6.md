@@ -4,7 +4,7 @@ En esta sección se define la arquitectura de software orientada al dominio de T
 
 ### 4.6.1. Design-Level EventStorming
 
-Como continuación del Big Picture EventStorming realizado en el Capítulo II, llevamos a cabo una sesión de Design-Level EventStorming con el fin de profundizar en el modelado del dominio del triaje, identificando con mayor detalle los Bounded Contexts, Commands, Events, Policies y Aggregates que estructuran nuestra solución. Se utilizó la herramienta Miro para su elaboración.
+Como continuación del Big Picture EventStorming realizado en el Capítulo II, llevamos a cabo una sesión de Design-Level EventStorming con el fin de profundizar en el modelado del dominio del triaje, identificando con mayor detalle los Bounded Contexts, Commands, Events, Policies y Aggregates que estructuran nuestra solución. Se utilizó la herramienta Miro para su elaboracion; el tablero desarrollado se encuentra disponible en el siguiente enlace para una mejor visualizacion: https://shorturl.at/IOH1x
 
 A partir de esta sesión identificamos los siguientes Bounded Contexts:
 

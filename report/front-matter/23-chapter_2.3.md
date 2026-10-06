@@ -68,7 +68,7 @@ Se elaboró un Customer Journey Map por segmento en **UXPressia**, documentando 
 #### Journey Map — Personal de triaje
 
 <p align="center">
-   <img src="../assets/ux_pressia/journey-map-enfermera.png" alt="Journey Map — Personal de triaje">
+   <img src="../assets/ux_pressia/marisol-quispe's-journey-map.png" alt="Journey Map — Personal de triaje">
 </p>
 
 El recorrido del personal de triaje abarca siete etapas: inicio de turno, recepción del paciente, medición de signos vitales, registro y transcripción, clasificación de prioridad, espera y re-evaluación, y cierre del turno. La curva de emociones se mantiene baja durante casi todo el recorrido: la recepción genera presión por la fila que espera, la medición produce estrés por la demora de los aparatos, el registro y la transcripción generan frustración por el doble registro, la clasificación genera inseguridad ante casos límite, y la espera genera angustia ante deterioros detectados tarde. El turno concluye con agotamiento por el papeleo final, sin métricas que permitan evaluar el desempeño.
@@ -76,7 +76,7 @@ El recorrido del personal de triaje abarca siete etapas: inicio de turno, recepc
 #### Journey Map — Paciente
 
 <p align="center">
-   <img src="../assets/ux_pressia/journey-map-paciente.png" alt="Journey Map — Paciente">
+   <img src="../assets/ux_pressia/jorge-ramírez's-journey-map.png" alt="Journey Map — Paciente">
 </p>
 
 El recorrido del paciente abarca seis etapas: decisión de acudir, llegada y admisión, espera al triaje, triaje, espera prolongada y atención y alta. La única elevación de la curva emocional ocurre durante el triaje, cuando el paciente percibe que será evaluado; sin embargo, esta mejoría es efímera: al regresar a la sala de espera sin información sobre su estado, su estado emocional cae nuevamente hacia la frustración y la desconfianza. Finalmente, el paciente se retira insatisfecho, sin un comprobante digital que documente su atención.
@@ -90,13 +90,13 @@ Para la construcción de los Empathy Maps, el equipo colocó a cada User Persona
 #### User Persona 1: Marisol Quispe
 
 <p align="center">
-   <img src="../assets/ux_pressia/empathy-map-marisol.png" alt="Empathy Map — Marisol Quispe">
+   <img src="../assets/ux_pressia/marisol-quispe-empathy-map.png" alt="Empathy Map — Marisol Quispe">
 </p>
 
 #### User Persona 2: Jorge Ramírez
 
 <p align="center">
-   <img src="../assets/ux_pressia/empathy-map-jorge.png" alt="Empathy Map — Jorge Ramírez">
+   <img src="../assets/ux_pressia/jorge-ramírez-empathy-map.png" alt="Empathy Map — Jorge Ramírez">
 </p>
 
 ### 2.3.5. As-Is Scenario Mapping
