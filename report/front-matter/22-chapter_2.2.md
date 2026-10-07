@@ -142,3 +142,57 @@ Técnico de instalación de gas doméstico, conviviente y padre de una hija de 3
 <div align="center"><img src="../assets/interviews/Entrevista_LuisRamos.png" width="700"></div>
 
 *URL del video:* [https://shorturl.at/ZTYG7](https://shorturl.at/ZTYG7)
+
+### 2.2.3. Análisis de entrevistas
+
+#### Segmento 1: Personal de triaje de hospitales y clínicas
+
+Este análisis sintetiza los principales patrones identificados en las entrevistas realizadas a las tres enfermeras(os) de este segmento (Shirley García, Franklin Bereche y Camila Rojas), expresados mediante porcentajes, iniciando con las características objetivas observadas:
+
+> - El 100% de los entrevistados emplea como instrumentos base el tensiómetro, el termómetro y el pulsoxímetro (el 67% añade el glucómetro o el estetoscopio según la gravedad del caso).
+> - El 100% trabaja con un doble registro: primero anota en fichas o papel y luego transcribe a un sistema clínico institucional (historia clínica, SICCAM, ESI o sistema propio de la clínica), lo que genera duplicidad de trabajo en la toma de signos vitales.
+> - El 100% estima que el triaje de un paciente demora entre 5 y 10 minutos; sin embargo, todos coinciden en que el registro de los datos (digitación o entrevista exhaustiva) es lo que más tiempo consume de ese proceso.
+> - El 100% deriva al paciente según el motivo de consulta, los síntomas y los signos vitales; cuando la derivación es incorrecta, la corrige el médico o la especialidad receptora mediante interconsulta o reenvío.
+> - El 100% utiliza un sistema informático institucional en paralelo al papel, y el 100% afirmó que puede verificar posteriormente si el paciente que clasificó llegó a la especialidad asignada.
+> - El 67% recibió capacitación formal en escalas de triaje y protocolos institucionales; el 100% navega habitualmente con Chrome y el 67% trabaja con PC Windows en el triaje.
+> - En horas pico, el 100% prioriza la precisión por sobre la velocidad, y el 67% reconoce sacrificar el detalle del registro para completarlo cuando baja la demanda.
+
+#### Pain Points
+
+> - El 100% de los entrevistados señaló que el registro manual de datos es la mayor fricción del triaje: la digitación en papel o en pantalla resta tiempo de atención directa al paciente.
+> - El 100% reportó errores de clasificación o derivación que se detectan tardíamente, cuando el médico evalúa al paciente o cuando la especialidad receptora reevalúa el caso.
+> - El 100% manifestó que la doble registración (papel + sistema) genera trabajo duplicado y riesgo de inconsistencias entre ambas fuentes.
+> - El 67% expresó que, sin alertas automáticas de valores fuera de límites, la detección de un paciente crítico depende de la revisión manual de los valores.
+
+#### Gains
+
+> - El 100% considera que la captura automática de signos vitales desde los instrumentos reduciría la digitación manual y el tiempo de triaje.
+> - El 100% afirmó que confiaría en las lecturas automáticas siempre que pueda corroborarlas (equipo calibrado, repetir la toma del signo alterado, coincidencia con el cuadro del paciente).
+> - El 100% coincidió en que en pantalla no pueden faltar los signos vitales, el nivel de prioridad y los datos clínicos del paciente (antecedentes, alergias y motivo de consulta).
+> - El 100% adoptaría una herramienta rápida, confiable, segura e intuitiva ("aprendible en una sola mañana") y la rechazaría si es complicada, lenta o inconsistente.
+
+#### Segmento 2: Pacientes que acuden a emergencia
+
+Este análisis consolida los hallazgos de los tres pacientes entrevistados (Pedro Hernández, Cristofer Becerra y Luis Ramos), representados mediante porcentajes, empezando por las características objetivas:
+
+> - El 100% llegó a emergencia por medios propios o con familiares/amigos; en ningún caso acudió una ambulancia del sistema de salud.
+> - El 100% tuvo que registrarse o repetir sus datos más de una vez en la misma visita, incluso encontrándose lastimado o con dolor.
+> - El 67% esperó tres horas o más desde su llegada hasta ser atendido (el 33% esperó 40 minutos solo para el triaje); en todos los casos la espera se percibió como excesiva.
+> - El 100% no recibió explicación sobre el significado de su número de prioridad ni sobre el avance de su atención; el información solo llegó cuando su turno fue llamado o cuando le entregaron la bata de operación.
+> - El 67% sufrió directamente un error del sistema hospitalario: derivación a la especialidad equivocada (con media hora perdida) o riesgo de perder el turno por el llamado a voces.
+> - El 67% reportó pérdida o riesgo de pérdida de documentos físicos (recetas, fichas) que luego debió volver a solicitar.
+> - El 100% utiliza celular Android con WhatsApp como aplicación principal, y el 100% manifestó preferir un enlace web antes que instalar una aplicación por una sola visita.
+
+Pasando a las características subjetivas, analizamos los Pain Points de nuestros usuarios:
+
+> - El 100% describió la espera sin información como la peor parte de la experiencia: "a ciegas", "sin saber si estaba grave, si empeoraba o si mejoraba"; la incertidumbre se percibió como más angustiante que la propia dolencia.
+> - El 100% relató que ningún miembro del personal lo mantuvo informado durante la espera, debiendo acudir por iniciativa propia a preguntar el avance.
+> - El 67% expresó temor o desconfianza frente a la herramienta: la filtración de datos personales (DNI, celular, correo) o que el sistema falle justo cuando se lo necesita.
+> - El 33% estuvo a punto de abandonar la emergencia sin ser atendido por la combinación de dolor, incertidumbre y horario tardío.
+
+Respecto a los Gains de nuestros usuarios:
+
+> - El 100% afirmó que usaría un enlace que muestre su turno, su nivel de prioridad explicado y la especialidad a la que va a ser derivado, mientras espera.
+> - El 100% coincidió en que ser informado cambiaría por completo la experiencia: "si me dicen cuánto falta y qué significa mi nivel, la misma espera se siente distinta".
+> - El 67% valora el comprobante digital de atención porque los documentos en papel se pierden con frecuencia.
+> - El 67% desea que el familiar o acompañante también pueda ver el avance de la atención desde su propio celular, ya que "¿cuánto falta?" es lo primero que pregunta quien acompaña.
