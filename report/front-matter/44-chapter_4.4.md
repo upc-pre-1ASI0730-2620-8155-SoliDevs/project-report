@@ -17,12 +17,37 @@ Los wireframes en blanco y negro definen la estructura de cada pantalla sin la i
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-El wireflow general de Tri-Aid conecta las 22 pantallas del producto mediante flechas de navegación etiquetadas con los disparadores de cada transición. El recorrido principal del personal de salud va del inicio de sesión a la cola de triaje y de ahí a la cadena registro → signos vitales → clasificación → derivación → comprobante; los valores fuera de rango ramifican hacia el centro de alertas, mientras que reportes, dispositivos y sesión cuelgan del menú lateral. En paralelo, el paciente consulta su estado desde el portal y el Institution Admin gestiona la suscripción, con flujos alternativos punteados para el pago rechazado y la suscripción inactiva.
+Los wireflows se organizan **por objetivo de usuario (user goal)**: cada diagrama conecta las pantallas de un objetivo mediante flechas de navegación etiquetadas con los disparadores de cada transición. Las flechas punteadas representan flujos alternativos (pago pendiente de actualización, suscripción vencida, cierre de sesión, atención de una alerta).
 
 <p align="center">
-  <img src="../assets/flows/wireflow-triaid.png" alt="Wireflow Tri-Aid" style="width:1180px">
+  <img src="../assets/flows/goal1-suscripcion-wireflow.png" alt="Wireflow User Goal 1" style="width:1180px">
 </p>
-<p align="center"><i>Wireflow general — wireframes conectados por flujo de navegación (Suscripción · Panel · Portal)</i></p>
+<p align="center"><i>Wireflow User Goal 1 — Gestionar la suscripción institucional</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal2-atender-paciente-wireflow.png" alt="Wireflow User Goal 2" style="width:1180px">
+</p>
+<p align="center"><i>Wireflow User Goal 2 — Atender un paciente de punta a punta</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal3-dispositivos-wireflow.png" alt="Wireflow User Goal 3" style="width:1180px">
+</p>
+<p align="center"><i>Wireflow User Goal 3 — Gestionar dispositivos de medición</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal4-alertas-wireflow.png" alt="Wireflow User Goal 4" style="width:1180px">
+</p>
+<p align="center"><i>Wireflow User Goal 4 — Monitorear y atender alertas</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal5-reportes-sesion-wireflow.png" alt="Wireflow User Goal 5" style="width:1180px">
+</p>
+<p align="center"><i>Wireflow User Goal 5 — Consultar reportes y cerrar sesión</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal6-portal-wireflow.png" alt="Wireflow User Goal 6" style="width:1180px">
+</p>
+<p align="center"><i>Wireflow User Goal 6 — Paciente: consultar su estado de atención</i></p>
 
 ### 4.4.3. Web Applications Mock-ups
 
@@ -35,12 +60,37 @@ Los mock-ups aplican el sistema visual definitivo sobre la estructura validada e
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-El user flow general consolida los objetivos de usuario principales sobre el flujo completo con mock-ups, incluyendo el happy path y los flujos alternativos (valores fuera de rango, pago rechazado, suscripción inactiva):
+Cada objetivo de usuario se documenta con su **user flow en mock-ups de alta fidelidad**, incluyendo el happy path y los flujos alternativos (valores fuera de rango, pago pendiente, suscripción inactiva):
 
 <p align="center">
-  <img src="../assets/flows/userflow-triaid.png" alt="User Flow Tri-Aid" style="width:1180px">
+  <img src="../assets/flows/goal1-suscripcion-userflow.png" alt="User Flow User Goal 1" style="width:1180px">
 </p>
-<p align="center"><i>User Flow general — mock-ups conectados por objetivos de usuario</i></p>
+<p align="center"><i>User Flow User Goal 1 — Gestionar la suscripción institucional</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal2-atender-paciente-userflow.png" alt="User Flow User Goal 2" style="width:1180px">
+</p>
+<p align="center"><i>User Flow User Goal 2 — Atender un paciente de punta a punta</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal3-dispositivos-userflow.png" alt="User Flow User Goal 3" style="width:1180px">
+</p>
+<p align="center"><i>User Flow User Goal 3 — Gestionar dispositivos de medición</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal4-alertas-userflow.png" alt="User Flow User Goal 4" style="width:1180px">
+</p>
+<p align="center"><i>User Flow User Goal 4 — Monitorear y atender alertas</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal5-reportes-sesion-userflow.png" alt="User Flow User Goal 5" style="width:1180px">
+</p>
+<p align="center"><i>User Flow User Goal 5 — Consultar reportes y cerrar sesión</i></p>
+
+<p align="center">
+  <img src="../assets/flows/goal6-portal-userflow.png" alt="User Flow User Goal 6" style="width:1180px">
+</p>
+<p align="center"><i>User Flow User Goal 6 — Paciente: consultar su estado de atención</i></p>
 
 **User Goals cubiertos:**
 
