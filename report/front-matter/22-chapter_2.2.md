@@ -4,7 +4,7 @@
 
 <div style="text-align: justify">
 
-Como técnica de indagación de requerimientos, el equipo aplicó **entrevistas semiestructuradas** a representantes de los dos segmentos objetivo. Para cada segmento se realizaron **3 entrevistas**, grabadas en video (evidencia subida y compartida mediante enlaces) con una duración objetivo de 15 a 20 minutos por sesión. Las entrevistas combinaron preguntas de caracterización (para la construcción posterior de los User Personas) con preguntas de profundización sobre el proceso de triaje y los puntos de dolor identificados en el Lean UX Process del Capítulo I. El diseño que se presenta a continuación fue el aplicado en las entrevistas registradas en la sección 2.2.2.
+Como técnica de indagación de requerimientos, el equipo aplicará **entrevistas semiestructuradas** a representantes de los dos segmentos objetivo. Para cada segmento se realizarán **entre 3 y 5 entrevistas**, grabadas en video (evidencia subida a Microsoft Stream) con una duración objetivo de 15 a 20 minutos por sesión. Las entrevistas combinan preguntas de caracterización (para la construcción posterior de los User Personas) con preguntas de profundización sobre el proceso de triaje y los puntos de dolor identificados en el Lean UX Process del Capítulo I.
 
 </div>
 
@@ -85,7 +85,7 @@ Como técnica de indagación de requerimientos, el equipo aplicó **entrevistas 
 - ¿Le generaría confianza que el sistema "lea" automáticamente sus signos vitales del aparato, o prefiere que la enfermera los confirme?
 - ¿Qué es lo primero que pregunta un familiar cuando lo acompañan a emergencia?
 
-<!-- Diseño de entrevistas aplicado en el TB1: 3 entrevistas por segmento registradas en 2.2.2. -->
+<!-- TODO (equipo): ejecutar las entrevistas grabadas (3-5 por segmento), subir los videos a Microsoft Stream y completar las secciones 2.2.2 (Registro de entrevistas) y 2.2.3 (Análisis de entrevistas) en la siguiente iteración del informe. -->
 
 ### 2.2.2. Registro de entrevistas
 
@@ -109,14 +109,6 @@ Licenciado en enfermería del Hospital Cayetano Heredia de Piura. Describió el 
 
 *URL del video:* [https://shorturl.at/wfoRD](https://shorturl.at/wfoRD)
 
-**Entrevista 3 — Rojas, Camila (25 años, Lima)**
-
-Licenciada en enfermería con 2 años de experiencia, el último en triaje de un hospital público de Lima. Describió el flujo: el paciente llega a admisión donde se verifican sus datos y pasa a triaje, donde se toman los signos vitales (tensiómetro, termómetro y pulsoxímetro; glucómetro si el paciente se ve mal) y se entrevista sobre los síntomas para priorizar y derivar a medicina, cirugía u otra especialidad. El triaje demora entre 5 y 10 minutos y afirmó que **lo que más tiempo consume es la entrevista y el registro**, pues debe digitar todo manualmente y en ocasiones el paciente no sabe explicar bien qué le pasa. Los errores frecuentes son la sub-clasificación por una mala descripción de síntomas y los errores de digitación con alta demanda, detectándose cuando el médico evalúa o alguien revisa el registro. Relató una noche con muchos pacientes simultáneos en la que avisó a su jefa, se repartieron los pacientes y se priorizó a los graves explicando la espera a los leves. La derivación la decide ella con los síntomas y signos vitales, consultando al médico ante dudas; una derivación incorrecta se corrige con interconsulta al área correcta. Su hospital usa un sistema clínico (historia, interconsultas, notas de enfermería), pero criticó que **digitar todo a mano le quita tiempo de mirada al paciente**. Consideró que la captura automática de signos vitales agilizaría el proceso y confiaría si el equipo está calibrado y los valores coinciden con el paciente —ante algo raro, remediría a mano—. En pantalla querría signos vitales, antecedentes, alergias, motivo de consulta, nivel de prioridad y alertas visibles en rojo. Adoptaría una herramienta rápida, confiable y fácil de usar; la rechazaría si es complicada o lenta. Usa la PC del triaje (Windows) y Chrome, y en su celular Android consulta escalas clínicas (Glasgow). En horas pico sacrifica el detalle del registro, nunca la precisión, y verifica en el sistema si sus pacientes llegaron a la especialidad asignada.
-
-<div align="center"><img src="../assets/interviews/Entrevista_Enfermera_TB1.png" width="700"></div>
-
-*URL del video:* [https://shorturl.at/Q3FHj](https://shorturl.at/Q3FHj)
-
 #### Segmento 2: Pacientes que acuden a emergencia
 
 **Entrevista 1 — Hernández, Pedro (20 años, San Juan de Lurigancho)**
@@ -127,72 +119,4 @@ Repartidor en motocicleta que acudió a emergencias tras un accidente de tránsi
 
 *URL del video:* [https://shorturl.at/om88z](https://shorturl.at/om88z)
 
-**Entrevista 2 — Becerra, Cristofer (21 años, San Martín de Porres)**
-
-Estudiante universitario que acudió a emergencias hace cuatro años por una apendicitis: tras días de mala alimentación empezó con dolor abdominal, y por la insistencia de su abuela acudió al hospital con sus padres. El registro demoró alrededor de una hora, la consulta médica otra hora, y luego **esperó cerca de seis horas sentado para ingresar a cirugía** mientras el dolor aumentaba. Durante la espera nadie lo informó del avance —el médico se acercó una sola vez a indicarle que esperara— y su turno llegó recién a las 3:30 de la madrugada, cuando le entregaron la bata de operación. No consideró retirarse ni acudir a una clínica privada. Nunca ha utilizado una aplicación o sistema de salud que muestre el estado de la atención. Señaló que una herramienta que muestre el proceso le habría dado tranquilidad (“yo no sabía nada, si estaba bien, si estaba empeorando o mejorando”). Su principal desconfianza frente a una app de este tipo es la **filtración de datos personales** (DNI, celular, correo). Si pudiera cambiar un solo aspecto: la información al paciente —“me dejaron a la deriva durante seis horas; si los doctores hubieran venido a decirme cómo estaba, la experiencia habría sido distinta”.
-
-<div align="center"><img src="../assets/interviews/Entrevista_CristoferBecerra.png" width="700"></div>
-
-*URL del video:* [https://shorturl.at/c7JVf](https://shorturl.at/c7JVf)
-
-**Entrevista 3 — Ramos Quispe, Luis Ángel (29 años, San Martín de Porres)**
-
-Técnico de instalación de gas doméstico, conviviente y padre de una hija de 3 años. Un domingo, jugando vóley en la loza deportiva del barrio, saltó a bloquear en la red y cayó pisando el pie de otro jugador: se torció el tobillo derecho (esguince grave grado II) y sus amigos lo llevaron en mototaxi al Hospital Cayetano Heredia. En admisión le tomaron los datos y le dieron una ficha con un número escrito a mano; esperó **cerca de tres horas** con el tobillo hinchado, acercándose dos veces a la ventanilla sin obtener información. En el triaje le tomaron los signos vitales pero no le explicaron su nivel ni su significado. Además, **fue derivado primero a Medicina de Emergencia por error** —la doctora lo reenvió a Traumatología—, perdiendo media hora adicional. Tuvo que repetir sus datos tres veces en la misma visita (admisión, triaje y farmacia). Recibió venda elástica y receta de antiinflamatorios; sin seguro, pagó la atención de su bolsillo y estuvo 10 días sin trabajar. Uso de tecnología: Samsung J7 de gama baja, WhatsApp y Yape; prefiere un enlace web sin registros complicados y solicita que su pareja pueda ver su avance desde su propio celular. Dijo que el familiar siempre pregunta primero “¿cuánto falta?”, que prioriza al especialista correcto aunque demore más (“rápido pero al tonto, no”), y que confiaría en la lectura automática de los dispositivos si la enfermera confirma al final. Si pudiera cambiar un solo aspecto: **que te informen** —“la noche entera a ciegas, sin saber si tu caso es grave, cuánto falta ni a dónde te mandan, eso es lo que uno no olvida”.
-
-<div align="center"><img src="../assets/interviews/Entrevista_LuisRamos.png" width="700"></div>
-
-*URL del video:* [https://shorturl.at/ZTYG7](https://shorturl.at/ZTYG7)
-
-### 2.2.3. Análisis de entrevistas
-
-#### Segmento 1: Personal de triaje de hospitales y clínicas
-
-Este análisis sintetiza los principales patrones identificados en las entrevistas realizadas a las tres enfermeras(os) de este segmento (Shirley García, Franklin Bereche y Camila Rojas), expresados mediante porcentajes, iniciando con las características objetivas observadas:
-
-> - El 100% de los entrevistados emplea como instrumentos base el tensiómetro, el termómetro y el pulsoxímetro (el 67% añade el glucómetro o el estetoscopio según la gravedad del caso).
-> - El 100% trabaja con un doble registro: primero anota en fichas o papel y luego transcribe a un sistema clínico institucional (historia clínica, SICCAM, ESI o sistema propio de la clínica), lo que genera duplicidad de trabajo en la toma de signos vitales.
-> - El 100% estima que el triaje de un paciente demora entre 5 y 10 minutos; sin embargo, todos coinciden en que el registro de los datos (digitación o entrevista exhaustiva) es lo que más tiempo consume de ese proceso.
-> - El 100% deriva al paciente según el motivo de consulta, los síntomas y los signos vitales; cuando la derivación es incorrecta, la corrige el médico o la especialidad receptora mediante interconsulta o reenvío.
-> - El 100% utiliza un sistema informático institucional en paralelo al papel, y el 100% afirmó que puede verificar posteriormente si el paciente que clasificó llegó a la especialidad asignada.
-> - El 67% recibió capacitación formal en escalas de triaje y protocolos institucionales; el 100% navega habitualmente con Chrome y el 67% trabaja con PC Windows en el triaje.
-> - En horas pico, el 100% prioriza la precisión por sobre la velocidad, y el 67% reconoce sacrificar el detalle del registro para completarlo cuando baja la demanda.
-
-#### Pain Points
-
-> - El 100% de los entrevistados señaló que el registro manual de datos es la mayor fricción del triaje: la digitación en papel o en pantalla resta tiempo de atención directa al paciente.
-> - El 100% reportó errores de clasificación o derivación que se detectan tardíamente, cuando el médico evalúa al paciente o cuando la especialidad receptora reevalúa el caso.
-> - El 100% manifestó que la doble registración (papel + sistema) genera trabajo duplicado y riesgo de inconsistencias entre ambas fuentes.
-> - El 67% expresó que, sin alertas automáticas de valores fuera de límites, la detección de un paciente crítico depende de la revisión manual de los valores.
-
-#### Gains
-
-> - El 100% considera que la captura automática de signos vitales desde los instrumentos reduciría la digitación manual y el tiempo de triaje.
-> - El 100% afirmó que confiaría en las lecturas automáticas siempre que pueda corroborarlas (equipo calibrado, repetir la toma del signo alterado, coincidencia con el cuadro del paciente).
-> - El 100% coincidió en que en pantalla no pueden faltar los signos vitales, el nivel de prioridad y los datos clínicos del paciente (antecedentes, alergias y motivo de consulta).
-> - El 100% adoptaría una herramienta rápida, confiable, segura e intuitiva ("aprendible en una sola mañana") y la rechazaría si es complicada, lenta o inconsistente.
-
-#### Segmento 2: Pacientes que acuden a emergencia
-
-Este análisis consolida los hallazgos de los tres pacientes entrevistados (Pedro Hernández, Cristofer Becerra y Luis Ramos), representados mediante porcentajes, empezando por las características objetivas:
-
-> - El 100% llegó a emergencia por medios propios o con familiares/amigos; en ningún caso acudió una ambulancia del sistema de salud.
-> - El 100% tuvo que registrarse o repetir sus datos más de una vez en la misma visita, incluso encontrándose lastimado o con dolor.
-> - El 67% esperó tres horas o más desde su llegada hasta ser atendido (el 33% esperó 40 minutos solo para el triaje); en todos los casos la espera se percibió como excesiva.
-> - El 100% no recibió explicación sobre el significado de su número de prioridad ni sobre el avance de su atención; el información solo llegó cuando su turno fue llamado o cuando le entregaron la bata de operación.
-> - El 67% sufrió directamente un error del sistema hospitalario: derivación a la especialidad equivocada (con media hora perdida) o riesgo de perder el turno por el llamado a voces.
-> - El 67% reportó pérdida o riesgo de pérdida de documentos físicos (recetas, fichas) que luego debió volver a solicitar.
-> - El 100% utiliza celular Android con WhatsApp como aplicación principal, y el 100% manifestó preferir un enlace web antes que instalar una aplicación por una sola visita.
-
-Pasando a las características subjetivas, analizamos los Pain Points de nuestros usuarios:
-
-> - El 100% describió la espera sin información como la peor parte de la experiencia: "a ciegas", "sin saber si estaba grave, si empeoraba o si mejoraba"; la incertidumbre se percibió como más angustiante que la propia dolencia.
-> - El 100% relató que ningún miembro del personal lo mantuvo informado durante la espera, debiendo acudir por iniciativa propia a preguntar el avance.
-> - El 67% expresó temor o desconfianza frente a la herramienta: la filtración de datos personales (DNI, celular, correo) o que el sistema falle justo cuando se lo necesita.
-> - El 33% estuvo a punto de abandonar la emergencia sin ser atendido por la combinación de dolor, incertidumbre y horario tardío.
-
-Respecto a los Gains de nuestros usuarios:
-
-> - El 100% afirmó que usaría un enlace que muestre su turno, su nivel de prioridad explicado y la especialidad a la que va a ser derivado, mientras espera.
-> - El 100% coincidió en que ser informado cambiaría por completo la experiencia: "si me dicen cuánto falta y qué significa mi nivel, la misma espera se siente distinta".
-> - El 67% valora el comprobante digital de atención porque los documentos en papel se pierden con frecuencia.
-> - El 67% desea que el familiar o acompañante también pueda ver el avance de la atención desde su propio celular, ya que "¿cuánto falta?" es lo primero que pregunta quien acompaña.
+*Nota: se encuentran en proceso entrevistas adicionales por segmento hasta alcanzar el rango de 3 a 5 requerido, cuyos registros serán incorporados a esta sección.*
