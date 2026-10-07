@@ -40,7 +40,7 @@ Con el flujo de comunicación definido, introdujimos los Aggregates para delimit
 
 **Paso 4: Identification of External Systems, Read Models and Attribute Refinement**
 
-En la etapa final incorporamos los sistemas externos con los que el dominio se integra (dispositivos IoT, SMS Gateway y Email Service), los Read Models que el personal necesita visualizar antes de ejecutar un comando (cola de triaje, rangos NT-158, disponibilidad de especialidades, alertas activas, historial de visitas) y refinamos los atributos técnicos de cada aggregate para eliminar ambigüedades de cara a la implementación.
+En la etapa final incorporamos los sistemas externos con los que el dominio se integra (dispositivos IoT, SMS Gateway y Resend), los Read Models que el personal necesita visualizar antes de ejecutar un comando (cola de triaje, rangos NT-158, disponibilidad de especialidades, alertas activas, historial de visitas) y refinamos los atributos técnicos de cada aggregate para eliminar ambigüedades de cara a la implementación.
 
 <div align="center"><img src="../assets/miro/Design-Level Event Storming.png" width ="100%"></div>
 
@@ -52,7 +52,7 @@ Este diagrama representa el nivel más alto de abstracción, mostrando Tri-Aid c
 
 > * Centro del Sistema: Tri-Aid posiciona la captura automática de signos vitales, la clasificación asistida NT-158 y la derivación informada como su núcleo de valor.
 > * Usuarios (Actors): El Personal de Triaje opera el panel de triaje; el Paciente consulta su estado a través del portal EP07; el Administrador de Institución gestiona cuentas, dispositivos y la suscripción.
-> * Sistemas Externos: Los Dispositivos IoT (tensiómetro, oxímetro, pulsimetro y termómetro BLE) ingresan las lecturas de signos vitales; el SMS Gateway entrega comprobantes de derivación; el Email Service envía enlaces de recuperación de credenciales; Stripe procesa los cobros de la suscripción institucional; y el HIS Hospitalario recibe episodios de triaje bajo el plan Institucional.
+> * Sistemas Externos: Los Dispositivos IoT (tensiómetro, oxímetro, pulsimetro y termómetro BLE) ingresan las lecturas de signos vitales; el SMS Gateway entrega comprobantes de derivación; Resend envía los enlaces de recuperación de credenciales vía su API de email transaccional; Stripe procesa los cobros de la suscripción institucional; y el HIS Hospitalario recibe episodios de triaje bajo el plan Institucional.
 
 ### 4.6.3. Software Architecture Container Diagrams
 
@@ -65,7 +65,7 @@ Este diagrama desglosa Tri-Aid en sus unidades de ejecución principales, especi
 > * Portal del Paciente: SPA en Vue.js 3 (mobile-first) correspondiente al portal EP07, de consulta en solo lectura.
 > * API Application: Contenedor central desarrollado en ASP.NET Core 8 con C#. Es un monolito modular organizado por bounded contexts que expone servicios REST para las SPA y WebSockets (SignalR) para alertas y actualizaciones de estado en tiempo real.
 > * Database: Motor relacional SQL Server que persiste usuarios, pacientes, episodios, lecturas de signos vitales, clasificaciones, alertas, derivaciones y suscripciones.
-> * Integraciones externas del API: SMS Gateway (comprobantes), Email Service (recuperación de credenciales) y Stripe (cobros de la suscripción institucional).
+> * Integraciones externas del API: SMS Gateway (comprobantes), Resend (recuperación de credenciales) y Stripe (cobros de la suscripción institucional).
 
 ### 4.6.4. Software Architecture Components Diagrams
 

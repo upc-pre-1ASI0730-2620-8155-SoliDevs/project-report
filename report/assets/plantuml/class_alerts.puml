@@ -11,7 +11,7 @@ package "API Layer" {
     +AcknowledgeAsync(alertId: int, userId: int) : Task<IActionResult>
     +EscalateAsync(alertId: int, command: EscalationCommand) : Task<ActionResult<EscalationResponse>>
   }
-  class AlertsHub <<SignalR Hub>> {
+  class AlertsHub <<UI Component>> {
     +JoinTriageGroup() : Task
     +JoinPatientGroup(episodeId: int) : Task
   }
@@ -33,7 +33,7 @@ package "Application Layer" {
     +BroadcastAlertAsync(alert: Alert) : Task
     +BroadcastResolutionAsync(alert: Alert) : Task
   }
-  class SignalRAlertBroadcaster {
+  class InMemoryEventBus <<Event Bus>> {
     -_hubContext : IHubContext<AlertsHub>
   }
 }
@@ -41,29 +41,28 @@ package "Application Layer" {
 package "Domain Layer" {
   class Alert <<Aggregate Root>> {
     -Id : int
-    -ReadingId : int
-    -EpisodeId : int
-    -Level : TriageLevel <<enum>>
-    -Metric : VitalMetric <<enum>>
-    -ObservedValue : decimal
-    -State : AlertState <<enum>>
-    -RaisedAt : DateTime
-    -AcknowledgedBy : int?
+    -PatientName : string
+    -Dni : string?
+    -Episode : string
+    -Priority : string
+    -VitalSign : string
+    -Value : string
+    -SafeRange : string?
+    -Severity : string
+    -Time : string
+    -CreatedAt : DateTime
     -AcknowledgedAt : DateTime?
-    +Acknowledge(userId: int) : void
-    +ResolveIfSafe(safeRange: Range) : bool
+    -EscalatedAt : DateTime?
+    -EscalatedTo : string?
+    +Acknowledge() : void
+    +Escalate(to: string) : void
   }
-  enum AlertState {
-    Active
-    Acknowledged
-    Resolved
-  }
-  enum VitalMetric {
-    Systolic
-    Diastolic
-    SpO2
-    HeartRate
-    Temperature
+  enum Severity {
+    critical
+    warning
+    info
+    resolved
+    escalated
   }
 }
 
@@ -81,10 +80,9 @@ package "Infrastructure Layer" {
 AlertsController --> IAlertingService
 AlertingService ..|> IAlertingService
 AlertingService --> IAlertBroadcaster
-SignalRAlertBroadcaster ..|> IAlertBroadcaster
+InMemoryEventBus ..|> IAlertBroadcaster
 AlertingService --> Alert
-Alert --> AlertState
-Alert --> VitalMetric
+Alert --> Severity
 AlertingService --> IAlertRepository
-AlertsHub ..> SignalRAlertBroadcaster
+AlertingService ..> InMemoryEventBus
 @enduml

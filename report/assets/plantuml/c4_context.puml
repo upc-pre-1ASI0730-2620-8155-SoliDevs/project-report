@@ -10,7 +10,7 @@ System(triAid, "Tri-Aid", "Plataforma SaaS de triaje asistido por IoT: captura a
 
 System_Ext(iot, "Dispositivos IoT", "Tensiometro, oximetro, pulsimetro y termometro digitales que transmiten lecturas via BLE.")
 System_Ext(sms, "SMS Gateway", "Servicio de mensajeria para entregar comprobantes de derivacion.")
-System_Ext(email, "Email Service", "Servicio de correo para enlaces de recuperacion de credenciales.")
+System_Ext(email, "Resend", "Servicio de email transaccional para enlaces de recuperacion de credenciales.", "Resend API")
 System_Ext(his, "HIS Hospitalario", "Sistema de informacion hospitalaria existente (integracion en plan Institucional).")
 
 Rel(triageStaff, triAid, "Usa el Panel de Triaje (HTTPS)")
