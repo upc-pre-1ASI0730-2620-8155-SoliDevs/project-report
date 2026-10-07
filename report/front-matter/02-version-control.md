@@ -3,6 +3,14 @@
 | Versión | Fecha    | Autor                           | Descripción de modificación |
 |:--------|:---------|:--------------------------------|:----------------------------|
 | 1.0.0   | 17/09/26 | Huayta Fuentes, Hernan Gabriel | Primer release de la version del front-matter |
+| 1.1.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Sección 4.6: reemplazo del Email Service genérico por Resend en los diagramas C4 de contexto, contenedores y componentes |
+| 1.2.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Secciones 4.7 y 4.8: diagramas de clases y base de datos alineados al modelo implementado (Episode, DocType, EpisodeVitals, VitalSignEntry, Device, Alert y sus ERD) |
+| 1.3.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Sección 4.4: mockups recapturados con la pantalla nueva Pacientes, wireflows y user flows por user goal (6 por tipo) y corrección de la altura del sidebar en todas las capturas |
+| 1.4.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Sección 5.2.2: Sprint 2 completa (planning, LACX, sprint backlog, evidencias de desarrollo, ejecución, servicios y despliegue) |
+| 1.5.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Student Outcome: entradas TB1 de cada integrante por bounded context y conclusiones del parcial, en ambos criterios |
+| 1.6.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Sección 2.2.2: entrevistas del TB1 registradas (Camila Rojas - enfermera de triaje; Cristofer Becerra y Luis Ramos - pacientes) con evidencia de video |
+| 1.7.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Sección 2.2.3: análisis de entrevistas por segmento con patrones, Pain Points y Gains |
+| 2.0.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Entrega de la segunda versión del informe (TB1), en la cual se implementó la aplicación web por bounded contexts documentada en el Sprint 2, se registró el análisis de entrevistas de ambos segmentos, se actualizó el Student Outcome con los aportes del parcial y se corregieron los diagramas C4, de clases, de base de datos, mockups y flujos. |
 | 0.30.0   | 16/09/26 | Ochoa Prado, Enrique Augusto | User Flow, Wireflow y sección 4.4 Web Applications UX/UI Design |
 | 0.29.0   | 16/09/26 | Alva Ayala, Mitchell Adriano | Wireframes del Panel de Triaje y Portal del Paciente con wireframe board |
 | 0.28.0   | 16/09/26 | Huayta Fuentes, Hernan Gabriel | Mockups de la Landing Page y sección 4.3 Landing Page UI Design |
