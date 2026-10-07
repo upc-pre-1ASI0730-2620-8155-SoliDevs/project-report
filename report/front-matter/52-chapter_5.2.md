@@ -129,7 +129,7 @@ La figura muestra las principales características de la plataforma: captura aut
 **Figura 4. Sección Plans**
 
 <div align="center">
-  <img src="../assets/landing/landing-planes.png" width="700">
+  <img src="../assets/landing/landing-plans-section.png" width="700">
 </div>
 
 La figura muestra la sección de planes de suscripción con el toggle de facturación mensual/anual, dirigida a las instituciones de salud interesadas en la plataforma.
