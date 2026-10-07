@@ -4,7 +4,7 @@
 
 <div style="text-align: justify">
 
-Como técnica de indagación de requerimientos, el equipo aplicará **entrevistas semiestructuradas** a representantes de los dos segmentos objetivo. Para cada segmento se realizarán **entre 3 y 5 entrevistas**, grabadas en video (evidencia subida a Microsoft Stream) con una duración objetivo de 15 a 20 minutos por sesión. Las entrevistas combinan preguntas de caracterización (para la construcción posterior de los User Personas) con preguntas de profundización sobre el proceso de triaje y los puntos de dolor identificados en el Lean UX Process del Capítulo I.
+Como técnica de indagación de requerimientos, el equipo aplicó **entrevistas semiestructuradas** a representantes de los dos segmentos objetivo. Para cada segmento se realizaron **3 entrevistas**, grabadas en video (evidencia subida y compartida mediante enlaces) con una duración objetivo de 15 a 20 minutos por sesión. Las entrevistas combinaron preguntas de caracterización (para la construcción posterior de los User Personas) con preguntas de profundización sobre el proceso de triaje y los puntos de dolor identificados en el Lean UX Process del Capítulo I. El diseño que se presenta a continuación fue el aplicado en las entrevistas registradas en la sección 2.2.2.
 
 </div>
 
@@ -85,7 +85,7 @@ Como técnica de indagación de requerimientos, el equipo aplicará **entrevista
 - ¿Le generaría confianza que el sistema "lea" automáticamente sus signos vitales del aparato, o prefiere que la enfermera los confirme?
 - ¿Qué es lo primero que pregunta un familiar cuando lo acompañan a emergencia?
 
-<!-- TODO (equipo): ejecutar las entrevistas grabadas (3-5 por segmento), subir los videos a Microsoft Stream y completar las secciones 2.2.2 (Registro de entrevistas) y 2.2.3 (Análisis de entrevistas) en la siguiente iteración del informe. -->
+<!-- Diseño de entrevistas aplicado en el TB1: 3 entrevistas por segmento registradas en 2.2.2. -->
 
 ### 2.2.2. Registro de entrevistas
 
@@ -109,6 +109,14 @@ Licenciado en enfermería del Hospital Cayetano Heredia de Piura. Describió el 
 
 *URL del video:* [https://shorturl.at/wfoRD](https://shorturl.at/wfoRD)
 
+**Entrevista 3 — Rojas, Camila (25 años, Lima)**
+
+Licenciada en enfermería con 2 años de experiencia, el último en triaje de un hospital público de Lima. Describió el flujo: el paciente llega a admisión donde se verifican sus datos y pasa a triaje, donde se toman los signos vitales (tensiómetro, termómetro y pulsoxímetro; glucómetro si el paciente se ve mal) y se entrevista sobre los síntomas para priorizar y derivar a medicina, cirugía u otra especialidad. El triaje demora entre 5 y 10 minutos y afirmó que **lo que más tiempo consume es la entrevista y el registro**, pues debe digitar todo manualmente y en ocasiones el paciente no sabe explicar bien qué le pasa. Los errores frecuentes son la sub-clasificación por una mala descripción de síntomas y los errores de digitación con alta demanda, detectándose cuando el médico evalúa o alguien revisa el registro. Relató una noche con muchos pacientes simultáneos en la que avisó a su jefa, se repartieron los pacientes y se priorizó a los graves explicando la espera a los leves. La derivación la decide ella con los síntomas y signos vitales, consultando al médico ante dudas; una derivación incorrecta se corrige con interconsulta al área correcta. Su hospital usa un sistema clínico (historia, interconsultas, notas de enfermería), pero criticó que **digitar todo a mano le quita tiempo de mirada al paciente**. Consideró que la captura automática de signos vitales agilizaría el proceso y confiaría si el equipo está calibrado y los valores coinciden con el paciente —ante algo raro, remediría a mano—. En pantalla querría signos vitales, antecedentes, alergias, motivo de consulta, nivel de prioridad y alertas visibles en rojo. Adoptaría una herramienta rápida, confiable y fácil de usar; la rechazaría si es complicada o lenta. Usa la PC del triaje (Windows) y Chrome, y en su celular Android consulta escalas clínicas (Glasgow). En horas pico sacrifica el detalle del registro, nunca la precisión, y verifica en el sistema si sus pacientes llegaron a la especialidad asignada.
+
+<div align="center"><img src="../assets/interviews/Entrevista_Enfermera_TB1.png" width="700"></div>
+
+*URL del video:* [https://shorturl.at/Q3FHj](https://shorturl.at/Q3FHj)
+
 #### Segmento 2: Pacientes que acuden a emergencia
 
 **Entrevista 1 — Hernández, Pedro (20 años, San Juan de Lurigancho)**
@@ -119,4 +127,18 @@ Repartidor en motocicleta que acudió a emergencias tras un accidente de tránsi
 
 *URL del video:* [https://shorturl.at/om88z](https://shorturl.at/om88z)
 
-*Nota: se encuentran en proceso entrevistas adicionales por segmento hasta alcanzar el rango de 3 a 5 requerido, cuyos registros serán incorporados a esta sección.*
+**Entrevista 2 — Becerra, Cristofer (21 años, San Martín de Porres)**
+
+Estudiante universitario que acudió a emergencias hace cuatro años por una apendicitis: tras días de mala alimentación empezó con dolor abdominal, y por la insistencia de su abuela acudió al hospital con sus padres. El registro demoró alrededor de una hora, la consulta médica otra hora, y luego **esperó cerca de seis horas sentado para ingresar a cirugía** mientras el dolor aumentaba. Durante la espera nadie lo informó del avance —el médico se acercó una sola vez a indicarle que esperara— y su turno llegó recién a las 3:30 de la madrugada, cuando le entregaron la bata de operación. No consideró retirarse ni acudir a una clínica privada. Nunca ha utilizado una aplicación o sistema de salud que muestre el estado de la atención. Señaló que una herramienta que muestre el proceso le habría dado tranquilidad (“yo no sabía nada, si estaba bien, si estaba empeorando o mejorando”). Su principal desconfianza frente a una app de este tipo es la **filtración de datos personales** (DNI, celular, correo). Si pudiera cambiar un solo aspecto: la información al paciente —“me dejaron a la deriva durante seis horas; si los doctores hubieran venido a decirme cómo estaba, la experiencia habría sido distinta”.
+
+<div align="center"><img src="../assets/interviews/Entrevista_CristoferBecerra.png" width="700"></div>
+
+*URL del video:* [https://shorturl.at/c7JVf](https://shorturl.at/c7JVf)
+
+**Entrevista 3 — Ramos Quispe, Luis Ángel (29 años, San Martín de Porres)**
+
+Técnico de instalación de gas doméstico, conviviente y padre de una hija de 3 años. Un domingo, jugando vóley en la loza deportiva del barrio, saltó a bloquear en la red y cayó pisando el pie de otro jugador: se torció el tobillo derecho (esguince grave grado II) y sus amigos lo llevaron en mototaxi al Hospital Cayetano Heredia. En admisión le tomaron los datos y le dieron una ficha con un número escrito a mano; esperó **cerca de tres horas** con el tobillo hinchado, acercándose dos veces a la ventanilla sin obtener información. En el triaje le tomaron los signos vitales pero no le explicaron su nivel ni su significado. Además, **fue derivado primero a Medicina de Emergencia por error** —la doctora lo reenvió a Traumatología—, perdiendo media hora adicional. Tuvo que repetir sus datos tres veces en la misma visita (admisión, triaje y farmacia). Recibió venda elástica y receta de antiinflamatorios; sin seguro, pagó la atención de su bolsillo y estuvo 10 días sin trabajar. Uso de tecnología: Samsung J7 de gama baja, WhatsApp y Yape; prefiere un enlace web sin registros complicados y solicita que su pareja pueda ver su avance desde su propio celular. Dijo que el familiar siempre pregunta primero “¿cuánto falta?”, que prioriza al especialista correcto aunque demore más (“rápido pero al tonto, no”), y que confiaría en la lectura automática de los dispositivos si la enfermera confirma al final. Si pudiera cambiar un solo aspecto: **que te informen** —“la noche entera a ciegas, sin saber si tu caso es grave, cuánto falta ni a dónde te mandan, eso es lo que uno no olvida”.
+
+<div align="center"><img src="../assets/interviews/Entrevista_LuisRamos.png" width="700"></div>
+
+*URL del video:* [https://shorturl.at/ZTYG7](https://shorturl.at/ZTYG7)
