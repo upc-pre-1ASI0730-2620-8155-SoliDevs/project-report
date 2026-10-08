@@ -7,3 +7,4 @@ A continuación se presenta la relación de videos de exposición del equipo Sol
 | Entrega | Título del video | Enlace |
 |---|---|---|
 | AV1 | Exposición del Avance 1 — Proyecto Tri-Aid (SoliDevs — Aplicaciones Web 1ASI0730) | [Video de Exposición AV1](https://shorturl.at/TtqNb) |
+| TB1 | Exposición del Trabajo Parcial 1 — Proyecto Tri-Aid (SoliDevs — Aplicaciones Web 1ASI0730) | [Video de Exposición TB1](https://shorturl.at/Dax0t) |
