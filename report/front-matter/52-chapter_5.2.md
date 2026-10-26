@@ -124,7 +124,7 @@ En esta sección se describe el problema que aborda Tri-Aid y la solución propu
   <img src="../assets/landing/landing-features.png" width="700">
 </div>
 
-La figura muestra las principales características de la plataforma: captura automática de signos vitales, clasificación asistida NT-158 y seguimiento del paciente en tiempo real.
+La figura muestra las principales características de la plataforma: captura automática de signos vitales, clasificación asistida NT-042 y seguimiento del paciente en tiempo real.
 
 **Figura 4. Sección Plans**
 
@@ -169,7 +169,7 @@ Durante el Sprint 1, la colaboración del equipo se distribuyó entre los cuatro
 La evidencia muestra el resumen de contribuciones del repositorio durante el mes de trabajo: 4 autores con commits en el proyecto, evidenciando la participación activa de todos los integrantes del equipo en el desarrollo de los productos de la solución y de la documentación.
 
 ### 5.2.2. Sprint 2
-El segundo sprint de nuestro proyecto estuvo enfocado en la construcción de la aplicación web de Tri-Aid mediante una arquitectura por Bounded Contexts (Domain-Driven Design): Patient Registration, Vital Signs Capture, Triage Classification, Specialty Assignment y Alerting. Durante este periodo, el equipo implementó el flujo completo de atención de extremo a extremo —registro del paciente, captura y confirmación de signos vitales, clasificación de prioridad según la escala NT-158, derivación a especialidades con comprobante, y generación y atención de alertas— integrando cada contexto mediante un bus de eventos y una infraestructura de persistencia compartida sobre una API REST simulada.
+El segundo sprint de nuestro proyecto estuvo enfocado en la construcción de la aplicación web de Tri-Aid mediante una arquitectura por Bounded Contexts (Domain-Driven Design): Patient Registration, Vital Signs Capture, Triage Classification, Specialty Assignment y Alerting. Durante este periodo, el equipo implementó el flujo completo de atención de extremo a extremo —registro del paciente, captura y confirmación de signos vitales, clasificación de prioridad según la escala NT-042, derivación a especialidades con comprobante, y generación y atención de alertas— integrando cada contexto mediante un bus de eventos y una infraestructura de persistencia compartida sobre una API REST simulada.
 
 #### 5.2.2.1. Sprint Planning 2.
 
@@ -183,9 +183,9 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
 | Location | Google Meet |
 | Prepared By | Castro Solorza, Nicolás Eduardo |
 | Attendees (to planning meeting) | Alva Ayala, Mitchell Adriano / Castro Solorza, Nicolás Eduardo / Huayta Fuentes, Hernan Gabriel / Ochoa Prado, Enrique Augusto |
-| Sprint 2 Review Summary | Durante el Sprint 2 se lograron implementar los cinco bounded contexts del producto de punta a punta: registro de pacientes con identidad temporal y regularización, captura y confirmación de signos vitales con dispositivos vinculados, clasificación NT-158 con sugerencia automática del motor de reglas, derivación a especialidades con cola y comprobante, y alertas generadas por valores fuera de rango con reconocimiento y escalamiento. El Product Owner validó el flujo completo funcionando sobre el backend simulado y resaltó como siguiente prioridad el despliegue productivo (Firebase Hosting + API en Render) y la persistencia de la sesión del personal. |
+| Sprint 2 Review Summary | Durante el Sprint 2 se lograron implementar los cinco bounded contexts del producto de punta a punta: registro de pacientes con identidad temporal y regularización, captura y confirmación de signos vitales con dispositivos vinculados, clasificación NT-042 con sugerencia automática del motor de reglas, derivación a especialidades con cola y comprobante, y alertas generadas por valores fuera de rango con reconocimiento y escalamiento. El Product Owner validó el flujo completo funcionando sobre el backend simulado y resaltó como siguiente prioridad el despliegue productivo (Firebase Hosting + API en Render) y la persistencia de la sesión del personal. |
 | Sprint 2 Retrospective Summary | El equipo identificó como acierto la decisión de definir la infraestructura compartida (BaseApi/BaseEndpoint y bus de eventos) al inicio del sprint, lo que permitió que los cinco contextos se desarrollaran en paralelo sin bloqueos. Como oportunidad de mejora, se estableció que los contratos de los endpoints (recursos y assemblers) deben acordarse antes de comenzar el desarrollo de cada contexto, para evitar retrabajos de integración; asimismo, se acordó documentar cada contexto con su diagrama de clases y ERD en el mismo sprint en que se implementa. |
-| Sprint 2 Goal | Nuestro enfoque está en que el personal de salud de los hospitales y clínicas afiliadas pueda atender a un paciente de punta a punta con Tri-Aid: registrarlo, capturar y confirmar sus signos vitales desde dispositivos vinculados, clasificar su prioridad con la escala NT-158, derivarlo a la especialidad correcta con comprobante y recibir alertas ante valores críticos.<br>Creemos que esto proporcionará al personal una aplicación web consistente que reduce el tiempo de triaje y los errores de transcripción, y al paciente trazabilidad sobre su atención.<br>Esto se confirmará cuando el flujo completo registro → signos vitales → clasificación → derivación → alertas funcione de extremo a extremo en la aplicación web conectada a la API simulada (json-server en desarrollo y Firebase RTDB en despliegue). |
+| Sprint 2 Goal | Nuestro enfoque está en que el personal de salud de los hospitales y clínicas afiliadas pueda atender a un paciente de punta a punta con Tri-Aid: registrarlo, capturar y confirmar sus signos vitales desde dispositivos vinculados, clasificar su prioridad con la escala NT-042, derivarlo a la especialidad correcta con comprobante y recibir alertas ante valores críticos.<br>Creemos que esto proporcionará al personal una aplicación web consistente que reduce el tiempo de triaje y los errores de transcripción, y al paciente trazabilidad sobre su atención.<br>Esto se confirmará cuando el flujo completo registro → signos vitales → clasificación → derivación → alertas funcione de extremo a extremo en la aplicación web conectada a la API simulada (json-server en desarrollo y Firebase RTDB en despliegue). |
 | Sprint 2 Velocity | Para este Sprint 2, evaluando el desempeño previo y la capacidad actual del equipo, se ha establecido un Velocity de 54 Story Points. |
 | Sum of Story Points | 54 |
 
@@ -218,9 +218,9 @@ A continuación, se detallan las User Stories priorizadas y las tareas asociadas
 | US-12 | Vincular dispositivos al episodio | T-04 | Modelar DeviceLink, DeviceType y VitalsConfirmedEvent | Dominio del contexto vital-signs-capture | 3 | Mitchell Adriano | Done |
 | US-12 | Vincular dispositivos al episodio | T-05 | Implementar device-store con inventario persistido | Alta, baja y estado online de dispositivos; picklist solo con dispositivos libres | 4 | Mitchell Adriano | Done |
 | US-12 | Vincular dispositivos al episodio | T-06 | Desarrollar vista de dispositivos y panel de vínculo | Inventario, vínculo por episodio y liberación automática al completar derivación | 4 | Mitchell Adriano | Done |
-| US-19 | Sugerir prioridad con la escala NT-158 | T-07 | Implementar motor de reglas NT-158 | Clasificación por rangos, valores faltantes y fuera de rango | 5 | Hernan Huayta | Done |
-| US-19 | Sugerir prioridad con la escala NT-158 | T-08 | Modelar agregado Classification con estados | PendingConfirmation, Assigned, Overridden, Confirmed | 3 | Hernan Huayta | Done |
-| US-21 | Aprobar o modificar la prioridad sugerida | T-09 | Desarrollar vista de clasificación con guía NT-158 | Sugerencia, modificación con justificación y confirmación con tiempo de ciclo | 5 | Hernan Huayta | Done |
+| US-19 | Sugerir prioridad con la escala NT-042 | T-07 | Implementar motor de reglas NT-042 | Clasificación por rangos, valores faltantes y fuera de rango | 5 | Hernan Huayta | Done |
+| US-19 | Sugerir prioridad con la escala NT-042 | T-08 | Modelar agregado Classification con estados | PendingConfirmation, Assigned, Overridden, Confirmed | 3 | Hernan Huayta | Done |
+| US-21 | Aprobar o modificar la prioridad sugerida | T-09 | Desarrollar vista de clasificación con guía NT-042 | Sugerencia, modificación con justificación y confirmación con tiempo de ciclo | 5 | Hernan Huayta | Done |
 | US-30 | Sugerir especialidad según síntomas | T-10 | Implementar catálogo codificado de síntomas | Catálogo ES/EN con restricciones demográficas por especialidad | 4 | Hernan Huayta | Done |
 | US-31 | Derivar al paciente a una especialidad | T-11 | Modelar agregado Referral con cambio justificado | Cola por especialidad, estados Referred/InAttention/Attended | 4 | Hernan Huayta | Done |
 | US-33 | Emitir comprobante de derivación | T-12 | Implementar voucher con QR y envío por SMS | Voucher dialog con código QR y confirmación de envío | 3 | Hernan Huayta | Done |
@@ -261,7 +261,7 @@ En esta sección se presentan evidencias de la ejecución de la web application 
   <img src="../assets/web_applications/cap1-panel.png">
 </div>
 
-La figura muestra el panel principal del personal de salud: pacientes en espera, alertas activas del turno, espera promedio y atendidos, junto a la lista de espera de admisión ordenada por prioridad (escala NT-158) con acciones directas por paciente (ver ficha, clasificar, regularizar, comprobante) y el estado de los dispositivos de medición de la sala.
+La figura muestra el panel principal del personal de salud: pacientes en espera, alertas activas del turno, espera promedio y atendidos, junto a la lista de espera de admisión ordenada por prioridad (escala NT-042) con acciones directas por paciente (ver ficha, clasificar, regularizar, comprobante) y el estado de los dispositivos de medición de la sala.
 
 **Figura 2. Registro de paciente**
 
@@ -279,13 +279,13 @@ La figura representa el formulario de registro de pacientes: datos de identidad 
 
 La figura muestra la ficha del paciente con el panel de captura de signos vitales: los dispositivos vinculados al episodio permiten la lectura automática (o el ingreso manual ante dispositivos desconectados), con confirmación de las lecturas que dispara el evento VitalsConfirmedEvent hacia los contextos de triaje y alertas.
 
-**Figura 4. Clasificación de prioridad (NT-158)**
+**Figura 4. Clasificación de prioridad (NT-042)**
 
 <div align="center">
   <img src="../assets/web_applications/cap3-triaje.png">
 </div>
 
-La figura presenta la clasificación de prioridad: el motor de reglas NT-158 sugiere el nivel a partir de los signos vitales confirmados, el personal puede aprobar la sugerencia o modificarla con justificación, y el tiempo de ciclo del triaje se registra al confirmar.
+La figura presenta la clasificación de prioridad: el motor de reglas NT-042 sugiere el nivel a partir de los signos vitales confirmados, el personal puede aprobar la sugerencia o modificarla con justificación, y el tiempo de ciclo del triaje se registra al confirmar.
 
 **Figura 5. Derivación a especialidad y comprobante**
 

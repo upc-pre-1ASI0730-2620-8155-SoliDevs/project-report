@@ -30,7 +30,7 @@
   <p align = "center">Equipo<br>
   </p>
   <h4 align = "center">
-  SolidDevs
+  SoliDevs
   </h4>
   <p align = "center">Proyecto</p>
   <h4 align = "center">

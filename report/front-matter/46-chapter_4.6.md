@@ -40,7 +40,7 @@ Con el flujo de comunicación definido, introdujimos los Aggregates para delimit
 
 **Paso 4: Identification of External Systems, Read Models and Attribute Refinement**
 
-En la etapa final incorporamos los sistemas externos con los que el dominio se integra (dispositivos IoT, SMS Gateway y Resend), los Read Models que el personal necesita visualizar antes de ejecutar un comando (cola de triaje, rangos NT-158, disponibilidad de especialidades, alertas activas, historial de visitas) y refinamos los atributos técnicos de cada aggregate para eliminar ambigüedades de cara a la implementación.
+En la etapa final incorporamos los sistemas externos con los que el dominio se integra (dispositivos IoT, SMS Gateway y Resend), los Read Models que el personal necesita visualizar antes de ejecutar un comando (cola de triaje, rangos NT-042, disponibilidad de especialidades, alertas activas, historial de visitas) y refinamos los atributos técnicos de cada aggregate para eliminar ambigüedades de cara a la implementación.
 
 <div align="center"><img src="../assets/miro/Design-Level Event Storming.png" width ="100%"></div>
 
@@ -50,7 +50,7 @@ Este diagrama representa el nivel más alto de abstracción, mostrando Tri-Aid c
 
 <div align="center"><img src="../assets/c4_diagrams/Diagrama_Contexto_TriAid.png" width ="100%"></div>
 
-> * Centro del Sistema: Tri-Aid posiciona la captura automática de signos vitales, la clasificación asistida NT-158 y la derivación informada como su núcleo de valor.
+> * Centro del Sistema: Tri-Aid posiciona la captura automática de signos vitales, la clasificación asistida NT-042 y la derivación informada como su núcleo de valor.
 > * Usuarios (Actors): El Personal de Triaje opera el panel de triaje; el Paciente consulta su estado a través del portal EP07; el Administrador de Institución gestiona cuentas, dispositivos y la suscripción.
 > * Sistemas Externos: Los Dispositivos IoT (tensiómetro, oxímetro, pulsimetro y termómetro BLE) ingresan las lecturas de signos vitales; el SMS Gateway entrega comprobantes de derivación; Resend envía los enlaces de recuperación de credenciales vía su API de email transaccional; Stripe procesa los cobros de la suscripción institucional; y el HIS Hospitalario recibe episodios de triaje bajo el plan Institucional.
 
@@ -76,7 +76,7 @@ Este diagrama profundiza en el contenedor API Application, revelando cómo se or
 > * IAM Component: Autenticación de personal y pacientes con ASP.NET Identity y JWT, incluyendo el bloqueo temporal por intentos fallidos y la recuperación de contraseña.
 > * Patient Registration Component: Búsqueda por DNI, registro de pacientes, creación de perfiles temporales de emergencia y regularización de identidad.
 > * Vital Signs Capture Component: Vinculación de dispositivos, ingesta de lecturas automáticas provenientes del gateway BLE, ingreso manual de contingencia y confirmación o rechazo de lecturas.
-> * Triage Classification Component: Motor de sugerencia de prioridad basado en rangos NT-158, aprobación, modificación con justificación obligatoria y confirmación de la clasificación.
+> * Triage Classification Component: Motor de sugerencia de prioridad basado en rangos NT-042, aprobación, modificación con justificación obligatoria y confirmación de la clasificación.
 > * Alerting Component: Evaluación de rangos vitales, generación de alertas y broadcast en tiempo real vía hub de SignalR hacia el panel y el portal.
 > * Specialty Assignment Component: Sugerencia de especialidad, derivación con colas por área, reasignaciones y generación y envío de comprobantes QR/SMS.
 > * Reports Component: Métricas del turno (tiempos de clasificación y espera, duración por paciente) y reporte de alertas del turno.

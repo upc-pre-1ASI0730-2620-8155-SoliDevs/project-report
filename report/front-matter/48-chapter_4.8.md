@@ -37,14 +37,14 @@ Este diagrama define el almacenamiento de las lecturas de signos vitales, la vin
 * **Constraints o Relaciones:** Cada lectura pertenece a un episodio (`episode_id`), registra su origen mediante `source_id` (automático o manual) y su estado mediante `status_id` (capturada, confirmada o rechazada). La tabla `device_links` materializa la vinculación de un dispositivo a un episodio, y `devices` referencia su tipo a través de `device_type_id`.
 
 #### 4. Bounded Context: Triage Classification
-Este diagrama persiste la clasificación de prioridad NT-158 de cada episodio, incluyendo la sugerencia del sistema y el override del personal.
+Este diagrama persiste la clasificación de prioridad NT-042 de cada episodio, incluyendo la sugerencia del sistema y el override del personal.
 
 <div align="center"><img src="../assets/erd_diagrams/erd_triage.png" width ="100%"></div>
 
 **Explicación del esquema:**
 * **Tablas:** `classifications`, `triage_levels`, `classification_states`.
 * **Columnas principales:** `suggested_level_id` (nivel calculado por el sistema) y `level_id` (nivel final asignado) permiten distinguir la sugerencia original de la decisión del personal; `justification` es obligatoria cuando existe override; `suggested_at` y `confirmed_at` registran las estampas de tiempo.
-* **Constraints o Relaciones:** `episode_id` es llave foránea y unique al mismo tiempo: cada episodio tiene exactamente una clasificación. Ambas referencias a niveles apuntan al catálogo `triage_levels`, que almacena los rangos de la guía NT-158.
+* **Constraints o Relaciones:** `episode_id` es llave foránea y unique al mismo tiempo: cada episodio tiene exactamente una clasificación. Ambas referencias a niveles apuntan al catálogo `triage_levels`, que almacena los rangos de la guía NT-042.
 
 #### 5. Bounded Context: Alerting
 Este diagrama modela la persistencia de las alertas generadas por valores fuera de rango, su ciclo de vida y su auditoría.
