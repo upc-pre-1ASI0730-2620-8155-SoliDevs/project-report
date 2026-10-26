@@ -56,7 +56,7 @@ Este contexto gestiona la vinculación de dispositivos, la ingesta de lecturas a
 * **Servicios:** `IVitalSignsService` / `VitalSignsService` e `IVitalSignsRepository` / `VitalSignsRepository`.
 
 #### 4. Bounded Context: Triage Classification
-Este contexto gestiona la clasificación asistida de prioridad según la guía NT-158, con aprobación, override justificado y confirmación.
+Este contexto gestiona la clasificación asistida de prioridad según la guía NT-042, con aprobación, override justificado y confirmación.
 
 <div align="center">
   <img src="../assets/class_diagrams/class_triage_classification.png" width ="100%">
@@ -66,7 +66,7 @@ Este contexto gestiona la clasificación asistida de prioridad según la guía N
 * **Clase `Classification` (Aggregate Root):** Representa la clasificación de prioridad de un episodio.
     * *Atributos:* `- Id : int`, `- EpisodeId : int`, `- Level : TriageLevel`, `- SuggestedLevel : TriageLevel`, `- State : ClassificationState`, `- OverriddenBy : int?`, `- Justification : string?`, `- SuggestedAt : DateTime`, `- ConfirmedAt : DateTime?`
     * *Métodos:* `+ Approve(userId: int) : void`, `+ Override(newLevel: TriageLevel, justification: string, userId: int) : Result`, `+ ResetToSuggestion(userId: int) : void`, `+ Confirm(userId: int) : void`
-* **Enum `TriageLevel`:** Niveles NT-158 (`I_Resuscitation`, `II_Emergency`, `III_Urgent`, `IV_LessUrgent`, `V_NonUrgent`).
+* **Enum `TriageLevel`:** Niveles NT-042 (`I_Resuscitation`, `II_Emergency`, `III_Urgent`, `IV_LessUrgent`, `V_NonUrgent`).
 * **Enum `ClassificationState`:** Estado de la clasificación (`PendingConfirmation`, `Assigned`, `Overridden`, `Confirmed`).
 * **Clase `Nt158Engine` (Domain Service):** Motor puro de cálculo que sugiere el nivel a partir del resumen de signos vitales confirmados y reporta las métricas faltantes (`+ CalculatePriority(vitals) : Result<TriageLevel>`, `+ MissingMetrics(vitals)`).
 * **Evento de dominio `ClassificationConfirmedEvent`:** Dispara la orquestación hacia Specialty Assignment.

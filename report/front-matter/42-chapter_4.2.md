@@ -16,7 +16,7 @@ El sistema de etiquetado utiliza terminología familiar para el personal de salu
 
 > - **Etiquetas de Navegación:** Términos directos como "Inicio", "Panel de Triaje", "Pacientes", "Alertas", "Reportes", "Dispositivos" y "Portal del Paciente".
 > - **Etiquetas de Datos:** Métricas bajo estándares clínicos reconocidos como "Presión Arterial (mmHg)", "Saturación de Oxígeno — SpO₂ (%)", "Frecuencia Cardíaca (lpm)", "Temperatura (°C)" y "Nivel de Prioridad (I–V)".
-> - **Etiquetas de Estado:** Sistema semántico de urgencia coherente con los niveles de la NT-158: Crítico (Rojo), Urgente (Ámbar) y Estable (Verde), aplicado tanto a los signos vitales fuera de rango como al estado de cada paciente en la cola.
+> - **Etiquetas de Estado:** Sistema semántico de urgencia coherente con los niveles de la NT-042: Crítico (Rojo), Urgente (Ámbar) y Estable (Verde), aplicado tanto a los signos vitales fuera de rango como al estado de cada paciente en la cola.
 
 ### 4.2.3. SEO Tags and Meta Tags
 
@@ -24,8 +24,8 @@ Para garantizar el posicionamiento del Landing Page y la relevancia en búsqueda
 
 > - **Indexado y Crawling:** Uso de la etiqueta meta name="robots" content="index, follow" para permitir que los buscadores rastreen la solución.
 > - **Meta Title:** "Tri-Aid | Triage Inteligente con IoT para Salas de Emergencia" (optimizado para captar el interés del personal directivo de salud).
-> - **Meta Description:** "Plataforma IoT que automatiza la captura de signos vitales, la clasificación asistida de prioridad (NT-158) y la derivación a especialidades. Reduzca tiempos de espera y detecte deterioros en tiempo real".
-> - **Palabras clave:** triaje hospitalario Perú, triage IoT, captura automática de signos vitales, clasificación NT-158, emergencias hospitalarias, Tri-Aid, SoliDevs UPC.
+> - **Meta Description:** "Plataforma IoT que automatiza la captura de signos vitales, la clasificación asistida de prioridad (NT-042) y la derivación a especialidades. Reduzca tiempos de espera y detecte deterioros en tiempo real".
+> - **Palabras clave:** triaje hospitalario Perú, triage IoT, captura automática de signos vitales, clasificación NT-042, emergencias hospitalarias, Tri-Aid, SoliDevs UPC.
 
 ### 4.2.4. Searching Systems
 

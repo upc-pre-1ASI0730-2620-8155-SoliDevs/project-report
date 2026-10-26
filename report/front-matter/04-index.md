@@ -8,10 +8,10 @@
     - [1.1.2. Perfiles de integrantes del equipo](11-chapter_1.1.md#112-perfiles-de-integrantes-del-equipo)
   - [1.2. Solution Profile](12-chapter_1.2.md)
     - [1.2.1. Descripción de la solución](12-chapter_1.2.md#121-antecedentes-y-problemática)
-        - [1.2.2.1. Feature Assumptions](12-chapter_1.2.md#1221-lean-ux-problem-statements)
-        - [1.2.2.2. Lean UX Assumptions](12-chapter_1.2.md#1222-lean-ux-assumptions)
-        - [1.2.2.3. Lean UX Hypothesis Statements](12-chapter_1.2.md#1223-lean-ux-hypothesis-statements)
-        - [1.2.2.4. Lean UX Canvas](12-chapter_1.2.md#1224-lean-ux-canvas)
+        - [1.2.1.1. Feature Assumptions](12-chapter_1.2.md#1221-lean-ux-problem-statements)
+        - [1.2.1.2. Lean UX Assumptions](12-chapter_1.2.md#1222-lean-ux-assumptions)
+        - [1.2.1.3. Lean UX Hypothesis Statements](12-chapter_1.2.md#1223-lean-ux-hypothesis-statements)
+        - [1.2.1.4. Lean UX Canvas](12-chapter_1.2.md#1224-lean-ux-canvas)
   - [1.3. Segmentos objetivo](13-chapter_1.3.md)
 
 ---

@@ -25,7 +25,7 @@ Como técnica de indagación de requerimientos, el equipo aplicó **entrevistas 
 | Personales | Estado civil, composición familiar, personalidad (cómo se describen bajo presión), habilidades destacadas |
 | Tecnología | Dispositivos de preferencia (PC, tablet, celular), navegador, apps o sistemas hospitalarios que usa (HIS, SIPES, Excel, papel), dominio tecnológico (básico/intermedio/avanzado) |
 | Canales digitales | Canales que usa a diario (WhatsApp, correo, redes sociales, plataformas de capacitación) |
-| Marcas e influencias | Instituciones en las que ha trabajado, referentes o protocolos que sigue (NT-158, Manchester, GET), cursos o certificaciones |
+| Marcas e influencias | Instituciones en las que ha trabajado, referentes o protocolos que sigue (NT-042, Manchester, GET), cursos o certificaciones |
 
 **Preguntas principales:**
 
@@ -44,7 +44,7 @@ Como técnica de indagación de requerimientos, el equipo aplicó **entrevistas 
 
 - ¿Trabaja con fichas de papel, con un sistema, o con ambos? ¿Por qué?
 - ¿En horas pico, qué es lo primero que se sacrifica: velocidad, detalle del registro o precisión?
-- ¿Ha recibido capacitación formal en escalas de triaje (NT-158, Manchester, ESI)? ¿Cuál usa su servicio?
+- ¿Ha recibido capacitación formal en escalas de triaje (NT-042, Manchester, ESI)? ¿Cuál usa su servicio?
 - ¿Qué haría si el sistema le alerta que un valor está fuera de rango y usted no está de acuerdo con la alerta?
 - ¿Cómo se entera de que un paciente que usted clasificó ya fue atendido? ¿Esa información le llega de vuelta?
 - Si un colega suyo quisiera aprender a usar Tri-Aid, ¿qué debería tener la herramienta para aprenderla en una mañana?
