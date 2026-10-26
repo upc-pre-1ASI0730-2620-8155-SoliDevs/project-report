@@ -1,24 +1,37 @@
-## Bibliographic References
+no nec# Bibliographic References
 
+- Adzic, G. (2012). *Impact Mapping: Making a big impact with software products and projects*. Provoking Thoughts.
+- Atlassian. (s. f.). *Jira Software: Plan, track, and manage work*. https://www.atlassian.com/software/jira
 - Brandolini, A. (2018). *Introducing EventStorming: An act of deliberate collective learning*. Leanpub. https://leanpub.com/introducing_eventstorming
 - Brown, S. (s. f.). *The C4 Model for visualising software architecture*. https://c4model.com/
 - Brown, S. (s. f.). *Structurizr DSL*. https://docs.structurizr.com/dsl/
+- Chacon, S., & Straub, B. (2014). *Pro Git* (2.ª ed.). Apress. https://git-scm.com/book/en/v2
+- Cohn, M. (2005). *Agile Estimating and Planning*. Prentice Hall.
 - Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/
+- Cooper, A. (1999). *The Inmates Are Running the Asylum: Why high-tech products drive us crazy and how to restore the sanity*. Sams Publishing.
+- Doran, G. T. (1981). There's a S.M.A.R.T. way to write management's goals and objectives. *Management Review, 70*(11), 35–36.
 - Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
 - Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.
 - Figma. (s. f.). *Figma: The collaborative interface design tool*. https://www.figma.com/
-- Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781492049588/
-- Google. (s. f.). *Google Meet: Video conferencing*. https://meet.google.com/
+- Firebase. (s. f.). *Firebase Realtime Database documentation*. https://firebase.google.com/docs/database
 - GitHub. (s. f.). *GitHub: Where the world builds software*. https://github.com/
-- Atlassian. (s. f.). *Jira Software: Plan, track, and manage work*. https://www.atlassian.com/software/jira
-- INEI. (2024). *Perú: Acceso y uso de las Tecnologías de Información y Comunicación en los hogares* (Informe Técnico TIC). https://www.inei.gob.pe/
+- GitHub. (s. f.). *What is GitHub Pages?* GitHub Docs. https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+- Google. (s. f.). *Google Meet: Video conferencing*. https://meet.google.com/
+- Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3rd ed.). O'Reilly Media. https://www.oreilly.com/library/view/lean-ux-3rd/9781492049588/
+- Gray, D., Brown, S., & Macanufo, J. (2010). *Gamestorming: A playbook for innovators, rulebreakers, and changemakers*. O'Reilly Media.
+- INEI. (2024). *Perú: Acceso y uso de las Tecnologías de Información y Comunicación en los hogares* (Informe Técnico TIC, cuarto trimestre 2024). Instituto Nacional de Estadística e Informática. https://www.inei.gob.pe/
+- Kalbach, J. (2020). *Mapping Experiences: A guide to creating value through journeys, blueprints, and diagrams* (2nd ed.). O'Reilly Media.
+- Ministerio de Salud del Perú. (2006). *Norma Técnica de Salud de los Servicios de Emergencia: NT N.° 042-MINSA/DGSP-V.01* (aprobada por R.M. N.° 386-2006-MINSA). https://www.gob.pe/institucion/minsa/informes-publicaciones/353462-norma-tecnica-de-salud-de-los-servicios-de-emergencia-nt-n-042-minsa-dgsp-v-01
 - Miro. (s. f.). *Miro: The visual workspace for innovation*. https://miro.com/
 - Microsoft. (s. f.). *ASP.NET Core documentation*. https://learn.microsoft.com/aspnet/core/
 - Microsoft. (s. f.). *SignalR documentation*. https://learn.microsoft.com/aspnet/core/signalr/
 - Microsoft. (s. f.). *SQL Server documentation*. https://learn.microsoft.com/sql/sql-server/
-- MINSA. (2022). *Norma Técnica de Salud N.° 158-MINSA/DIGEPRES: Gestión del riesgo en los servicios de emergencia y cuidados críticos*. Ministerio de Salud del Perú. https://www.gob.pe/institucion/minsa/normas-legales
+- Nielsen, J. (1994). *Usability Engineering*. Morgan Kaufmann.
+- OpenAPI Initiative. (s. f.). *OpenAPI Specification v3.2*. https://spec.openapis.org/oas/latest.html
 - PlantUML. (s. f.). *PlantUML: Open-source tool for drawing UML diagrams*. https://plantuml.com/
 - Preston-Werner, T. (2013). *Semantic Versioning 2.0.0*. https://semver.org/
 - Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum*. https://scrumguides.org/
+- SUSALUD. (s. f.). *Registro Nacional de Entidades Prestadoras de Servicios de Salud – RENIPRESS* [Conjunto de datos]. Plataforma Nacional de Datos Abiertos. https://www.datosabiertos.gob.pe/dataset/registro-nacional-de-entidades-prestadoras-de-servicios-de-salud-renipress
+- typicode. (s. f.). *json-server: Get a full fake REST API with zero coding* [Software]. GitHub. https://github.com/typicode/json-server
 - UXPressia. (s. f.). *UXPressia: User persona, journey map and empathy map tool*. https://uxpressia.com/
 - Vue.js. (s. f.). *Vue.js: The progressive JavaScript framework*. https://vuejs.org/

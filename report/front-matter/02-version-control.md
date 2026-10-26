@@ -2,6 +2,7 @@
 
 | Versión | Fecha    | Autor                           | Descripción de modificación |
 |:--------|:---------|:--------------------------------|:----------------------------|
+| 2.1.0   | 26/10/26 | Huayta Fuentes, Hernan Gabriel | Bibliografía: se agregaron las fuentes originales de los métodos empleados (Nielsen 1994, Cooper 1999, Gray et al. 2010, Kalbach 2020, Cohn 2005, Adzic 2012, Doran 1981), la norma de triaje NT N.° 042-MINSA/DGSP-V.01, y las referencias técnicas de OpenAPI, Firebase, json-server, Pro Git, GitHub Pages y RENIPRESS |
 | 2.0.0   | 06/10/26 | Castro Solorza, Nicolas Eduardo | Entrega de la segunda versión del informe (TB1)|
 | 1.10.0  | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Implementación de la aplicación web por bounded contexts documentada en el Sprint 2, se registró el análisis de entrevistas de ambos segmentos, se actualizó el Student Outcome con los aportes del parcial y se corregieron los diagramas C4, de clases, de base de datos, mockups y flujos.|
 | 1.9.0   | 06/10/26 | Huayta Fuentes, Hernan Gabriel | Sección 2.2.3: análisis de entrevistas por segmento con patrones, Pain Points y Gains |
