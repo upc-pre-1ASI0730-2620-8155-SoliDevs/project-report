@@ -386,6 +386,18 @@
             <td>Como paciente adulto deseo acceder al portal web cuando mi institución lo tiene contratado para conocer mi estado de atención desde mi celular.</td>
             <td>3</td>
         </tr>
+        <tr>
+            <td>US54</td>
+            <td>Registro de la institución contratante</td>
+            <td>Como administrador de triaje deseo registrar los datos de mi institución al contratar un plan para que la suscripción quede asociada al hospital correcto.</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>US55</td>
+            <td>Vinculación de usuarios a la institución</td>
+            <td>Como administrador de triaje deseo que las cuentas de mi equipo se vinculen a mi institución para que cada usuario acceda únicamente a la data de su hospital.</td>
+            <td>5</td>
+        </tr>
     </tbody>
 </table>
 

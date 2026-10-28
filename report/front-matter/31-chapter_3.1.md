@@ -449,5 +449,19 @@
             <td><strong>Escenario 1: Plan con portal</strong><br>Dado que mi institución tiene un plan que incluye el portal del paciente, Cuando ingreso con mis credenciales, Entonces el sistema me permite consultar mi estado, turno y comprobante.<br><br><strong>Escenario 2: Plan sin portal</strong><br>Dado que el plan de mi institución no incluye el portal, Cuando intento acceder con credenciales válidas, Entonces el sistema me informa que el portal no está disponible para mi institución.</td>
             <td>EP09</td>
         </tr>
+        <tr>
+            <td>US54</td>
+            <td>Registro de la institución contratante</td>
+            <td>Como administrador de triaje deseo registrar los datos de mi institución al contratar un plan para que la suscripción quede asociada al hospital correcto.</td>
+            <td><strong>Escenario 1: Registro exitoso</strong><br>Dado que el administrador completa el formulario de contratación con los datos de la institución, Cuando confirma el pago del plan, Entonces el sistema crea la institución y la vincula a la suscripción activa.<br><br><strong>Escenario 2: Datos incompletos</strong><br>Dado que el administrador omite el nombre de la institución, Cuando intenta confirmar la contratación, Entonces el sistema solicita el dato obligatorio y no registra la suscripción.</td>
+            <td>EP09</td>
+        </tr>
+        <tr>
+            <td>US55</td>
+            <td>Vinculación de usuarios a la institución</td>
+            <td>Como administrador de triaje deseo que las cuentas de mi equipo se vinculen a mi institución para que cada usuario acceda únicamente a la data de su hospital.</td>
+            <td><strong>Escenario 1: Usuario vinculado</strong><br>Dado que el administrador crea la cuenta de un miembro de su personal, Cuando el usuario inicia sesión, Entonces el sistema le asigna la institución del administrador y muestra solo la data de ese hospital.<br><br><strong>Escenario 2: Aislamiento entre instituciones</strong><br>Dado que existen usuarios de instituciones distintas, Cuando un usuario consulta pacientes o alertas, Entonces el sistema retorna únicamente los registros de su propia institución.</td>
+            <td>EP09</td>
+        </tr>
     </tbody>
 </table>
