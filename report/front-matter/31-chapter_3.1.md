@@ -117,7 +117,7 @@
             <td>US06</td>
             <td>Buscar paciente por DNI</td>
             <td>Como enfermera de triaje deseo buscar al paciente por su DNI para recuperar sus datos y acelerar el proceso de admisión.</td>
-            <td><strong>Escenario 1: Paciente existente</strong><br>Dado que la enfermera requiere registrar a un paciente, Cuando ingresa un DNI registrado, Entonces el sistema recupera y autocompleta los datos personales del paciente.<br><br><strong>Escenario 2: Paciente nuevo</strong><br>Dado que la enfermera ingresa un DNI no registrado, Cuando ejecuta la búsqueda, Entonces el sistema habilita un formulario en blanco para nuevo registro.</td>
+            <td><strong>Escenario 1: Paciente existente</strong><br>Dado que la enfermera requiere registrar a un paciente, Cuando ingresa un DNI registrado, Entonces el sistema recupera y autocompleta los datos personales del paciente.<br><br><strong>Escenario 2: Paciente nuevo</strong><br>Dado que la enfermera ingresa un DNI no registrado, Cuando ejecuta la búsqueda, Entonces el sistema habilita un formulario en blanco para nuevo registro.<br><br><strong>Escenario 3: Aislamiento entre instituciones</strong><br>Dado que múltiples instituciones de salud operan sobre la plataforma, Cuando el personal consulta los pacientes registrados, Entonces el sistema muestra únicamente los registros de la institución del personal autenticado, manteniendo la confidencialidad de los datos de las demás instituciones.</td>
             <td>EP02</td>
         </tr>
         <tr>

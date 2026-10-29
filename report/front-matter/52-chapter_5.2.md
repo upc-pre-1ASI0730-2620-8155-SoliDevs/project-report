@@ -346,6 +346,10 @@ URL base (desarrollo): `http://localhost:3900/api/v1` · URL base (producción):
 | `/alerts/{id}` | PUT | Alerting | Actualiza el estado de la alerta (reconocida, escalada) | `id`: int · Body: objeto Alert | Alert actualizada |
 | `/symptoms` | GET | Specialty Assignment | Catálogo codificado de síntomas (ES/EN) | — | Array de síntomas con especialidad sugerida |
 
+**Multi-tenancy de los recursos clínicos.** Los registros clínicos (patients, episodes, devices, triage-classifications, referrals, vouchers y alerts) se etiquetan con la institución del personal autenticado en el momento de su creación, y toda consulta se filtra por institución dentro de `BaseEndpoint` (parámetro `tenantScoped`), de modo que una institución nunca accede a los datos de otra. Los catálogos de plataforma (plans, specialties, symptoms) y las cuentas de usuario permanecen globales. Cuando el backend formal en ASP.NET Core aplique el aislamiento desde el token de sesión, este filtro en cliente se mantiene como verificación UX sin cambio alguno en las vistas.
+
+**Gateway de pagos simulado.** El bounded context de Subscription interactúa con el gateway de pagos a través de un puerto desacoplado de la implementación. La implementación actual simula la autorización y el rechazo de cargos, lo que permite demostrar los flujos de activación, reintento, renovación y cobro automático al término de la prueba gratuita sin depender de un proveedor externo. La integración con un proveedor real (p. ej., Stripe) corresponde a una implementación alternativa del mismo puerto y queda fuera del alcance del presente ciclo.
+
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 2, el equipo realizó el despliegue de la **Frontend Web Application** en Firebase Hosting y de la **API REST simulada (json-server)** en Render, dejando el flujo completo disponible en línea.
