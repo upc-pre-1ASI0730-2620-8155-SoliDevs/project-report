@@ -6,9 +6,9 @@ En esta sección se presenta el Impact Mapping para nuestro modelo de negocio di
 
 Para la construcción de estos mapas, definimos metas de negocio (Business Goals) bajo criterios SMART, tales como: 
 
-A partir de estas metas, estructuramos el mapa identificando a los actores clave (nuestros User Personas: <!-- Persona1 -->y <!-- Persona2 -->) que nos ayudarán a lograr el objetivo. Luego, definimos los impactos (Impacts) esperados en su comportamiento diario, los entregables (Deliverables) que nuestra plataforma proveerá para provocar dichos cambios, y finalmente, las Historias de Usuario (User Stories) redactadas en el formato *"Como... deseo... para..."* que guiarán la implementación técnica de las funcionalidades.
+A partir de estas metas, estructuramos el mapa identificando a los actores clave (nuestros User Personas: Maria Quispe y Jorge Ramirez) que nos ayudarán a lograr el objetivo. Luego, definimos los impactos (Impacts) esperados en su comportamiento diario, los entregables (Deliverables) que nuestra plataforma proveerá para provocar dichos cambios, y finalmente, las Historias de Usuario (User Stories) redactadas en el formato *"Como... deseo... para..."* que guiarán la implementación técnica de las funcionalidades.
 
-### User Persona 1: Marisol Quispe
+
 
 <p align = "left">
     <img src="../assets/ux_pressia/impact-mapping.png">
