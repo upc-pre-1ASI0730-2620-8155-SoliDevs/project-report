@@ -4,7 +4,9 @@ El siguiente enlace lleva al URL del repositorio que se encuentra disponible en 
 
 A continuación, se explicará a detalle el desarrollo de actividades para la elaboración del informe, acompañado de capturas de los analíticos de colaboración y los commits hechos en GitHub.
 
-## Avance 1
+## Avance 1 (AV1)
+
+---
 
 Para la entrega del avance 1, se procede a mostrar el análisis de colaboración, el cual representa el número de contribuciones realizadas en el repositorio del informe por cada integrante del equipo.
 
@@ -13,3 +15,23 @@ Para la entrega del avance 1, se procede a mostrar el análisis de colaboración
 La siguiente imagen representa el número de commits por semana realizados en el repositorio a lo largo del periodo comprendido entre agosto y septiembre, evidenciando la concentración del trabajo durante las semanas de desarrollo del primer avance.
 
 <div align="center"><img src="../assets/insights/pulse-av1.png" width ="100%"></div>
+
+## Trabajo Parcial (TB1) 
+
+---
+
+
+Para la entrega del trabajo parcial, se procede a mostrar el analisis de colaboracion el cual representa el número de contribuciones realizadas en el repositorio del informe por cada integrante del equipo.
+
+<div align="center"><img src="../assets/insights/contributors-tb1.png" width ="100%"></div>
+
+La siguiente imagen representa el número de commits por semana realizados en el repositorio a lo largo del periodo comprendido entre agosto y septiembre, evidenciando la concentración del trabajo durante las semanas de desarrollo del trabajo parcial.
+
+<div align="center"><img src="../assets/insights/pulse-tb1.png" width ="100%"></div>
+
+## Avance 2 (AV2)
+
+---
+
+Para la entrega del segundo avance, se procedera 
+

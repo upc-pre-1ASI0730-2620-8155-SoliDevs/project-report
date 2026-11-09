@@ -53,5 +53,5 @@
   Período 202620
 </h4>
 <h4 align = "center">
-  Septiembre 2026
+  Noviembre 2026
 </h4>
