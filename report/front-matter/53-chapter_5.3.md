@@ -14,7 +14,7 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 
 </div>
 
-#### Segmento 1 — Personal de triaje de hospitales y clínicas
+#### Segmento 1: Personal de triaje de hospitales y clínicas
 
 **Tareas en el Landing Page:**
 
@@ -55,7 +55,7 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 - ¿Qué haría si la lectura de un dispositivo no llega o le parece incorrecta?
 - ¿Qué información del reporte le serviría a la jefatura de su servicio?
 
-#### Segmento 2 — Pacientes que acuden a emergencia
+#### Segmento 2: Pacientes que acuden a emergencia
 
 **Tareas en el Landing Page:**
 
