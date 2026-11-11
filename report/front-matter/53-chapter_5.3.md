@@ -14,6 +14,17 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 
 </div>
 
+#### Segmento 1 — Personal de triaje de hospitales y clínicas
+
+**Tareas en el Landing Page:**
+
+| # | Tarea |
+|---|---|
+| L1 | Explicar con sus palabras qué hace Tri-Aid después de revisar la sección principal |
+| L2 | Identificar las funcionalidades principales en la sección Features |
+| L3 | Comparar los planes y entrar a la aplicación desde el botón para personal de triaje |
+| L4 | Cambiar el idioma de la página |
+
 ### 5.3.2. Registro de entrevistas
 
 ---
