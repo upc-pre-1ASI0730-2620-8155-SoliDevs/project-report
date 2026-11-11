@@ -10,7 +10,7 @@ Con el website y aplicacion web de Tri-Aid desplegadas, se han diseñado las sig
 
 <div style="text-align: justify">
 
-En cada sesión de validación el entrevistado recorre el Landing Page y la aplicación web desplegadas realizando las tareas indicadas para su segmento, y al terminar responde las preguntas de cierre. Para cada segmento se realizan de 3 a 5 sesiones grabadas en video.
+En cada sesión de validación el entrevistado recorre el Landing Page y la aplicación web desplegadas realizando las tareas indicadas para su segmento, y al terminar responde las preguntas. Las tareas de la aplicación web siguen los user flows definidos en el diseño, para comprobar que los usuarios recorren los caminos tal como fueron planteados.
 
 </div>
 
@@ -25,7 +25,7 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 | L3 | Comparar los planes y entrar a la aplicación desde el botón para personal de triaje |
 | L4 | Cambiar el idioma de la página |
 
-**User flows de la Web Application a validar:**
+**User flows de la Web Application incluidos en la validación:**
 
 | # | Tarea | User goal |
 |---|---|---|
