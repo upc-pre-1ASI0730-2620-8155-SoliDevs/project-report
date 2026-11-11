@@ -48,6 +48,13 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 6. ¿Los textos y etiquetas de la aplicación usan los términos que se usan en su servicio?
 7. ¿Recomendaría Tri-Aid a la jefatura de su servicio? ¿Qué tendría que cambiar primero?
 
+**Preguntas complementarias:**
+
+- ¿Usaría la aplicación desde una PC, una tablet o un celular durante su turno?
+- Con varios pacientes en espera, ¿qué dato de la lista revisaría primero?
+- ¿Qué haría si la lectura de un dispositivo no llega o le parece incorrecta?
+- ¿Qué información del reporte le serviría a la jefatura de su servicio?
+
 #### Segmento 2 — Pacientes que acuden a emergencia
 
 **Tareas en el Landing Page:**
