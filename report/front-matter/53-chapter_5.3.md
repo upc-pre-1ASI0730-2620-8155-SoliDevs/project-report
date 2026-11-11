@@ -48,6 +48,18 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 6. ¿Los textos y etiquetas de la aplicación usan los términos que se usan en su servicio?
 7. ¿Recomendaría Tri-Aid a la jefatura de su servicio? ¿Qué tendría que cambiar primero?
 
+#### Segmento 2 — Pacientes que acuden a emergencia
+
+**Tareas en el Landing Page:**
+
+| # | Tarea |
+|---|---|
+| P1 | Explicar qué beneficio le da Tri-Aid como paciente |
+| P2 | Usar el botón para pacientes y decir qué espera encontrar al llegar |
+| P3 | Ver el video About the Product y decir qué recuerda |
+| P4 | Encontrar la información de contacto |
+| P5 | Cambiar el idioma de la página |
+
 ### 5.3.2. Registro de entrevistas
 
 ---
