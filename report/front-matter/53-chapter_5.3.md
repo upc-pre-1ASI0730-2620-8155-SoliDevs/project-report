@@ -60,6 +60,14 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 | P4 | Encontrar la información de contacto |
 | P5 | Cambiar el idioma de la página |
 
+**Preguntas de cierre:**
+
+1. ¿Entendió desde el inicio para qué sirve Tri-Aid?
+2. ¿Hubo textos, palabras o botones que no entendió?
+3. ¿El tamaño de letra y los colores le permitieron leer sin esfuerzo?
+4. ¿Qué información le gustaría recibir mientras espera en emergencia?
+5. ¿Usaría una herramienta así en su próxima visita? ¿Qué lo haría desconfiar?
+
 ### 5.3.2. Registro de entrevistas
 
 ---
