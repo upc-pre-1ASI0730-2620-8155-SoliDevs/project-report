@@ -25,6 +25,19 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 | L3 | Comparar los planes y entrar a la aplicación desde el botón para personal de triaje |
 | L4 | Cambiar el idioma de la página |
 
+**User flows de la Web Application a validar** (sección 4.4.4):
+
+| # | Tarea | User goal |
+|---|---|---|
+| A1 | Iniciar sesión | Goal 5 |
+| A2 | Registrar a un paciente nuevo y abrir su episodio de triaje | Goal 2 |
+| A3 | Registrar sus signos vitales e identificar si algún valor está fuera de rango | Goal 2 |
+| A4 | Revisar la prioridad sugerida y confirmarla o corregirla | Goal 2 |
+| A5 | Derivar al paciente a una especialidad | Goal 2 |
+| A6 | Encontrar una alerta pendiente en el centro de alertas y reconocerla | Goal 4 |
+| A7 | Revisar los dispositivos de medición registrados | Goal 3 |
+| A8 | Consultar el reporte de atenciones y cerrar sesión | Goal 5 |
+
 ### 5.3.2. Registro de entrevistas
 
 ---
