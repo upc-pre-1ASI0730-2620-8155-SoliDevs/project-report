@@ -8,6 +8,12 @@ Con el website y aplicacion web de Tri-Aid desplegadas, se han diseñado las sig
 
 ---
 
+<div style="text-align: justify">
+
+En cada sesión de validación el entrevistado recorre el Landing Page y la aplicación web desplegadas realizando las tareas indicadas para su segmento, y al terminar responde las preguntas de cierre. Para cada segmento se realizan de 3 a 5 sesiones grabadas en video.
+
+</div>
+
 ### 5.3.2. Registro de entrevistas
 
 ---
