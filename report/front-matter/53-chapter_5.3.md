@@ -38,6 +38,16 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 | A7 | Revisar los dispositivos de medición registrados | Goal 3 |
 | A8 | Consultar el reporte de atenciones y cerrar sesión | Goal 5 |
 
+**Preguntas de cierre:**
+
+1. ¿Qué tarea le resultó más fácil y cuál le costó más? ¿Por qué?
+2. ¿En algún momento no supo dónde estaba o qué hacer después?
+3. ¿La alerta de valor fuera de rango le llamó la atención a tiempo? ¿Cómo la mejoraría?
+4. ¿Confiaría en la prioridad sugerida por el sistema? ¿Qué información le falta para decidir?
+5. Comparado con su forma actual de trabajar, ¿cuántos pasos siente que se ahorra o se agregan?
+6. ¿Los textos y etiquetas de la aplicación usan los términos que se usan en su servicio?
+7. ¿Recomendaría Tri-Aid a la jefatura de su servicio? ¿Qué tendría que cambiar primero?
+
 ### 5.3.2. Registro de entrevistas
 
 ---
