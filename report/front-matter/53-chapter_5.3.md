@@ -38,7 +38,7 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 | A7 | Revisar los dispositivos de medición registrados | Gestionar dispositivos de medición |
 | A8 | Consultar el reporte de atenciones y cerrar sesión | Consultar reportes y cerrar sesión |
 
-**Preguntas de cierre:**
+**Preguntas principales:**
 
 1. ¿Qué tarea le resultó más fácil y cuál le costó más? ¿Por qué?
 2. ¿En algún momento no supo dónde estaba o qué hacer después?
@@ -67,7 +67,7 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 | P4 | Encontrar la información de contacto |
 | P5 | Cambiar el idioma de la página |
 
-**Preguntas de cierre:**
+**Preguntas principales:**
 
 1. ¿Entendió desde el inicio para qué sirve Tri-Aid?
 2. ¿Hubo textos, palabras o botones que no entendió?
