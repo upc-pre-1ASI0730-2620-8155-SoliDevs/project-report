@@ -75,6 +75,14 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 4. ¿Qué información le gustaría recibir mientras espera en emergencia?
 5. ¿Usaría una herramienta así en su próxima visita? ¿Qué lo haría desconfiar?
 
+**Preguntas complementarias:**
+
+- ¿Desde qué dispositivo abriría esta página?
+- La página se abre en inglés, ¿le costó encontrar el cambio a español?
+- ¿El video le ayudó a entender Tri-Aid mejor que el texto?
+- ¿Alguien de su familia le ayuda con páginas web? ¿Le pediría ayuda para usar esta?
+- ¿Qué le daría confianza para dejar sus datos en una plataforma de salud?
+
 ### 5.3.2. Registro de entrevistas
 
 ---
