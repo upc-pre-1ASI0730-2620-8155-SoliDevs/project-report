@@ -63,9 +63,8 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 |---|---|
 | P1 | Explicar qué beneficio le da Tri-Aid como paciente |
 | P2 | Usar el botón para pacientes y decir qué espera encontrar al llegar |
-| P3 | Ver el video About the Product y decir qué recuerda |
-| P4 | Encontrar la información de contacto |
-| P5 | Cambiar el idioma de la página |
+| P3 | Encontrar los términos y condiciones y la política de privacidad |
+| P4 | Cambiar el idioma de la página |
 
 **Preguntas principales:**
 
@@ -79,9 +78,8 @@ En cada sesión de validación el entrevistado recorre el Landing Page y la apli
 
 - ¿Desde qué dispositivo abriría esta página?
 - La página se abre en inglés, ¿le costó encontrar el cambio a español?
-- ¿El video le ayudó a entender Tri-Aid mejor que el texto?
 - ¿Alguien de su familia le ayuda con páginas web? ¿Le pediría ayuda para usar esta?
-- ¿Qué le daría confianza para dejar sus datos en una plataforma de salud?
+- ¿Qué le daría confianza en una plataforma que maneja sus datos de salud?
 
 ### 5.3.2. Registro de entrevistas
 
