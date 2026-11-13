@@ -1,20 +1,20 @@
 ## 5.4. Video About the Product
-El video About-the-Product posee por objetivo documentar de forma audiovisual la propuesta de valor de Tri-Aid. El video ha sido publicado tanto en las plataformas de Microsoft Stream/SharePoint como en Youtube. A su vez se ha incorporado el video en el reporte.
+El video About-the-Product posee por objetivo documentar de forma audiovisual la propuesta de valor de Tri-Aid. El video ha sido publicado en Microsoft Clipchamp (pendiente de su publicación en Microsoft Stream y YouTube) y se ha incorporado en el reporte.
 ### 5.4.1. Objetivo del video
-El objetivo del video es presentar a Tri-Aid como una plataforma digital capaz de
+El objetivo del video es presentar a Tri-Aid como una plataforma digital capaz de transformar la atención de emergencias: registrar al paciente, capturar sus signos vitales, clasificar su prioridad con el motor normativo NT-158, alertar ante valores críticos y derivarlo a la especialidad correcta con comprobante, todo dentro de un mismo flujo trazable.
 ### 5.4.2. Resumen del contenido
-El video inicia con una introducción a la problemática d
-<br> A continuación, se presenta la plataforma Tri-Aid, mostrando sus principales características y funcionalidades, incluyendo el 
+El video inicia con una introducción a la problemática del triaje manual en las emergencias peruanas: constantes vitales tomadas por separado, transcritas a mano y prioridades decididas sin una guía normativa.
+<br> A continuación, se presenta la plataforma Tri-Aid, mostrando sus principales características y funcionalidades, incluyendo el registro del paciente con episodio de triaje, la captura de signos vitales, la clasificación asistida por el motor NT-158, las alertas automáticas ante valores fuera de rango, el escalamiento a Trauma Shock y la derivación con comprobante, todo operando sobre los Web Services desplegados.
 ### 5.4.3. Registro de video
 | Elemento                  | Detalle                                                                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Título del video          | `upc-pre-202620-1asi0730-8155-Tri-Aid-about-the-product-tf`                                                                                          |
-| Plataforma de publicación | Microsoft Stream / SharePoint y YouTube                                                                                                                 |
-| URL Microsoft Stream      |                                                                                                                               |
-| URL Youtube               |                                                                                                                                |
-| Duración                  |  min                                                                                                                                               |
-| Fecha de publicación | 0/0/2026                                                                                                                                              |
-| Testimonio positivo incluido |  |
+| Título del video          | `upc-pre-202620-1asi0730-8155-SoliDevs-about-the-product-av2`                                                                                           |
+| Plataforma de publicación | Microsoft Clipchamp (pendiente de subir a Microsoft Stream y YouTube)                                                                                   |
+| URL Microsoft Clipchamp   | https://shorturl.at/Emb7x                                                                                                                               |
+| URL YouTube               | [Pendiente de subir]                                                                                                                                    |
+| Duración                  | [Completar]                                                                                                                                             |
+| Fecha de publicación      | 13/11/2026                                                                                                                                              |
+| Testimonio positivo incluido | [Pendiente: grabar durante las entrevistas de validación (5.3.2)]                                                                                   |
 
 ### 5.4.4. Evidencia fotográfica del video
 La siguiente captura corresponde al Video About-the-Product publicado para el cierre TF:
@@ -24,9 +24,9 @@ La siguiente captura corresponde al Video About-the-Product publicado para el ci
 </p>
 
 ### 5.4.5. Testimonios positivos incluidos
-En el video se incorpora un testimonio positivo de un usuario del segmento de 
+[Pendiente] En el video se incorporan testimonios positivos de usuarios de los segmentos objetivo de Tri-Aid:
 
 | Segmento                                                        | Testimonio incluido en el video                                                                                                                                                                                                                                                         |
 |-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Usuario del segmento de empresa prestadora de servicios de agua |                                                                                                                                                    |
-| Usuario del segmento proveedor de servicios de residuos sólidos |  |
+| Usuario del segmento de personal de triaje de hospitales y clínicas |                                                                                                                                                    |
+| Usuario del segmento de pacientes que acuden a emergencias |  |
