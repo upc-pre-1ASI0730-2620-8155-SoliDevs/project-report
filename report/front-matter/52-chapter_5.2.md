@@ -419,7 +419,7 @@ Para el desarrollo de este segundo sprint, todos los miembros del equipo desarro
 
 ### 5.2.3. Sprint 3
 
-El tercer sprint marcó el paso de la simulación a la plataforma real: el equipo construyó el backend de Tri-Aid como una solución .NET de siete bounded contexts con Entity Framework Core y MySQL, expuso los endpoints REST que la aplicación web consume, alineó ambos contratos (ADR-010), integró el flujo clínico de extremo a extremo y desplegó el stack productivo (Web Services en Render con base de datos MySQL gestionada en Aiven, y Web Application en Firebase Hosting).
+El tercer sprint marcó el paso de la simulación a la plataforma real: el equipo construyó el backend de Tri-Aid como una solución .NET de siete bounded contexts con Entity Framework Core y MySQL, expuso los endpoints REST que la aplicación web consume, alineó ambos contratos (ADR-010), integró el flujo clínico de extremo a extremo y desplegó el stack productivo (Web Services en Render con base de datos gestionada MySQL en Aiven, y Web Application en Firebase Hosting).
 
 #### 5.2.3.1. Sprint Planning 3.
 
@@ -433,9 +433,9 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
 | Location | Google Meet |
 | Prepared By | Huayta Fuentes, Hernan Gabriel |
 | Attendees (to planning meeting) | Alva Ayala, Mitchell Adriano / Castro Solorza, Nicolás Eduardo / Huayta Fuentes, Hernan Gabriel / Ochoa Prado, Enrique Augusto |
-| Sprint 3 Review Summary | Durante el Sprint 3 se implementó la solución backend de Tri-Aid con los bounded contexts IAM, Subscription, Patient Registration, Triage Classification, Alerting, Specialty Assignment y Devices, cada uno con su dominio, servicios de comando y consulta, persistencia EF Core y fachada REST. Se alineó el contrato con el cliente web (ADR-010): sesiones y registro anónimo de personal, identificadores de episodio como cadena, especialidad por nombre en las derivaciones y alertas servidas bajo /alerts con CRUD completo. Se reconectó la aplicación web al API real y se verificó el flujo clínico de extremo a extremo (registro, signos vitales, clasificación NT-158, generación de alertas, reconocimiento, escalamiento a Trauma Shock, derivación y comprobante). El Product Owner aprobó el despliegue productivo (Render + Aiven MySQL + Firebase Hosting). |
-| Sprint 3 Retrospective Summary | El equipo identificó como acierto mantener el contrato del frontend como fuente de verdad durante el cambio de backend, lo que evitó reescribir la capa de infraestructura del cliente. Como oportunidades de mejora se acordó: (1) versionar el backend con un tag por merge a develop y un changelog por versión, para que la evidencia del sprint sea trazable commit a commit; (2) documentar los endpoints con la especificación OpenAPI y la interfaz Scalar en el mismo sprint en que se implementan. |
-| Sprint 3 Goal | Nuestro enfoque está en que el personal de salud opere Tri-Aid sobre una plataforma real: los bounded context del dominio servidos por una API .NET con persistencia gestionada, la aplicación web consumiendo esa API sin simuladores, y el flujo clínico completo verificado y desplegado.<br>Creemos que esto proporciona al equipo clínico una herramienta confiable de triaje con alertas reales y al proyecto una base arquitectónica sostenible para los siguientes avances.<br>Esto se confirmará cuando el flujo registro → signos vitales → clasificación → alertas → derivación funcione de extremo a extremo contra los Web Services desplegados, con la documentación interactiva accesible públicamente. |
+| Sprint 3 Review Summary | Durante el Sprint 3 se implementó la solución backend de Tri-Aid con los bounded contexts IAM, Subscription, Patient Registration, Triage Classification, Alerting, Specialty Assignment y Devices, cada uno con su dominio, servicios de comando y consulta, persistencia EF Core y fachada REST. Se alineó el contrato con el cliente web (ADR-010): sesiones y registro anónimo de personal, identificadores de episodio como cadena, especialidad por nombre en las derivaciones y alertas servidas bajo /alerts con CRUD completo. Se reconectó la aplicación web al API real y se verificó el flujo clínico de extremo a extremo (registro, signos vitales, clasificación NT-158, generación de alertas, reconocimiento, escalamiento a Trauma Shock, derivación y comprobante). El Product Owner aprobó el despliegue productivo (Render + Aiven MySQL + Firebase Hosting) y recomendó reforzar la generación automática de alertas en el paso de confirmación. |
+| Sprint 3 Retrospective Summary | El equipo identificó como acierto mantener el contrato del frontend como fuente de verdad durante el swap de backend, lo que evitó reescribir la capa de infraestructura del cliente. Como oportunidades de mejora se acordó: (1) registrar el webhook de despliegue automático al reconfigurar un servicio existente, ya que la reconversión del servicio de Render exigió disparos manuales; (2) versionar el backend con un tag por merge a develop y un changelog por versión, para que la evidencia del sprint sea trazable commit a commit. |
+| Sprint 3 Goal | Nuestro enfoque está en que el personal de salud opere Tri-Aid sobre una plataforma real: los bounded context del dominio servidos por una API .NET con persistencia gestionada, la aplicación web consumiendo esa API sin simuladores, y el flujo clínico completo verificado y desplegado.<br>Creemos que esto proporciona al equipo clínico una herramienta confiable de triaje con alertas reales y al proyecto una base arquitectónica sostenible para los siguientes avances.<br>Esto se confirmará cuando el flujo registro → signos vitales → clasificación → alertas → derivación → comprobante funcione de extremo a extremo contra los Web Services desplegados, con la documentación interactiva (Scalar) y la aplicación web accesibles públicamente. |
 | Sprint 3 Velocity | Para este Sprint 3, evaluando el desempeño de los dos sprints previos y el alcance técnico del backend, se ha establecido un Velocity de 68 Story Points. |
 | Sum of Story Points | 68 |
 
@@ -454,9 +454,9 @@ Los aspectos seleccionados corresponden a las principales áreas del proyecto Tr
 
 #### 5.2.3.3. Sprint Backlog 3
 
-El objetivo de este sprint backlog 3 fue asignar la construcción del backend por bounded context —un líder por contexto, igual que en la aplicación web—, la exposición de los endpoints REST que el cliente ya consume, la conexión del frontend al API real y el despliegue productivo del stack completo.
+El objetivo de este sprint backlog 3 fue asignar la construcción del backend por bounded context —un líder por contexto, igual que en la aplicación web—, la exposición de los endpoints REST que el cliente ya consume, la conexión del frontend al API real y el despliegue productivo del stack completo. Durante este Sprint, el equipo trabajó de manera colaborativa y en paralelo, integrando cada contexto a develop mediante merges revisados y versionando cada merge con un tag semántico (v0.1.0 a v0.11.0).
 
-Las siguientes capturas muestran el tablero del equipo con el sprint backlog 3 mapeado por User Story y tareas:
+Las siguientes capturas muestran el tablero del equipo (Jira) con el sprint backlog 3 mapeado por User Story y tareas:
 
 <div align="center">
   <img src="../assets/jira/fig-jira-sprint3.png">
@@ -481,16 +481,17 @@ A continuación, se detallan las User Stories priorizadas y las tareas asociadas
 | US-50 | Consumir el API real desde la aplicación | T-13 | Reconectar Patient Registration al API | Assemblers de paciente y episodio, sincronía de estados start-triage y referred, errores de validación | 5 | Enrique Ochoa | Done |
 | US-50 | Consumir el API real desde la aplicación | T-14 | Alinear contratos de signos vitales y estados | Vitales persistidos en el episodio, estados Assigned/Confirmed y normalización RTDB acotada | 4 | Hernan Huayta | Done |
 | US-50 | Consumir el API real desde la aplicación | T-15 | Ajustar la UX del centro de alertas | Reconocimiento directo sin confirmación; escalamiento con modal a Trauma Shock | 2 | Hernan Huayta | Done |
-| US-51 | Desplegar los Web Services | T-16 | Contenedor Docker y despliegue en Render | Dockerfile multi-etapa .NET 10, documentación interactiva pública, base MySQL gestionada en Aiven | 4 | Hernan Huayta | Done |
-| US-51 | Desplegar los Web Services | T-17 | Redesplegar la Web Application en Firebase | Ambiente de producción apuntando al API desplegada y verificación E2E del stack público | 3 | Hernan Huayta | Done |
-| US-52 | Versionar el backend por merge | T-18 | CHANGELOG y tags por versión | Semver 0.1.0 a 1.0.0, un tag anotado por merge a develop y changelog del release | 3 | Hernan Huayta | Done |
+| US-51 | Desplegar los Web Services | T-16 | Contenedor Docker y despliegue en Render | Dockerfile multi-etapa .NET 10, Scalar público, base MySQL gestionada en Aiven | 4 | Hernan Huayta | Done |
+| US-51 | Desplegar los Web Services | T-17 | Redesplegar la Web Application en Firebase | .env.production apuntando al API desplegada y verificación E2E del stack público | 3 | Hernan Huayta | Done |
+| US-52 | Versionar el backend por merge | T-18 | CHANGELOG y tags por versión | Semver 0.1.0→1.0.0, un tag anotado por merge a develop y changelog del release | 3 | Hernan Huayta | Done |
 | US-53 | Documentar los servicios | T-19 | Documentar endpoints por bounded context | Tabla de servicios del sprint y ADRs del frontend (001-010) | 3 | Nicolás Castro y Enrique Ochoa | Done |
+| US-54 | Presentar el producto desde la Landing | T-20 | Actualizar la Landing Page hacia el producto desplegado | CTAs por rol en el hero, eliminación del checkout legacy, planes de prueba enlazados al registro del app desplegada | 3 | Hernan Huayta | Done |
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
 En esta sección se presentan los commits que evidencian el trabajo realizado durante el Sprint 3, sobre los repositorios del Web Services (triaid-platform) y de la Web Application (triaid-webapp). Cada merge a develop del backend quedó versionado con un tag semántico (v0.1.0 a v0.11.0) y documentado en el changelog del repositorio.
 
-| Repository | Branch | Commit Ids | Commit Message | Committed on (Date) |
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
 |------------|--------|-----------|----------------|---------------------|
 | triaid-platform | feature/iam | 2a47943 | feat(iam): domain model with User and Session aggregates | 03/11/2026 |
 | triaid-platform | feature/iam | 620914d | feat(iam): JWT TokenService and token settings | 04/11/2026 |
@@ -499,9 +500,11 @@ En esta sección se presentan los commits que evidencian el trabajo realizado du
 | triaid-platform | feature/triage-classification | 22d6c84 | Merge branch 'feature/triage-classification' into develop (NT-158 engine, aggregate, REST facade) | 10/11/2026 |
 | triaid-platform | feature/specialty-assignment | 75792ce | Merge branch 'feature/specialty-assignment' into develop (SpecialtyRules US30-33, referrals, vouchers) | 10/11/2026 |
 | triaid-platform | feature/alerting | 1883310 | feat(alert): add CreateAlertCommand for clinical alert creation | 11/11/2026 |
+| triaid-platform | feature/alerting | e14235d | feat(alert): add ListAsync and GetByIdAsync methods to IAlertRepository for alert retrieval | 11/11/2026 |
 | triaid-platform | feature/alerting | 68b1eea | feat(alert): implement CreateAlertCommand and UpdateAlertCommand for alert state management | 11/11/2026 |
 | triaid-platform | feature/api-route-prefix | 4ea334c | feat(api): apply global api/v1 route prefix with camelCase enums | 11/11/2026 |
 | triaid-platform | feature/iam-sessions | eebab49 | feat(iam): add session management endpoints for the web client | 11/11/2026 |
+| triaid-platform | feature/iam-sessions | 8ad4601 | feat(iam): expose plain password and anonymous staff registration | 11/11/2026 |
 | triaid-platform | feature/clinical-contract | 8eec5cc | feat(specialty-assignment): add voucher persistence and symptom catalog | 11/11/2026 |
 | triaid-platform | feature/alerting-corrections-plus | 1b2e8ea | feat(alert): serve alerts under the alerts route with full crud | 11/11/2026 |
 | triaid-platform | feature/devices-management | 87cd7ae | feat(devices): accept the frontend device record on create | 11/11/2026 |
@@ -511,11 +514,13 @@ En esta sección se presentan los commits que evidencian el trabajo realizado du
 | triaid-platform | develop | db9c32f | chore(persistence): restore the mysql provider with the aiven managed cloud database | 12/11/2026 |
 | triaid-webapp | feature/patient-registration-backend | ec10b00 | feat(patient-registration): register patients and open triage episodes through the api | 11/11/2026 |
 | triaid-webapp | feature/patient-registration-backend | bc65bab | feat(patient-registration): sync episode state with start-triage and referred endpoints | 11/11/2026 |
+| triaid-webapp | feature/patient-registration-backend | 8a80e61 | feat(patient-registration): show api validation errors when registration fails | 11/11/2026 |
 | triaid-webapp | develop | 215b978 | fix(patient-registration): load persisted vitals from the episode record | 11/11/2026 |
 | triaid-webapp | develop | 4b1b1ef | ux(alerting): acknowledge alerts directly without confirmation | 11/11/2026 |
 | triaid-webapp | develop | fded57f | chore(deployment): point the production environment to the deployed triaid platform api | 12/11/2026 |
 | landing-page | feature/trial-plans | c1326d0 | feat(hero): role-based entry CTAs for staff and patient portal | 29/10/2026 |
 | landing-page | develop | 6d3bd7c | chore: point register CTAs to deployed web app | 04/11/2026 |
+| landing-page | develop | 24575b8 | Merge branch 'feature/landing-corrections' into develop | 11/11/2026 |
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
@@ -523,74 +528,79 @@ Las siguientes capturas muestran los endpoints de cada bounded context validados
 
 **Figura 1. Endpoints del Bounded Context IAM (autenticación, personal y sesiones)**
 <div align="center">
-  <img src="../assets/endpoints/scalar-iam.png">
+  <img src="../assets/scalar/scalar-iam.png">
 </div>
 
 **Figura 2. Endpoints del Bounded Context Subscription (planes, suscripciones e instituciones)**
 <div align="center">
-  <img src="../assets/endpoints/scalar-subscription.png">
+  <img src="../assets/scalar/scalar-subscription.png">
 </div>
 
 **Figura 3. Endpoints del Bounded Context Patient Registration (pacientes y episodios)**
 <div align="center">
-  <img src="../assets/endpoints/scalar-patient.png">
+  <img src="../assets/scalar/scalar-patient.png">
 </div>
 
 **Figura 4. Endpoints del Bounded Context Triage Classification (motor NT-158)**
 <div align="center">
-  <img src="../assets/endpoints/scalar-triage.png">
+  <img src="../assets/scalar/scalar-triage.png">
 </div>
 
 **Figura 5. Endpoints del Bounded Context Alerting (generación, reconocimiento y escalamiento)**
 <div align="center">
-  <img src="../assets/endpoints/scalar-alerting.png">
+  <img src="../assets/scalar/scalar-alerting.png">
 </div>
 
 **Figura 6. Endpoints del Bounded Context Specialty Assignment (síntomas, derivaciones y vouchers)**
 <div align="center">
-  <img src="../assets/endpoints/scalar-specialty.png">
+  <img src="../assets/scalar/scalar-specialty.png">
 </div>
 
 **Figura 7. Endpoints del Bounded Context Devices (inventario y lecturas de signos vitales)**
 <div align="center">
-  <img src="../assets/endpoints/scalar-devices.png">
+  <img src="../assets/scalar/scalar-devices.png">
 </div>
 
-Adicionalmente, se presentan evidencias de la aplicación web en producción operando contra los Web Services reales, correspondientes al flujo clínico completo verificado de extremo a extremo.
+Adicionalmente, se presentan evidencias de la aplicación web en producción operando contra los Web Services reales, correspondientes al flujo clínico completo verificado de extremo a extremo: autenticación del personal, registro de paciente con episodio, clasificación NT-158 confirmada, generación automática de alertas, reconocimiento directo y escalamiento a Trauma Shock.
 
 **Figura 8. Autenticación del personal contra el API desplegada**
 <div align="center">
   <img src="../assets/exec/exec-login.png">
 </div>
 
-**Figura 9. Clasificación NT-158 confirmada con niveles críticos**
+**Figura 9. Registro de paciente de emergencia con identidad temporal**
 <div align="center">
-  <img src="../assets/exec/exec-classification.png">
+  <img src="../assets/exec/exec-registration.png">
 </div>
 
-**Figura 10. Centro de alertas con las alertas generadas al confirmar la clasificación**
+**Figura 10. Clasificación NT-158 confirmada con niveles críticos**
 <div align="center">
-  <img src="../assets/exec/exec-alert-center.png">
+  <img src="../assets/exec/fig-exec-classification.png">
 </div>
 
-**Figura 11. Reconocimiento directo de una alerta (PUT /api/v1/alerts)**
+**Figura 11. Centro de alertas con las alertas generadas al confirmar la clasificación**
 <div align="center">
-  <img src="../assets/exec/exec-acknowledge.png">
+  <img src="../assets/exec/fig-exec-alert-center.png">
 </div>
 
-**Figura 12. Escalamiento a Trauma Shock con confirmación (derivación inmediata TS-1)**
+**Figura 12. Reconocimiento directo de una alerta (PUT /api/v1/alerts)**
 <div align="center">
-  <img src="../assets/exec/exec-escalate.png">
+  <img src="../assets/exec/fig-exec-acknowledge.png">
 </div>
 
-**Figura 13. Registro de pacientes en producción**
+**Figura 13. Escalamiento a Trauma Shock con confirmación (derivación inmediata TS-1)**
 <div align="center">
-  <img src="../assets/exec/exec-patients.png">
+  <img src="../assets/exec/fig-exec-escalate.png">
 </div>
 
-**Figura 14. Reportes del turno con el registro de atenciones en producción**
+**Figura 14. Gestión del plan de suscripción de la institución**
 <div align="center">
-  <img src="../assets/exec/exec-reports.png">
+  <img src="../assets/exec/exec-subscription.png">
+</div>
+
+**Figura 15. Landing Page publicada con los call-to-action hacia la aplicación desplegada**
+<div align="center">
+  <img src="../assets/exec/exec-landing.png">
 </div>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
@@ -600,9 +610,9 @@ Durante el Sprint 3 el equipo consolidó la documentación de los Web Services c
 - **Scalar UI (documentación interactiva):** https://triaid-api.onrender.com/scalar/v1
 - **Especificación OpenAPI (JSON):** https://triaid-api.onrender.com/openapi/v1.json
 
-**Figura 15. Interfaz Scalar desplegada con los bounded context agrupados por controlador**
+**Figura 16. Interfaz Scalar desplegada con los bounded context agrupados por controlador**
 <div align="center">
-  <img src="../assets/endpoints/scalar-overview.png">
+  <img src="../assets/scalar/scalar-overview.png">
 </div>
 
 A continuación se presenta la relación de endpoints documentados con OpenAPI durante este Sprint, indicando para cada acción el verbo HTTP, la sintaxis de llamada, los parámetros esperados y la respuesta correspondiente.
@@ -615,12 +625,14 @@ A continuación se presenta la relación de endpoints documentados con OpenAPI d
 | IAM | Abrir sesión de turno | POST | `/api/v1/sessions` | Body `SessionResource` | `{"staffId":1,"shift":"Morning"}` | `201 Created` |
 | IAM | Cerrar sesión | DELETE | `/api/v1/sessions/{id}` | `id` (path) | `DELETE /api/v1/sessions/1` | `200 OK` |
 | Subscription | Listar planes | GET | `/api/v1/plans` | — | `GET /api/v1/plans` | `200 OK` · `PlanResource[]` |
-| Subscription | Crear suscripción | POST | `/api/v1/subscriptions` | Body `SubscriptionResource` | `{"institution":"Clínica San Isidro","planId":"plan-esencial","paymentMethod":"Visa •••• 1111"}` | `201 Created` |
+| Subscription | Crear suscripción | POST | `/api/v1/subscriptions` | Body `SubscriptionResource` | `{"institution":"Clínica San Isidro","planId":"plan-esencial","card":{"number":"4111111111111111"}}` | `201 Created` |
+| Subscription | Actualizar suscripción | PUT | `/api/v1/subscriptions/{id}` | `id` (path) + Body | `PUT /api/v1/subscriptions/1` | `200 OK` |
 | Patient Registration | Listar pacientes | GET | `/api/v1/patients` | — | `GET /api/v1/patients` | `200 OK` · `PatientResource[]` |
 | Patient Registration | Registrar paciente y episodio | POST | `/api/v1/patients` | Body `PatientResource` | `{"dni":"17854296","names":"Rogelio","surnames":"Paredes Salas","birthDate":"1965-11-02","sex":"M"}` | `201 Created` · episodio abierto |
 | Patient Registration | Listar episodios | GET | `/api/v1/episodes` | `?patientId` (query, opcional) | `GET /api/v1/episodes?patientId=1` | `200 OK` · `EpisodeResource[]` |
 | Patient Registration | Confirmar signos vitales | PUT | `/api/v1/episodes/{id}` | `id` (path, string) + Body con `vitals` | `PUT /api/v1/episodes/2` con `vitals[{type,value}]` | `200 OK` |
 | Triage Classification | Crear clasificación | POST | `/api/v1/triage-classifications` | Body `SuggestClassificationResource` | `{"episodeId":"2","vitals":[...]}` | `201 Created` · nivel NT-158 sugerido |
+| Triage Classification | Clasificaciones por episodio | GET | `/api/v1/triage-classifications?episodeId={id}` | `episodeId` (query) | `GET /api/v1/triage-classifications?episodeId=2` | `200 OK` / `404` tolerado |
 | Triage Classification | Transición de estado | PUT | `/api/v1/triage-classifications/{id}` | `id` (path) + Body `ModifyClassificationResource` | `PUT /api/v1/triage-classifications/2` con `state` | `200 OK` · estado eco del cliente |
 | Alerting | Listar alertas | GET | `/api/v1/alerts` | — | `GET /api/v1/alerts` | `200 OK` · `AlertResource[]` |
 | Alerting | Generar alerta | POST | `/api/v1/alerts` | Body `CreateAlertResource` (episode string) | `{"episode":"2","patientName":"...","vitalSign":"SpO2","value":"88 %","severity":"critical"}` | `201 Created` |
@@ -636,19 +648,35 @@ A continuación se presenta la relación de endpoints documentados con OpenAPI d
 
 Durante este Sprint se desplegó el stack productivo completo de la plataforma:
 
-- **Web Services (.NET 10 en contenedor Docker):** desplegados en Render en https://triaid-api.onrender.com, con esquema y semillas creados automáticamente al arranque.
-- **Base de datos MySQL gestionada:** Aiven, accesible por TLS; el proveedor de Entity Framework Core abstrae el motor entre el desarrollo local (MySQL en Docker) y el despliegue.
+- **Web Services (.NET 10 en contenedor Docker):** desplegados en Render en https://triaid-api.onrender.com, con esquema y semillas creados automáticamente al arranque. El servicio reconvertido conserva la URL del release anterior del equipo (triaid-api), de modo que los integrantes ya la tenían registrada.
+- **Base de datos MySQL gestionada:** Aiven (plan developer-1), accesible por TLS; el proveedor de EF Core abstrae el motor entre el desarrollo local (MySQL en Docker) y el despliegue.
 - **Web Application (Vue 3):** desplegada en Firebase Hosting en https://triaid-solidevs.web.app, con el ambiente de producción apuntando a la API desplegada (ADR-010).
 - **Landing Page:** publicada en GitHub Pages con los call-to-action enlazando a la aplicación.
 
-Las capturas de las Figuras 8 a 14 (Ejecución) corresponden todas a la aplicación operando sobre el stack desplegado, y las Figuras 1 a 7 a la documentación interactiva servida por los Web Services productivos.
+**Figura 17. Base de datos MySQL desplegada en la nube mediante Aiven**<div align="center">
+  <img src="../assets/endpoints/db_cloud.png">
+</div>
+
+**Figura 18. Web Services desplegados en Render (contenedor Docker .NET 10)**
+<div align="center">
+  <img src="../assets/endpoints/render_backend.png">
+</div>
+**Figura 19. Interfaz Scalar desplegada públicamente en los Web Services**
+<div align="center">
+  <img src="../assets/fig-scalar-public.png">
+</div>
+
+**Figura 20. Panel de la aplicación en producción autenticado contra los Web Services (MySQL en Aiven)**
+<div align="center">
+  <img src="../assets/fig-deploy-panel-production.png">
+</div>
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-Para el desarrollo de este tercer sprint todos los miembros del equipo desarrollaron y colaboraron de manera activa y continua. Durante la ventana del sprint (09/10 al 12/11), el repositorio de Web Services registró la contribución de los cuatro integrantes: Nicolás Castro lideró el bounded context Alerting, Enrique Ochoa y Mitchell Adriano lideraron Devices y Vital Signs, y Hernan Huayta lideró IAM, Subscription, Triage Classification y Specialty Assignment además del rol de integrador (merges, resolución de conflictos, versionado semántico por merge y despliegue). En la Web Application, la reconexión al API real correspondió a Enrique Ochoa (Patient Registration) y Hernan Huayta (centro de alertas, contratos y despliegue).
+Para el desarrollo de este tercer sprint todos los miembros del equipo desarrollaron y colaboraron de manera activa y continua. La evidencia siguiente corresponde a los insights de GitHub de la ventana del sprint en el repositorio de Web Services (triaid-platform):
 
-<b>Nota de transparencia:</b> parte de las contribuciones de Huayta Fuentes, Hernan Gabriel fueron registradas bajo su usuario de GitHub **Homesman** y otras bajo su identidad completa **Huayta Fuentes, Hernan Gabriel** (misma persona, configuración distinta de git en dos entornos de trabajo):
+<div align="center">
+  <img src="../assets/insights/fig-github-insights-av2.png">
+</div>
 
-| Team Member (Last Name, First Name) | GitHub Username | Autorías en git |
-|------------------------------------|----------------|-----------------|
-| Huayta Fuentes, Hernan Gabriel | Homesman | `Homesman` y `Huayta Fuentes, Hernan Gabriel` |
+Durante esta ventana, los cuatro integrantes registraron commits en el repositorio de Web Services: Nicolás Castro lideró el bounded context Alerting, Enrique Ochoa y Mitchell Adriano lideraron Devices y Vital Signs, y Hernan Huayta lideró IAM, Subscription, Triage Classification y Specialty Assignment, además del rol de integrador (merges, versionado semántico por merge y despliegue). En el Web Application, la reconexión al API real correspondió a Enrique Ochoa (Patient Registration) y Hernan Huayta (centro de alertas, contratos y despliegue).
