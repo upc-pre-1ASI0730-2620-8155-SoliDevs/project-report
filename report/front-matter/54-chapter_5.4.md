@@ -8,12 +8,12 @@ El video inicia con una introducción a la problemática del triaje manual en la
 ### 5.4.3. Registro de video
 | Elemento                  | Detalle                                                                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Título del video          | `upc-pre-202620-1asi0730-8155-SoliDevs-about-the-product-av2`                                                                                           |
-| Plataforma de publicación | Microsoft Clipchamp (pendiente de subir a Microsoft Stream y YouTube)                                                                                   |
+| Título del video          | `upc-pre-202620-1asi0730-8155-SoliDevs-about-the-product-sprint-3`                                                                                      |
+| Plataforma de publicación | Microsoft Clipchamp y YouTube                                                                                                                           |
 | URL Microsoft Clipchamp   | https://shorturl.at/Emb7x                                                                                                                               |
-| URL YouTube               | [Pendiente de subir]                                                                                                                                    |
-| Duración                  | [Completar]                                                                                                                                             |
-| Fecha de publicación      | 13/11/2026                                                                                                                                              |
+| URL YouTube               | https://youtu.be/ZbTMJk2V1k0                                                                                                                            |
+| Duración                  | 6:49 min                                                                                                                                                |
+| Fecha de publicación      | 12/11/2026                                                                                                                                              |
 | Testimonio positivo incluido | [Pendiente: grabar durante las entrevistas de validación (5.3.2)]                                                                                   |
 
 ### 5.4.4. Evidencia fotográfica del video
