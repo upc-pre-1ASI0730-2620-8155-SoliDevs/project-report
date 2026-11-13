@@ -42,7 +42,7 @@
 <div align = "center">
 
 || Código     | Apellidos y Nombres                           |
-| :--- |:-----------|:----------------------------------------------|
+| :---: | :---: | :---: |
 |1| U202112423 | Alva Ayala Mitchell Adriano                   |
 |2| U20241D428 | Castro Solorza Nicolás Eduardo                |
 |3| U202320776 | Huayta Fuentes, Hernan Gabriel                |
