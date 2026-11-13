@@ -14,19 +14,10 @@ El video inicia con una introducción a la problemática del triaje manual en la
 | URL YouTube               | https://youtu.be/ZbTMJk2V1k0                                                                                                                            |
 | Duración                  | 6:49 min                                                                                                                                                |
 | Fecha de publicación      | 12/11/2026                                                                                                                                              |
-| Testimonio positivo incluido | [Pendiente: grabar durante las entrevistas de validación (5.3.2)]                                                                                   |
 
 ### 5.4.4. Evidencia fotográfica del video
-La siguiente captura corresponde al Video About-the-Product publicado para el cierre TF:
+La siguiente captura corresponde al Video About-the-Product publicado para el AV2:
 
 <p align="left">
-   <img src="">
+   <img src="https://i.ytimg.com/vi/ZbTMJk2V1k0/hqdefault.jpg" alt="Video About the Product">
 </p>
-
-### 5.4.5. Testimonios positivos incluidos
-[Pendiente] En el video se incorporan testimonios positivos de usuarios de los segmentos objetivo de Tri-Aid:
-
-| Segmento                                                        | Testimonio incluido en el video                                                                                                                                                                                                                                                         |
-|-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Usuario del segmento de personal de triaje de hospitales y clínicas |                                                                                                                                                    |
-| Usuario del segmento de pacientes que acuden a emergencias |  |
