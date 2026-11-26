@@ -462,7 +462,7 @@ Las siguientes capturas muestran el tablero del equipo (Jira) con el sprint back
   <img src="../assets/jira/fig-jira-sprint3.png">
 </div>
 
-<!-- Agregar el URL público del tablero de Jira del Sprint 3: "URL del tablero: <enlace>" -->
+URL del tablero: https://webwarriors-aquanetix-202610.atlassian.net/jira/software/projects/SOLID/boards/67/backlog
 
 Las User Stories de la tabla usan los mismos identificadores del Product Backlog de la sección 3.3; las tareas técnicas de despliegue, versionado y documentación no dependen de una User Story en particular.
 
