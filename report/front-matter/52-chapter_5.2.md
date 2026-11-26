@@ -466,26 +466,26 @@ A continuación, se detallan las User Stories priorizadas y las tareas asociadas
 
 | US Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 |------|------|--------|------------|------------|-------------------|-------------|--------|
-| US-46 | Autenticar al personal del centro | T-01 | Implementar el bounded context IAM | Agregados User y Session, servicios de comando y consulta, hashing y tokens JWT | 6 | Hernan Huayta | Done |
-| US-46 | Autenticar al personal del centro | T-02 | Exponer login y registro de personal con RBAC | UsersController y fachada REST con roles; sesiones para el cliente web | 5 | Hernan Huayta | Done |
-| US-47 | Gestionar la suscripción de la institución | T-03 | Implementar el bounded context Subscription | Agregados Subscription e Institution, portal de pago simulado, planes y checkout | 5 | Hernan Huayta | Done |
-| US-19 | Sugerir prioridad con la escala NT-158 | T-04 | Implementar el motor NT-158 en el backend | NT158Engine con tabla normativa y agregado Classification con estados | 5 | Hernan Huayta | Done |
-| US-21 | Clasificar y confirmar la prioridad | T-05 | Exponer /triage-classifications | ClassificationsController con creación, consulta por episodio y transiciones de estado | 4 | Hernan Huayta | Done |
-| US-38 | Generar alertas por valores fuera de rango | T-06 | Implementar el dominio Alerting | Agregado Alert con métrica, nivel y estado; comandos de ciclo de vida | 4 | Nicolás Castro | Done |
-| US-39 | Consultar y reconocer alertas activas | T-07 | Exponer /alerts con CRUD completo | AlertsController, recursos de entrada y assemblers; consultas de alertas activas en memoria | 5 | Nicolás Castro | Done |
-| US-30 | Sugerir especialidad según síntomas | T-08 | Implementar SpecialtyRules y catálogo | Reglas clínicas US30-US33, catálogo de dieciséis síntomas y semilla de especialidades | 4 | Hernan Huayta | Done |
-| US-31 | Derivar al paciente a una especialidad | T-09 | Exponer derivaciones y comprobantes | Referrals con especialidad por nombre, síntoma e institución; vouchers persistidos | 5 | Hernan Huayta | Done |
-| US-09 | Registrar paciente y generar episodio | T-10 | Exponer pacientes y episodios desde el backend | PatientRegistration con perfiles temporales, regularización y episodios con signos confirmados | 5 | Enrique Ochoa | Done |
-| US-12 | Gestionar el inventario de dispositivos | T-11 | Implementar el bounded context Devices | Agregado Device con estado online, vínculo a episodio e institución | 5 | Enrique Ochoa y Mitchell Adriano | Done |
-| US-12 | Gestionar el inventario de dispositivos | T-12 | Exponer CRUD de dispositivos con registro del frontend | DevicesController con create/put/delete alineados al record del cliente web | 4 | Enrique Ochoa | Done |
-| US-50 | Consumir el API real desde la aplicación | T-13 | Reconectar Patient Registration al API | Assemblers de paciente y episodio, sincronía de estados start-triage y referred, errores de validación | 5 | Enrique Ochoa | Done |
-| US-50 | Consumir el API real desde la aplicación | T-14 | Alinear contratos de signos vitales y estados | Vitales persistidos en el episodio, estados Assigned/Confirmed y normalización RTDB acotada | 4 | Hernan Huayta | Done |
-| US-50 | Consumir el API real desde la aplicación | T-15 | Ajustar la UX del centro de alertas | Reconocimiento directo sin confirmación; escalamiento con modal a Trauma Shock | 2 | Hernan Huayta | Done |
-| US-51 | Desplegar los Web Services | T-16 | Contenedor Docker y despliegue en Render | Dockerfile multi-etapa .NET 10, Scalar público, base MySQL gestionada en Aiven | 4 | Hernan Huayta | Done |
-| US-51 | Desplegar los Web Services | T-17 | Redesplegar la Web Application en Firebase | .env.production apuntando al API desplegada y verificación E2E del stack público | 3 | Hernan Huayta | Done |
-| US-52 | Versionar el backend por merge | T-18 | CHANGELOG y tags por versión | Semver 0.1.0→1.0.0, un tag anotado por merge a develop y changelog del release | 3 | Hernan Huayta | Done |
-| US-53 | Documentar los servicios | T-19 | Documentar endpoints por bounded context | Tabla de servicios del sprint y ADRs del frontend (001-010) | 3 | Nicolás Castro y Enrique Ochoa | Done |
-| US-54 | Presentar el producto desde la Landing | T-20 | Actualizar la Landing Page hacia el producto desplegado | CTAs por rol en el hero, eliminación del checkout legacy, planes de prueba enlazados al registro del app desplegada | 3 | Hernan Huayta | Done |
+| US-50 | Endpoint de generación de token | T-01 | Implementar el bounded context IAM | Agregados User y Session, servicios de comando y consulta, hashing y tokens JWT | 6 | Hernan Huayta | Done |
+| US-40 | Autenticación del personal | T-02 | Exponer login y registro de personal con RBAC | UsersController y fachada REST con roles; sesiones para el cliente web | 5 | Hernan Huayta | Done |
+| US-51 | Contratación de plan institucional | T-03 | Implementar el bounded context Subscription | Agregados Subscription e Institution, portal de pago simulado, planes y checkout | 5 | Hernan Huayta | Done |
+| US-46 | Endpoint de cálculo de prioridad | T-04 | Implementar el motor NT-158 en el backend | NT158Engine con tabla normativa y agregado Classification con estados | 5 | Hernan Huayta | Done |
+| US-47 | Endpoint de confirmación de triaje | T-05 | Exponer /triage-classifications | ClassificationsController con creación, consulta por episodio y transiciones de estado | 4 | Hernan Huayta | Done |
+| US-49 | Endpoint de transmisión de alertas | T-06 | Implementar el dominio Alerting | Agregado Alert con métrica, nivel y estado; comandos de ciclo de vida | 4 | Nicolás Castro | Done |
+| US-29 | Auditoría de alertas emitidas | T-07 | Exponer /alerts con CRUD completo | AlertsController, recursos de entrada y assemblers; consultas de alertas activas en memoria | 5 | Nicolás Castro | Done |
+| US-30 | Recomendación de especialidad | T-08 | Implementar SpecialtyRules y catálogo | Reglas clínicas US30-US33, catálogo de dieciséis síntomas y semilla de especialidades | 4 | Hernan Huayta | Done |
+| US-31 | Asignación a consultorio | T-09 | Exponer derivaciones y comprobantes | Referrals con especialidad por nombre, síntoma e institución; vouchers persistidos | 5 | Hernan Huayta | Done |
+| US-44 | Endpoint de registro de paciente | T-10 | Exponer pacientes y episodios desde el backend | PatientRegistration con perfiles temporales, regularización y episodios con signos confirmados | 5 | Enrique Ochoa | Done |
+| US-45 | Endpoint captura de signos vía IoT | T-11 | Implementar el bounded context Devices | Agregado Device con estado online, vínculo a episodio e institución | 5 | Enrique Ochoa y Mitchell Adriano | Done |
+| US-45 | Endpoint captura de signos vía IoT | T-12 | Exponer CRUD de dispositivos con registro del frontend | DevicesController con create/put/delete alineados al record del cliente web | 4 | Enrique Ochoa | Done |
+| US-44 | Endpoint de registro de paciente | T-13 | Reconectar Patient Registration al API | Assemblers de paciente y episodio, sincronía de estados start-triage y referred, errores de validación | 5 | Enrique Ochoa | Done |
+| US-45 | Endpoint captura de signos vía IoT | T-14 | Alinear contratos de signos vitales y estados | Vitales persistidos en el episodio, estados Assigned/Confirmed y normalización RTDB acotada | 4 | Hernan Huayta | Done |
+| US-28 | Escalamiento de paciente crítico | T-15 | Ajustar la UX del centro de alertas | Reconocimiento directo sin confirmación; escalamiento con modal a Trauma Shock | 2 | Hernan Huayta | Done |
+| — | Tarea técnica: despliegue de la solución | T-16 | Contenedor Docker y despliegue en Render | Dockerfile multi-etapa .NET 10, Scalar público, base MySQL gestionada en Aiven | 4 | Hernan Huayta | Done |
+| — | Tarea técnica: despliegue de la solución | T-17 | Redesplegar la Web Application en Firebase | .env.production apuntando al API desplegada y verificación E2E del stack público | 3 | Hernan Huayta | Done |
+| — | Tarea técnica: versionado del backend | T-18 | CHANGELOG y tags por versión | Semver 0.1.0→1.0.0, un tag anotado por merge a develop y changelog del release | 3 | Hernan Huayta | Done |
+| — | Tarea técnica: documentación de servicios | T-19 | Documentar endpoints por bounded context | Tabla de servicios del sprint y ADRs del frontend (001-010) | 3 | Nicolás Castro y Enrique Ochoa | Done |
+| US-04 | Planes de suscripción | T-20 | Actualizar la Landing Page hacia el producto desplegado | CTAs por rol en el hero, eliminación del checkout legacy, planes de prueba enlazados al registro del app desplegada | 3 | Hernan Huayta | Done |
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
