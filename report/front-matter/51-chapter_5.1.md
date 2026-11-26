@@ -52,12 +52,9 @@ IDE de JetBrains utilizado para desarrollar los Web Services de Tri-Aid en C# co
 
 [Rider](https://www.jetbrains.com/rider/download/)
 
-<!-- Agregar captura de Rider con el proyecto triaid-platform abierto como ../assets/development_environment/Rider.png y descomentar la imagen -->
-<!--
 <p align="center">
   <img src="../assets/development_environment/Rider.png" width="500"/>
 </p>
--->
 
 ### WebStorm
 
