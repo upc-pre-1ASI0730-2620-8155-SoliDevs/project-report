@@ -695,3 +695,21 @@ La siguiente tabla resume los commits (sin contar merges) registrados en la rama
 | landing-page (Landing Page) | Castro Solorza, Nicolás Eduardo (NicoCSE) | 1 |
 
 En el mismo periodo, el repositorio de Web Services registró 15 merges, el de la Web Application 5 y el de la Landing Page 5, integrando el trabajo desde ramas feature y release según GitFlow.
+
+La siguiente captura corresponde a los insights de GitHub del repositorio de la Web Application durante el sprint:
+
+<!-- Agregar captura de Insights > Contributors del repositorio SoliDevs-WebApplication_Tri-aid filtrada entre el 9 de octubre y el 13 de noviembre de 2026 como ../assets/insights/fig-github-insights-webapp-sprint3.png y descomentar la imagen -->
+<!--
+<div align="center">
+  <img src="../assets/insights/fig-github-insights-webapp-sprint3.png">
+</div>
+-->
+
+La siguiente captura corresponde a los insights de GitHub del repositorio de la Landing Page durante el sprint:
+
+<!-- Agregar captura de Insights > Contributors del repositorio landing-page filtrada entre el 9 de octubre y el 13 de noviembre de 2026 como ../assets/insights/fig-github-insights-landing-sprint3.png y descomentar la imagen -->
+<!--
+<div align="center">
+  <img src="../assets/insights/fig-github-insights-landing-sprint3.png">
+</div>
+-->
