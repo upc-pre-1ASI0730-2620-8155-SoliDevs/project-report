@@ -690,8 +690,8 @@ La siguiente tabla resume los commits (sin contar merges) registrados en la rama
 | Repositorio | Integrante (usuario de GitHub) | Commits |
 | :--- | :--- | :---: |
 | triaid-platform (Web Services) | Huayta Fuentes, Hernan Gabriel (Homesman) | 62 |
+| triaid-platform (Web Services) | Ochoa Prado, Enrique Augusto (EnriqueO-18) | 59 |
 | triaid-platform (Web Services) | Castro Solorza, Nicolás Eduardo (NicoCSE) | 35 |
-| triaid-platform (Web Services) | Ochoa Prado, Enrique Augusto (EnriqueO-18) | 27 |
 | triaid-platform (Web Services) | Alva Ayala, Mitchell Adriano (adn0307) | 20 |
 | SoliDevs-WebApplication_Tri-aid (Web Application) | Huayta Fuentes, Hernan Gabriel (Homesman) | 60 |
 | SoliDevs-WebApplication_Tri-aid (Web Application) | Ochoa Prado, Enrique Augusto (EnriqueO-18) | 30 |
