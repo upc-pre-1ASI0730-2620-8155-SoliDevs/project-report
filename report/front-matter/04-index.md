@@ -2,6 +2,10 @@
 
 ---
 
+- [Student Outcome](05-StudentOutcome.md)
+
+---
+
 ## Capítulo I: Introducción
   - [1.1. Startup Profile](11-chapter_1.1.md)
     - [1.1.1. Descripción de la Startup](11-chapter_1.1.md#111-descripción-de-la-startup)
@@ -118,6 +122,7 @@
 ---
 
 - [Conclusiones](97-conclusions.md)
+  - [Recomendaciones](97-conclusions.md#recomendaciones)
 - [Video About-the-Team](99-annexes.md#anexo-b-videos-about-the-product-y-about-the-team)
 - [Bibliografía](98-bibliographic_references.md)
 - [Anexos](99-annexes.md)
