@@ -109,13 +109,17 @@
     - [5.2.3.6. Services Documentation Evidence for Sprint Review](52-chapter_5.2.md#5236-services-documentation-evidence-for-sprint-review)
     - [5.2.3.7. Software Deployment Evidence for Sprint Review](52-chapter_5.2.md#5237-software-deployment-evidence-for-sprint-review)
     - [5.2.3.8. Team Collaboration Insights during Sprint](52-chapter_5.2.md#5238-team-collaboration-insights-during-sprint)
--  [5.3. Validation Interviews]()
-  - [5.3.1. Diseño de Entrevistas]()
-  - [5.3.2. Registro de Entrevistas]()
-  - [5.3.3. Evaluacion segun heuristicas]()
-- [5.4. Video About-The-Product]()
+- [5.3. Validation Interviews](53-chapter_5.3.md)
+  - [5.3.1. Diseño de entrevistas](53-chapter_5.3.md#531-diseño-de-entrevistas)
+  - [5.3.2. Registro de entrevistas](53-chapter_5.3.md#532-registro-de-entrevistas)
+  - [5.3.3. Evaluaciones según heurísticas](53-chapter_5.3.md#533-evaluaciones-según-heurísticas)
+- [5.4. Video About-the-Product](54-chapter_5.4.md)
+
+---
 
 - [Conclusiones](97-conclusions.md)
-- [Video About-The-Team]()
+- [Video About-the-Team](99-annexes.md#anexo-b-videos-about-the-product-y-about-the-team)
 - [Bibliografía](98-bibliographic_references.md)
 - [Anexos](99-annexes.md)
+  - [Anexo A: Videos de Exposiciones](99-annexes.md#anexo-a-videos-de-exposiciones)
+  - [Anexo B: Videos About-the-Product y About-the-Team](99-annexes.md#anexo-b-videos-about-the-product-y-about-the-team)
