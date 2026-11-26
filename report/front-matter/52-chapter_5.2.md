@@ -680,3 +680,18 @@ Para el desarrollo de este tercer sprint todos los miembros del equipo desarroll
 </div>
 
 Durante esta ventana, los cuatro integrantes registraron commits en el repositorio de Web Services: Nicolás Castro lideró el bounded context Alerting, Enrique Ochoa y Mitchell Adriano lideraron Devices y Vital Signs, y Hernan Huayta lideró IAM, Subscription, Triage Classification y Specialty Assignment, además del rol de integrador (merges, versionado semántico por merge y despliegue). En el Web Application, la reconexión al API real correspondió a Enrique Ochoa (Patient Registration) y Hernan Huayta (centro de alertas, contratos y despliegue).
+
+La siguiente tabla resume los commits (sin contar merges) registrados en la rama develop de cada repositorio entre el 9 de octubre y el 13 de noviembre de 2026, periodo que abarca desde el Sprint Planning 3 hasta la entrega del AV2:
+
+| Repositorio | Integrante (usuario de GitHub) | Commits |
+| :--- | :--- | :---: |
+| triaid-platform (Web Services) | Huayta Fuentes, Hernan Gabriel (Homesman) | 62 |
+| triaid-platform (Web Services) | Castro Solorza, Nicolás Eduardo (NicoCSE) | 35 |
+| triaid-platform (Web Services) | Ochoa Prado, Enrique Augusto (EnriqueO-18) | 27 |
+| triaid-platform (Web Services) | Alva Ayala, Mitchell Adriano (adn0307) | 20 |
+| SoliDevs-WebApplication_Tri-aid (Web Application) | Huayta Fuentes, Hernan Gabriel (Homesman) | 60 |
+| SoliDevs-WebApplication_Tri-aid (Web Application) | Ochoa Prado, Enrique Augusto (EnriqueO-18) | 30 |
+| landing-page (Landing Page) | Huayta Fuentes, Hernan Gabriel (Homesman) | 12 |
+| landing-page (Landing Page) | Castro Solorza, Nicolás Eduardo (NicoCSE) | 1 |
+
+En el mismo periodo, el repositorio de Web Services registró 15 merges, el de la Web Application 5 y el de la Landing Page 5, integrando el trabajo desde ramas feature y release según GitFlow.
