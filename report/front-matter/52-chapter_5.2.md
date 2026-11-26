@@ -462,6 +462,10 @@ Las siguientes capturas muestran el tablero del equipo (Jira) con el sprint back
   <img src="../assets/jira/fig-jira-sprint3.png">
 </div>
 
+<!-- Agregar el URL público del tablero de Jira del Sprint 3: "URL del tablero: <enlace>" -->
+
+Las User Stories de la tabla usan los mismos identificadores del Product Backlog de la sección 3.3; las tareas técnicas de despliegue, versionado y documentación no dependen de una User Story en particular.
+
 A continuación, se detallan las User Stories priorizadas y las tareas asociadas:
 
 | US Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
