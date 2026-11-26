@@ -62,12 +62,9 @@ IDE de JetBrains utilizado para desarrollar la Web Application en Vue y la Landi
 
 [WebStorm](https://www.jetbrains.com/webstorm/download/)
 
-<!-- Agregar captura de WebStorm con el proyecto de la Web Application abierto como ../assets/development_environment/WebStorm.png y descomentar la imagen -->
-<!--
 <p align="center">
   <img src="../assets/development_environment/WebStorm.png" width="500"/>
 </p>
--->
 
 ### Meet
 
