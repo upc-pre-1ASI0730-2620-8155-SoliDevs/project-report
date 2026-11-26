@@ -48,7 +48,7 @@
 - [4.1. Style Guidelines](41-chapter_4.1.md)
   - [4.1.1. General Style Guidelines](41-chapter_4.1.md#411-general-style-guidelines)
   - [4.1.2. Web Style Guidelines](41-chapter_4.1.md#412-web-style-guidelines)
-- [4.2. Mobile Applications UX/UI Design](42-chapter_4.2.md)
+- [4.2. Information Architecture](42-chapter_4.2.md)
   - [4.2.1. Organization Systems](42-chapter_4.2.md#421-organization-systems)
   - [4.2.2. Labeling Systems](42-chapter_4.2.md#422-labeling-systems)
   - [4.2.3. SEO Tags and Meta Tags](42-chapter_4.2.md#423-seo-tags-and-meta-tags)
@@ -66,12 +66,12 @@
 - [4.6. Domain-Driven Software Architecture](46-chapter_4.6.md)
   - [4.6.1. Design Level-EventStorming](46-chapter_4.6.md#461-design-level-eventstorming)
   - [4.6.2. Software Architecture Context Diagram](46-chapter_4.6.md#462-software-architecture-context-diagram)
-  - [4.6.3. Software Architecture Container Diagram](46-chapter_4.6.md#463-software-architecture-container-diagram)
-  - [4.6.4. Software Architecture Component Diagram](46-chapter_4.6.md#464-software-architecture-component-diagram)
+  - [4.6.3. Software Architecture Container Diagrams](46-chapter_4.6.md#463-software-architecture-container-diagrams)
+  - [4.6.4. Software Architecture Components Diagrams](46-chapter_4.6.md#464-software-architecture-components-diagrams)
 - [4.7. Software Object-Oriented Design](47-chapter_4.7.md)
-  - [4.7.1. Class Diagram](47-chapter_4.7.md#471-class-diagram)
+  - [4.7.1. Class Diagrams](47-chapter_4.7.md#471-class-diagrams)
 - [4.8. Database Design](48-chapter_4.8.md)
-  - [4.8.1. Database Diagram](48-chapter_4.8.md#481-database-diagram)
+  - [4.8.1. Database Diagrams](48-chapter_4.8.md#481-database-diagrams)
 
 ---
 
