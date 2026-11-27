@@ -1,4 +1,6 @@
-no nec# Bibliographic References
+# Bibliographic References
+
+---
 
 - Adzic, G. (2012). *Impact Mapping: Making a big impact with software products and projects*. Provoking Thoughts.
 - Atlassian. (s. f.). *Jira Software: Plan, track, and manage work*. https://www.atlassian.com/software/jira
