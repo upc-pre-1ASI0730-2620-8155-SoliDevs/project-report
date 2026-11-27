@@ -1,5 +1,10 @@
 # Conclusiones
 
+---
+## Conclusiones y Recomendaciones
+
+---
+### Conclusiones
 - El proceso de needfinding permitió al equipo comprender en profundidad el problema real del triaje en emergencias: mediante entrevistas a ambos segmentos objetivo, el análisis competitivo y la técnica Event Storming, se identificó con evidencia que el registro manual en papel, la doble digitación, la demora en detectar casos críticos y la falta de información del paciente son las principales causas de los tiempos de espera y de los errores en las derivaciones.
 - La aplicación de Lean UX (problem statements, assumptions, hypotheses y Lean UX Canvas) orientó las decisiones del equipo hacia las necesidades reales de los segmentos, evitando desarrollar funcionalidades sin sustento; cada User Story del Product Backlog proviene de una hipótesis validada con entrevistas y del Impact Map construido a partir de los Business Goals.
 - La modelación del dominio mediante Big Picture EventStorming y Design-Level EventStorming permitió identificar los bounded contexts, commands, events, policies y aggregates del proceso de triaje, estableciendo un lenguaje ubicuo compartido que se refleja de manera consistente en la arquitectura, los diagramas de clases y el diseño de la base de datos.
@@ -8,10 +13,44 @@
 - El trabajo colaborativo basado en la matriz de liderazgo y colaboración (LACX) y la distribución de responsabilidades por bounded contexts permitió que cada integrante liderara sus entregables y aportara a los de los demás, evidenciado en el registro de contribuciones del repositorio y en el Student Outcome del equipo.
 - La gestión de la configuración de software (repositorios independientes para el informe y para la Landing Page, ramas feature, control de versiones documentado) garantizó la trazabilidad de cada cambio y la atribución correcta del aporte de cada integrante a lo largo del avance.
 
-## Recomendaciones
+### Recomendaciones
 
 - Realizar las entrevistas de validación (§5.3) con usuarios de ambos segmentos interactuando con el prototipo en Figma, y aplicar la evaluación heurística de usabilidad definida en el Anexo D, para identificar oportunidades de mejora antes de la implementación de las aplicaciones web.
 - Priorizar en los siguientes sprints la implementación del Web Service (RESTful API) correspondiente a los bounded contexts definidos, junto con la integración de los dispositivos IoT, que constituyen el núcleo diferencial de Tri-Aid frente a sus competidores.
 - Diseñar e implementar la integración con los sistemas HIS institucionales para el plan Institucional, evitando la duplicidad de registros y aprovechando la infraestructura que las clínicas privadas ya tienen operativa.
 - Planificar tempranamente el despliegue de las aplicaciones web (Panel de Triaje y Portal del Paciente) y del Web Services, incluyendo la configuración de ambientes, dominios y la documentación de servicios, para no concentrar los despliegues al cierre del ciclo.
 - Mantener el registro de control de versiones y el Student Outcome actualizados en cada entrega, acumulando las conclusiones por avance, de modo que la evidencia del trabajo en equipo quede documentada de forma continua.
+
+## Video About-the-Team
+
+---
+
+### Resumen del video
+En esta sección, se presenta un video que documenta de manera audiovisual el proceso del trabajo realizado a lo largo del proyecto, detallando cada actividad planificada y ejecutada. Asimismo se presenta los testimonios de cada uno de los integrantes del equipo en donde mencionan su aporte y colaboración en el proyecto.
+
+### Enlaces de Publicación
+| Elemento                  | Detalle                                                             |
+|---------------------------|---------------------------------------------------------------------|
+| Título del video          | `` |
+| Plataforma de publicación | Microsoft Stream / SharePoint y YouTube                             |
+| URL Microsoft Stream      |                                           |
+| URL Youtube               |                                           |
+| Duración                  |                                                            |
+| Fecha de publicación |                                                           |
+
+### Evidencia fotográfica del video
+La siguiente captura corresponde al Video About-the-Team publicado para el cierre TF:
+<p align="left">
+   <img src="">
+</p>
+
+### Pauta de Secuencias de Contenido (Timing)
+A continuación, se detalla la estructura del video indicando el momento exacto de inicio de cada bloque, el cual incluye el desarrollo del proyecto y los testimonios ante cámara de cada integrante:
+
+| Timing (hh:mm:ss)   | Secuencia de contenido                                                                                                                                           | Detalles                                                                                                                                                         |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 00:00:00 - 00:0: |  |  |
+| 00:0:0 - 00:0:0 | Testimonio de                                                                                                                  |                                                                     |
+| 00:0: - 00:0:0 | Testimonio de                                                                                                                       |                                                                    |
+| 00:0: - 00:0: | Testimonio de                                                                                                                      |                                                                      |
+| 00:0: - 00:0:0 | Testimonio de                                                                                                                    |                                                                  |
