@@ -657,7 +657,8 @@ Durante este Sprint se desplegó el stack productivo completo de la plataforma:
 - **Web Application (Vue 3):** desplegada en Firebase Hosting en https://triaid-solidevs.web.app, con el ambiente de producción apuntando a la API desplegada (ADR-010).
 - **Landing Page:** publicada en GitHub Pages con los call-to-action enlazando a la aplicación.
 
-**Figura 17. Base de datos MySQL desplegada en la nube mediante Aiven**<div align="center">
+**Figura 17. Base de datos MySQL desplegada en la nube mediante Aiven**
+<div align="center">
   <img src="../assets/endpoints/db_cloud.png">
 </div>
 

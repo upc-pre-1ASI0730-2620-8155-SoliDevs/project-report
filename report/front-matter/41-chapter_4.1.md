@@ -52,7 +52,7 @@ Utilizaremos un contenedor máximo de **1120 px** con separaciones basadas en m�
 
 **Tono de comunicación**
 
-Los tonos de comunicación serán calmados, precisos y asistivos. Queremos transmitir que la plataforma apoya al personal — nunca reemplaza su criterio clínico — y que cada mensaje (registro, prioridad, alerta, derivación) es claro, verificable y bilingüe (inglés por defecto, español latinoamericano disponible).
+Los tonos de comunicación serán calmados, precisos y asistivos. Queremos transmitir que la plataforma apoya al personal — nunca reemplaza su criterio clínico — y que cada mensaje (registro, prioridad, incidente, derivación) es claro, verificable y bilingüe (inglés por defecto, español latinoamericano disponible).
 
 ### 4.1.2. Web Style Guidelines
 
@@ -70,7 +70,7 @@ Siguiendo lo establecido en las General Style Guidelines, la tipografía web de 
 
 La paleta de colores definida en las General Style Guidelines se aplica en la interfaz web de la siguiente manera:
 
-- **Papel clínico (#EFF6F1):** fondo principal de la aplicación; proporciona contraste con las tarjetas de triaje, la tabla de signos vitales y los paneles de alerta.
+- **Papel clínico (#EFF6F1):** fondo principal de la aplicación; proporciona contraste con las tarjetas de triaje, la tabla de signos vitales y los paneles de incidente.
 - **Verde tinta (#0A221A / #086733):** paneles de contraste oscuro (footer), botones primarios, marca y estados de confirmación.
 - **Verde ECG (#35C26D):** trazo del pulso en el monitoreo, glows y elementos de identidad sobre fondos oscuros.
 - **Verdes suaves (#E7F0EA / #D3F1D9):** áreas hundidas, estados hover y selección de texto.
@@ -82,7 +82,7 @@ Adicionalmente, se incorporan colores semánticos para la representación de la 
 - **Amarillo (#FFB300):** Nivel III — prioritario / requiere monitoreo cercano.
 - **Verde (#35C26D):** Niveles IV–V — dentro del rango habitual.
 
-Estos colores semánticos se emplean **con moderación** (solo chips de prioridad, alertas y estados del monitor): la interfaz permanece verde-monocroma para que el color clínico conserve su significado y la accesibilidad del conjunto no se degrade.
+Estos colores semánticos se emplean **con moderación** (solo chips de prioridad, incidentes y estados del monitor): la interfaz permanece verde-monocroma para que el color clínico conserve su significado y la accesibilidad del conjunto no se degrade.
 
 **Accesibilidad**
 

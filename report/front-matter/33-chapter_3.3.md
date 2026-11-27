@@ -2,7 +2,7 @@
 
 ---
 
-<p>El Product Backlog se encuentra organizado por caso de negocio siguiendo la secuencia natural del proceso de atención: primero la difusión institucional (Landing Page), luego el flujo clínico (admisión, captura de signos vitales, clasificación de prioridad, alertas y derivación), a continuación la seguridad del acceso — prerrequisito del portal del paciente — y finalmente la visibilidad para el paciente y la gestión comercial de la suscripción. Dentro de cada caso de negocio, las technical stories de la API anteceden a las user stories de negocio que dependen de ellas, y ninguna funcionalidad aparece antes que la que la hace posible (por ejemplo, el endpoint de registro de pacientes antecede a la búsqueda por DNI, y la generación de tokens y autenticación anteceden al acceso seguro al portal). Los story points siguen la escala de Fibonacci (2/3/5/8) y su estimación en horas se detalla en el Sprint Backlog del Capítulo V, donde ninguna tarea excede las 8 horas.</p>
+<p>El Product Backlog se encuentra organizado por caso de negocio siguiendo la secuencia natural del proceso de atención: primero la difusión institucional (Landing Page), luego el flujo clínico (admisión, captura de signos vitales, clasificación de prioridad, incidentes y derivación), a continuación la seguridad del acceso — prerrequisito del portal del paciente — y finalmente la visibilidad para el paciente y la gestión comercial de la suscripción. Dentro de cada caso de negocio, las technical stories de la API anteceden a las user stories de negocio que dependen de ellas, y ninguna funcionalidad aparece antes que la que la hace posible (por ejemplo, el endpoint de registro de pacientes antecede a la búsqueda por DNI, y la generación de tokens y autenticación anteceden al acceso seguro al portal). Los story points siguen la escala de Fibonacci (2/3/5/8) y su estimación en horas se detalla en el Sprint Backlog del Capítulo V, donde ninguna tarea excede las 8 horas.</p>
 
 <table>
     <thead>
@@ -214,8 +214,8 @@
         <tr>
             <td>29</td>
             <td>US49</td>
-            <td>Endpoint de transmisión de alertas</td>
-            <td>Como Developer deseo un servicio de WebSockets para emitir alertas bidireccionales en tiempo real cuando se detecten lecturas vitales críticas.</td>
+            <td>Endpoint de transmisión de incidentes</td>
+            <td>Como Developer deseo un servicio de WebSockets para emitir incidentes bidireccionales en tiempo real cuando se detecten lecturas vitales críticas.</td>
             <td>8</td>
         </tr>
         <tr>
@@ -235,21 +235,21 @@
         <tr>
             <td>32</td>
             <td>US27</td>
-            <td>Reconocimiento de alerta</td>
-            <td>Como enfermera de triaje deseo marcar una alerta crítica como recibida para silenciar las notificaciones una vez que el caso está en atención.</td>
+            <td>Reconocimiento de incidente</td>
+            <td>Como enfermera de triaje deseo marcar un incidente crítico como recibido para silenciar las notificaciones una vez que el caso está en atención.</td>
             <td>2</td>
         </tr>
         <tr>
             <td>33</td>
             <td>US28</td>
             <td>Escalamiento de paciente crítico</td>
-            <td>Como técnico de enfermería deseo poder derivar al paciente directamente a trauma shock al recibir una alerta vital para agilizar el escalamiento del caso y salvar su vida.</td>
+            <td>Como técnico de enfermería deseo poder derivar al paciente directamente a trauma shock al recibir un incidente vital para agilizar el escalamiento del caso y salvar su vida.</td>
             <td>5</td>
         </tr>
         <tr>
             <td>34</td>
             <td>US29</td>
-            <td>Auditoría de alertas emitidas</td>
+            <td>Auditoría de incidentes emitidos</td>
             <td>Como administrador de triaje deseo consultar un reporte de las incidencias críticas del turno para analizar las horas de mayor riesgo.</td>
             <td>5</td>
         </tr>
