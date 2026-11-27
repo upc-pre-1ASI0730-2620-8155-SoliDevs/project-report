@@ -4,6 +4,7 @@
 
 Con el website y aplicacion web de Tri-Aid desplegadas, se han diseñado las siguientes preguntas con el fin de recaudar información de los usuarios finales y validar la experiencia de usuario, la usabilidad y la funcionalidad de la plataforma. Las entrevistas se realizaron con personal de triaje y pacientes, quienes interactuaron con el sistema y proporcionaron retroalimentación valiosa.
 
+
 ### 5.3.1. Diseño de entrevistas
 
 ---
