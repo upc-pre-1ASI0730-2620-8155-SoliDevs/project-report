@@ -262,23 +262,23 @@
         </tr>
         <tr>
             <td>US27</td>
-            <td>Reconocimiento de alerta</td>
-            <td>Como enfermera de triaje deseo marcar una alerta crítica como recibida para silenciar las notificaciones una vez que el caso está en atención.</td>
-            <td><strong>Escenario 1: Detención de notificaciones</strong><br>Dado que una alerta crítica está activa, Cuando la enfermera de triaje reconoce la advertencia, Entonces el sistema detiene las notificaciones asociadas al evento.<br><br><strong>Escenario 2: Registro de auditoría</strong><br>Dado que el usuario confirma la recepción de la alerta, Cuando el sistema detiene el aviso, Entonces guarda el identificador del usuario responsable en el historial de eventos.</td>
+            <td>Reconocimiento de incidente</td>
+            <td>Como enfermera de triaje deseo marcar un incidente crítico como recibido para silenciar las notificaciones una vez que el caso está en atención.</td>
+            <td><strong>Escenario 1: Detención de notificaciones</strong><br>Dado que un incidente crítico está activo, Cuando la enfermera de triaje reconoce la advertencia, Entonces el sistema detiene las notificaciones asociadas al evento.<br><br><strong>Escenario 2: Registro de auditoría</strong><br>Dado que el usuario confirma la recepción del incidente, Cuando el sistema detiene el aviso, Entonces guarda el identificador del usuario responsable en el historial de eventos.</td>
             <td>EP05</td>
         </tr>
         <tr>
             <td>US28</td>
             <td>Escalamiento de paciente crítico</td>
-            <td>Como técnico de enfermería deseo poder derivar al paciente directamente a trauma shock al recibir una alerta vital para agilizar el escalamiento del caso y salvar su vida.</td>
-            <td><strong>Escenario 1: Escalamiento directo</strong><br>Dado que el sistema presenta una alerta vital de nivel 1, Cuando el técnico selecciona la opción de derivación inmediata, Entonces el sistema omite los pasos secundarios de registro y envía al paciente directamente a la lista de atención crítica.<br><br><strong>Escenario 2: Cancelación de escalamiento</strong><br>Dado que el técnico inicia la derivación inmediata por error, Cuando cancela la acción antes de la confirmación final, Entonces el sistema retiene al paciente en la vista de evaluación actual.</td>
+            <td>Como técnico de enfermería deseo poder derivar al paciente directamente a trauma shock al recibir un incidente vital para agilizar el escalamiento del caso y salvar su vida.</td>
+            <td><strong>Escenario 1: Escalamiento directo</strong><br>Dado que el sistema presenta un incidente vital de nivel 1, Cuando el técnico selecciona la opción de derivación inmediata, Entonces el sistema omite los pasos secundarios de registro y envía al paciente directamente a la lista de atención crítica.<br><br><strong>Escenario 2: Cancelación de escalamiento</strong><br>Dado que el técnico inicia la derivación inmediata por error, Cuando cancela la acción antes de la confirmación final, Entonces el sistema retiene al paciente en la vista de evaluación actual.</td>
             <td>EP05</td>
         </tr>
         <tr>
             <td>US29</td>
-            <td>Auditoría de alertas emitidas</td>
+            <td>Auditoría de incidentes emitidos</td>
             <td>Como administrador de triaje deseo consultar un reporte de las incidencias críticas del turno para analizar las horas de mayor riesgo.</td>
-            <td><strong>Escenario 1: Generación de reporte</strong><br>Dado que el administrador de triaje requiere evaluar incidencias, Cuando consulta el reporte de alertas, Entonces el sistema lista todas las advertencias emitidas ordenadas cronológicamente.<br><br><strong>Escenario 2: Filtrado por fecha</strong><br>Dado que el administrador visualiza el historial global de alertas, Cuando aplica un filtro de fecha específico, Entonces el sistema muestra únicamente las incidencias ocurridas durante ese periodo.</td>
+            <td><strong>Escenario 1: Generación de reporte</strong><br>Dado que el administrador de triaje requiere evaluar incidencias, Cuando consulta el reporte de incidentes, Entonces el sistema lista todas las advertencias emitidas ordenadas cronológicamente.<br><br><strong>Escenario 2: Filtrado por fecha</strong><br>Dado que el administrador visualiza el historial global de incidentes, Cuando aplica un filtro de fecha específico, Entonces el sistema muestra únicamente las incidencias ocurridas durante ese periodo.</td>
             <td>EP05</td>
         </tr>
         <tr>
@@ -416,9 +416,9 @@
         </tr>
         <tr>
             <td>US49</td>
-            <td>Endpoint de transmisión de alertas</td>
-            <td>Como Developer deseo un servicio de WebSockets para emitir alertas bidireccionales en tiempo real cuando se detecten lecturas vitales críticas.</td>
-            <td><strong>Escenario 1: Broadcast de alerta</strong><br>Dado que el motor de reglas detecta valores anómalos, Cuando se dispara el evento crítico interno, Entonces el API emite un mensaje persistente en tiempo real hacia los clientes conectados al socket.<br><br><strong>Escenario 2: Sincronización tras desconexión</strong><br>Dado que un cliente pierde la conexión de red temporalmente, Cuando restablece su conexión con el WebSocket, Entonces el API sincroniza el historial de alertas emitidas durante su ausencia.</td>
+            <td>Endpoint de transmisión de incidentes</td>
+            <td>Como Developer deseo un servicio de WebSockets para emitir incidentes bidireccionales en tiempo real cuando se detecten lecturas vitales críticas.</td>
+            <td><strong>Escenario 1: Broadcast de incidente</strong><br>Dado que el motor de reglas detecta valores anómalos, Cuando se dispara el evento crítico interno, Entonces el API emite un mensaje persistente en tiempo real hacia los clientes conectados al socket.<br><br><strong>Escenario 2: Sincronización tras desconexión</strong><br>Dado que un cliente pierde la conexión de red temporalmente, Cuando restablece su conexión con el WebSocket, Entonces el API sincroniza el historial de incidentes emitidas durante su ausencia.</td>
             <td>EP08</td>
         </tr>
         <tr>
