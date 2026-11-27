@@ -15,10 +15,10 @@ En este anexo se registra, de forma progresiva, el título y el enlace del video
 
 ## Anexo B: Videos About-the-Product y About-the-Team
 
-Los siguientes videos complementan el informe. El video About-the-Product parte del problema descrito en el Problem Statement: el triaje de emergencias con signos vitales tomados por separado, transcritos a mano y una prioridad decidida sin guía normativa, que genera registros lentos, errores de transcripción y derivaciones incorrectas. Sobre esa base, muestra cómo Tri-Aid atiende a los dos segmentos objetivo: el personal de triaje y los pacientes de los servicios de emergencia.
+Los siguientes videos complementan el informe. El video About-the-Product parte del problema descrito en el Problem Statement: el triaje de emergencias con signos vitales transcritos a mano, que genera congestión, errores de digitación y demoras en la atención. Sobre esa base, muestra cómo el personal de triaje registra y atiende a un paciente en Tri-Aid.
 
 | Video | Enlace | Sobre el contenido |
 | :--- | :--- | :--- |
-| Video About-the-Product | https://youtu.be/ZbTMJk2V1k0 | Presenta la problemática del triaje manual y recorre el flujo completo de atención en Tri-Aid: registro del paciente con episodio de triaje, captura de signos vitales, clasificación con el motor NT-158, alertas ante valores fuera de rango y derivación a la especialidad con comprobante. |
+| Video About-the-Product | https://youtu.be/ZbTMJk2V1k0 | Presenta la problemática del triaje manual y los tres pilares de Tri-Aid: captura IoT, clasificación según la NT-158 y alertas en tiempo real. Luego recorre el flujo en la aplicación: registro del paciente, captura de signos vitales de forma manual y con dispositivos vinculados, clasificación de prioridad, derivación a la especialidad con comprobante digital, alertas y reportes. |
 | Video About-the-Team | https://youtu.be/n721zMXQ6AA | Video en el que el equipo se presenta y explica cómo se organizó el trabajo por bounded contexts. |
 <!-- Reemplazar los enlaces de About-the-Product y About-the-Team cuando se publiquen las versiones finales -->
