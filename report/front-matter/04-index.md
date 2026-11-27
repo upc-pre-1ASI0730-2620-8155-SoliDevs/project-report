@@ -2,6 +2,10 @@
 
 ---
 
+- [Student Outcome](05-StudentOutcome.md)
+
+---
+
 ## Capítulo I: Introducción
   - [1.1. Startup Profile](11-chapter_1.1.md)
     - [1.1.1. Descripción de la Startup](11-chapter_1.1.md#111-descripción-de-la-startup)
@@ -10,6 +14,12 @@
     - [1.2.1. Antecedentes y problemática](12-chapter_1.2.md#121-antecedentes-y-problemática)
     - [1.2.2. Lean UX Process](12-chapter_1.2.md#122-lean-ux-process)
         - [1.2.2.1. Feature Assumptions](12-chapter_1.2.md#1221-lean-ux-problem-statements)
+        - [1.2.2.2. Lean UX Assumptions](12-chapter_1.2.md#1222-lean-ux-assumptions)
+        - [1.2.2.3. Lean UX Hypothesis Statements](12-chapter_1.2.md#1223-lean-ux-hypothesis-statements)
+        - [1.2.2.4. Lean UX Canvas](12-chapter_1.2.md#1224-lean-ux-canvas)
+    - [1.2.1. Antecedentes y problemática](12-chapter_1.2.md#121-antecedentes-y-problemática)
+    - [1.2.2. Lean UX Process](12-chapter_1.2.md#122-lean-ux-process)
+        - [1.2.2.1. Lean UX Problem Statements](12-chapter_1.2.md#1221-lean-ux-problem-statements)
         - [1.2.2.2. Lean UX Assumptions](12-chapter_1.2.md#1222-lean-ux-assumptions)
         - [1.2.2.3. Lean UX Hypothesis Statements](12-chapter_1.2.md#1223-lean-ux-hypothesis-statements)
         - [1.2.2.4. Lean UX Canvas](12-chapter_1.2.md#1224-lean-ux-canvas)
@@ -48,7 +58,7 @@
 - [4.1. Style Guidelines](41-chapter_4.1.md)
   - [4.1.1. General Style Guidelines](41-chapter_4.1.md#411-general-style-guidelines)
   - [4.1.2. Web Style Guidelines](41-chapter_4.1.md#412-web-style-guidelines)
-- [4.2. Mobile Applications UX/UI Design](42-chapter_4.2.md)
+- [4.2. Information Architecture](42-chapter_4.2.md)
   - [4.2.1. Organization Systems](42-chapter_4.2.md#421-organization-systems)
   - [4.2.2. Labeling Systems](42-chapter_4.2.md#422-labeling-systems)
   - [4.2.3. SEO Tags and Meta Tags](42-chapter_4.2.md#423-seo-tags-and-meta-tags)
@@ -66,12 +76,14 @@
 - [4.6. Domain-Driven Software Architecture](46-chapter_4.6.md)
   - [4.6.1. Design Level-EventStorming](46-chapter_4.6.md#461-design-level-eventstorming)
   - [4.6.2. Software Architecture Context Diagram](46-chapter_4.6.md#462-software-architecture-context-diagram)
-  - [4.6.3. Software Architecture Container Diagram](46-chapter_4.6.md#463-software-architecture-container-diagram)
-  - [4.6.4. Software Architecture Component Diagram](46-chapter_4.6.md#464-software-architecture-component-diagram)
+  - [4.6.3. Software Architecture Container Diagrams](46-chapter_4.6.md#463-software-architecture-container-diagrams)
+  - [4.6.4. Software Architecture Components Diagrams](46-chapter_4.6.md#464-software-architecture-components-diagrams)
 - [4.7. Software Object-Oriented Design](47-chapter_4.7.md)
   - [4.7.1. Class Diagram](47-chapter_4.7.md#471-class-diagrams)
+  - [4.7.1. Class Diagrams](47-chapter_4.7.md#471-class-diagrams)
 - [4.8. Database Design](48-chapter_4.8.md)
   - [4.8.1. Database Diagram](48-chapter_4.8.md#481-database-diagrams)
+  - [4.8.1. Database Diagrams](48-chapter_4.8.md#481-database-diagrams)
 
 ---
 
@@ -91,7 +103,7 @@
     - [5.2.1.6. Services Documentation Evidence for Sprint Review](52-chapter_5.2.md#5216-services-documentation-evidence-for-sprint-review)
     - [5.2.1.7. Software Deployment Evidence for Sprint Review](52-chapter_5.2.md#5217-software-deployment-evidence-for-sprint-review)
     - [5.2.1.8. Team Collaboration Insights during Sprint](52-chapter_5.2.md#5218-team-collaboration-insights-during-sprint)
-  - [5.2.2. Sprint 2](52-chapter_5.2.md#5221-sprint-planning-2)
+  - [5.2.2. Sprint 2](52-chapter_5.2.md#522-sprint-2)
     - [5.2.2.1. Sprint Planning 2](52-chapter_5.2.md#5221-sprint-planning-2)
     - [5.2.2.2. Aspect Leaders and Collaborators](52-chapter_5.2.md#5222-aspect-leaders-and-collaborators)
     - [5.2.2.3. Sprint Backlog 2](52-chapter_5.2.md#5223-sprint-backlog-2)
@@ -120,3 +132,5 @@
   - [Video About-The-Team](97-conclusions.md#video-about-the-team)
 - [Bibliografía](98-bibliographic_references.md)
 - [Anexos](99-annexes.md)
+  - [Anexo A: Videos de Exposiciones](99-annexes.md#anexo-a-videos-de-exposiciones)
+  - [Anexo B: Videos About-the-Product y About-the-Team](99-annexes.md#anexo-b-videos-about-the-product-y-about-the-team)

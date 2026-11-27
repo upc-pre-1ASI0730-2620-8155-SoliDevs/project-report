@@ -46,14 +46,24 @@ Herramienta utilizada para la elaboración de wireframes, mockups y prototipos d
   <img src="../assets/development_environment/Figma.png" width="500"/>
 </p>
 
-### VSCode
+### Rider
 
-Editor de código principal del equipo. Permitió trabajar de manera eficiente con archivos HTML, CSS y JavaScript para la Landing Page, así como con la documentación del informe en Markdown, facilitando la organización del código y la integración con el repositorio del proyecto.
+IDE de JetBrains utilizado para desarrollar los Web Services de Tri-Aid en C# con ASP.NET Core y Entity Framework Core. Permitió compilar y ejecutar la solución .NET, probar los endpoints con la documentación de Scalar y gestionar las ramas de GitFlow desde el propio entorno.
 
-[VSCode](https://code.visualstudio.com/)
+[Rider](https://www.jetbrains.com/rider/download/)
 
 <p align="center">
-  <img src="../assets/development_environment/VSCode.png" width="500"/>
+  <img src="../assets/development_environment/Rider.png" width="500"/>
+</p>
+
+### WebStorm
+
+IDE de JetBrains utilizado para desarrollar la Web Application en Vue y la Landing Page en HTML, CSS y JavaScript, así como para editar la documentación del informe en Markdown. Facilitó la ejecución local de la aplicación, la depuración en el navegador y la integración con el repositorio del proyecto.
+
+[WebStorm](https://www.jetbrains.com/webstorm/download/)
+
+<p align="center">
+  <img src="../assets/development_environment/WebStorm.png" width="500"/>
 </p>
 
 ### Meet

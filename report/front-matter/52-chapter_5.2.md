@@ -20,7 +20,7 @@ Para este sprint, la reunión de Sprint Planning permitió al equipo seleccionar
 | Attendees (to planning meeting) | Alva Ayala, Mitchell Adriano / Castro Solorza, Nicolás Eduardo / Huayta Fuentes, Hernan Gabriel / Ochoa Prado, Enrique Augusto |
 | Sprint 1 Review Summary | Al ser el primer sprint del proyecto, no existe revisión de un sprint anterior. El equipo partió de la aprobación del Product Backlog inicial, enfocándose en las Historias de Usuario de la Landing Page: propuesta de valor, beneficios por segmento, planes de suscripción y formulario de contacto. |
 | Sprint 1 Retrospective Summary | Al ser el inicio del proyecto, se establecieron las normas de trabajo del equipo: reuniones de seguimiento (Daily Stand-ups) por Google Meet, uso de GitFlow y Conventional Commits para el control de versiones, y comunicación constante para evitar bloqueos en el desarrollo. |
-| Sprint 1 Goal | Nuestro enfoque se centra en comunicar la propuesta de valor de Tri-Aid a los visitantes de la Landing Page. Creemos que esto entregará una Landing Page clara y confiable, que genere interés en hospitales y en los pacientes. Esto será confirmado cuando los visitantes naveguen la propuesta de valor completa, comparen los planes de suscripción y envíen una solicitud a través del formulario de contacto. |
+| Sprint 1 Goal | Nuestro enfoque está en presentar con claridad la propuesta de valor de Tri-Aid en la Landing Page: los beneficios para el personal de triaje y para los pacientes, los planes de suscripción y un canal de contacto.<br>Creemos que esto entrega a los hospitales y clínicas la información que necesitan para considerar Tri-Aid en su servicio de emergencias, y a los pacientes una idea clara de cómo la plataforma ordena su atención.<br>Esto se confirmará cuando un visitante pueda recorrer la propuesta de valor, comparar los planes de suscripción y enviar una solicitud de contacto desde la Landing Page sin ayuda del equipo. |
 | Sprint 1 Velocity | El equipo ha establecido un Velocity de 11 Story Points, que representa la capacidad máxima de esfuerzo que los developers pueden aceptar de manera realista para este Sprint 1. |
 | Sum of Story Points | 11 (US01: 2 · US02: 2 · US03: 2 · US04: 2 · US05: 3) |
 
@@ -185,7 +185,7 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
 | Attendees (to planning meeting) | Alva Ayala, Mitchell Adriano / Castro Solorza, Nicolás Eduardo / Huayta Fuentes, Hernan Gabriel / Ochoa Prado, Enrique Augusto |
 | Sprint 2 Review Summary | Durante el Sprint 2 se lograron implementar los cinco bounded contexts del producto de punta a punta: registro de pacientes con identidad temporal y regularización, captura y confirmación de signos vitales con dispositivos vinculados, clasificación NT-042 con sugerencia automática del motor de reglas, derivación a especialidades con cola y comprobante, y alertas generadas por valores fuera de rango con reconocimiento y escalamiento. El Product Owner validó el flujo completo funcionando sobre el backend simulado y resaltó como siguiente prioridad el despliegue productivo (Firebase Hosting + API en Render) y la persistencia de la sesión del personal. |
 | Sprint 2 Retrospective Summary | El equipo identificó como acierto la decisión de definir la infraestructura compartida (BaseApi/BaseEndpoint y bus de eventos) al inicio del sprint, lo que permitió que los cinco contextos se desarrollaran en paralelo sin bloqueos. Como oportunidad de mejora, se estableció que los contratos de los endpoints (recursos y assemblers) deben acordarse antes de comenzar el desarrollo de cada contexto, para evitar retrabajos de integración; asimismo, se acordó documentar cada contexto con su diagrama de clases y ERD en el mismo sprint en que se implementa. |
-| Sprint 2 Goal | Nuestro enfoque está en que el personal de salud de los hospitales y clínicas afiliadas pueda atender a un paciente de punta a punta con Tri-Aid: registrarlo, capturar y confirmar sus signos vitales desde dispositivos vinculados, clasificar su prioridad con la escala NT-042, derivarlo a la especialidad correcta con comprobante y recibir alertas ante valores críticos.<br>Creemos que esto proporcionará al personal una aplicación web consistente que reduce el tiempo de triaje y los errores de transcripción, y al paciente trazabilidad sobre su atención.<br>Esto se confirmará cuando el flujo completo registro → signos vitales → clasificación → derivación → alertas funcione de extremo a extremo en la aplicación web conectada a la API simulada (json-server en desarrollo y Firebase RTDB en despliegue). |
+| Sprint 2 Goal | Nuestro enfoque está en que el personal de triaje pueda atender a un paciente de principio a fin en la aplicación web: registrarlo, tomar sus signos vitales, clasificar su prioridad con la escala NT-042, derivarlo a la especialidad correcta y recibir alertas ante valores críticos.<br>Creemos que esto entrega al personal de triaje menos tiempo de registro y menos errores de transcripción, y a los pacientes una atención ordenada según su gravedad.<br>Esto se confirmará cuando una persona del personal de triaje complete la atención de un paciente, desde su llegada hasta su derivación con comprobante, dentro de la aplicación y sin registros en papel. |
 | Sprint 2 Velocity | Para este Sprint 2, evaluando el desempeño previo y la capacidad actual del equipo, se ha establecido un Velocity de 54 Story Points. |
 | Sum of Story Points | 54 |
 
@@ -435,7 +435,7 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
 | Attendees (to planning meeting) | Alva Ayala, Mitchell Adriano / Castro Solorza, Nicolás Eduardo / Huayta Fuentes, Hernan Gabriel / Ochoa Prado, Enrique Augusto |
 | Sprint 3 Review Summary | Durante el Sprint 3 se implementó la solución backend de Tri-Aid con los bounded contexts IAM, Subscription, Patient Registration, Triage Classification, Alerting, Specialty Assignment y Devices, cada uno con su dominio, servicios de comando y consulta, persistencia EF Core y fachada REST. Se alineó el contrato con el cliente web (ADR-010): sesiones y registro anónimo de personal, identificadores de episodio como cadena, especialidad por nombre en las derivaciones y alertas servidas bajo /alerts con CRUD completo. Se reconectó la aplicación web al API real y se verificó el flujo clínico de extremo a extremo (registro, signos vitales, clasificación NT-158, generación de alertas, reconocimiento, escalamiento a Trauma Shock, derivación y comprobante). El Product Owner aprobó el despliegue productivo (Render + Aiven MySQL + Firebase Hosting) y recomendó reforzar la generación automática de alertas en el paso de confirmación. |
 | Sprint 3 Retrospective Summary | El equipo identificó como acierto mantener el contrato del frontend como fuente de verdad durante el swap de backend, lo que evitó reescribir la capa de infraestructura del cliente. Como oportunidades de mejora se acordó: (1) registrar el webhook de despliegue automático al reconfigurar un servicio existente, ya que la reconversión del servicio de Render exigió disparos manuales; (2) versionar el backend con un tag por merge a develop y un changelog por versión, para que la evidencia del sprint sea trazable commit a commit. |
-| Sprint 3 Goal | Nuestro enfoque está en que el personal de salud opere Tri-Aid sobre una plataforma real: los bounded context del dominio servidos por una API .NET con persistencia gestionada, la aplicación web consumiendo esa API sin simuladores, y el flujo clínico completo verificado y desplegado.<br>Creemos que esto proporciona al equipo clínico una herramienta confiable de triaje con alertas reales y al proyecto una base arquitectónica sostenible para los siguientes avances.<br>Esto se confirmará cuando el flujo registro → signos vitales → clasificación → alertas → derivación → comprobante funcione de extremo a extremo contra los Web Services desplegados, con la documentación interactiva (Scalar) y la aplicación web accesibles públicamente. |
+| Sprint 3 Goal | Nuestro enfoque está en que los hospitales y clínicas usen Tri-Aid como un servicio real disponible en internet: con cuentas para su personal, planes de suscripción y la información de cada paciente guardada de forma permanente.<br>Creemos que esto entrega al personal de triaje una herramienta confiable que conserva los datos de los pacientes y las alertas entre turnos, y a las instituciones la posibilidad de empezar a usar la plataforma.<br>Esto se confirmará cuando el personal de una institución inicie sesión en la aplicación publicada, atienda a un paciente de principio a fin (registro, signos vitales, clasificación, alertas y derivación con comprobante) y encuentre esa información disponible al volver a ingresar. |
 | Sprint 3 Velocity | Para este Sprint 3, evaluando el desempeño de los dos sprints previos y el alcance técnico del backend, se ha establecido un Velocity de 68 Story Points. |
 | Sum of Story Points | 68 |
 
@@ -462,30 +462,34 @@ Las siguientes capturas muestran el tablero del equipo (Jira) con el sprint back
   <img src="../assets/jira/fig-jira-sprint3.png">
 </div>
 
+URL del tablero: https://webwarriors-aquanetix-202610.atlassian.net/jira/software/projects/SOLID/boards/67/backlog
+
+Las User Stories de la tabla usan los mismos identificadores del Product Backlog de la sección 3.3; las tareas técnicas de despliegue, versionado y documentación no dependen de una User Story en particular.
+
 A continuación, se detallan las User Stories priorizadas y las tareas asociadas:
 
 | US Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 |------|------|--------|------------|------------|-------------------|-------------|--------|
-| US-46 | Autenticar al personal del centro | T-01 | Implementar el bounded context IAM | Agregados User y Session, servicios de comando y consulta, hashing y tokens JWT | 6 | Hernan Huayta | Done |
-| US-46 | Autenticar al personal del centro | T-02 | Exponer login y registro de personal con RBAC | UsersController y fachada REST con roles; sesiones para el cliente web | 5 | Hernan Huayta | Done |
-| US-47 | Gestionar la suscripción de la institución | T-03 | Implementar el bounded context Subscription | Agregados Subscription e Institution, portal de pago simulado, planes y checkout | 5 | Hernan Huayta | Done |
-| US-19 | Sugerir prioridad con la escala NT-158 | T-04 | Implementar el motor NT-158 en el backend | NT158Engine con tabla normativa y agregado Classification con estados | 5 | Hernan Huayta | Done |
-| US-21 | Clasificar y confirmar la prioridad | T-05 | Exponer /triage-classifications | ClassificationsController con creación, consulta por episodio y transiciones de estado | 4 | Hernan Huayta | Done |
-| US-38 | Generar alertas por valores fuera de rango | T-06 | Implementar el dominio Alerting | Agregado Alert con métrica, nivel y estado; comandos de ciclo de vida | 4 | Nicolás Castro | Done |
-| US-39 | Consultar y reconocer alertas activas | T-07 | Exponer /alerts con CRUD completo | AlertsController, recursos de entrada y assemblers; consultas de alertas activas en memoria | 5 | Nicolás Castro | Done |
-| US-30 | Sugerir especialidad según síntomas | T-08 | Implementar SpecialtyRules y catálogo | Reglas clínicas US30-US33, catálogo de dieciséis síntomas y semilla de especialidades | 4 | Hernan Huayta | Done |
-| US-31 | Derivar al paciente a una especialidad | T-09 | Exponer derivaciones y comprobantes | Referrals con especialidad por nombre, síntoma e institución; vouchers persistidos | 5 | Hernan Huayta | Done |
-| US-09 | Registrar paciente y generar episodio | T-10 | Exponer pacientes y episodios desde el backend | PatientRegistration con perfiles temporales, regularización y episodios con signos confirmados | 5 | Enrique Ochoa | Done |
-| US-12 | Gestionar el inventario de dispositivos | T-11 | Implementar el bounded context Devices | Agregado Device con estado online, vínculo a episodio e institución | 5 | Enrique Ochoa y Mitchell Adriano | Done |
-| US-12 | Gestionar el inventario de dispositivos | T-12 | Exponer CRUD de dispositivos con registro del frontend | DevicesController con create/put/delete alineados al record del cliente web | 4 | Enrique Ochoa | Done |
-| US-50 | Consumir el API real desde la aplicación | T-13 | Reconectar Patient Registration al API | Assemblers de paciente y episodio, sincronía de estados start-triage y referred, errores de validación | 5 | Enrique Ochoa | Done |
-| US-50 | Consumir el API real desde la aplicación | T-14 | Alinear contratos de signos vitales y estados | Vitales persistidos en el episodio, estados Assigned/Confirmed y normalización RTDB acotada | 4 | Hernan Huayta | Done |
-| US-50 | Consumir el API real desde la aplicación | T-15 | Ajustar la UX del centro de alertas | Reconocimiento directo sin confirmación; escalamiento con modal a Trauma Shock | 2 | Hernan Huayta | Done |
-| US-51 | Desplegar los Web Services | T-16 | Contenedor Docker y despliegue en Render | Dockerfile multi-etapa .NET 10, Scalar público, base MySQL gestionada en Aiven | 4 | Hernan Huayta | Done |
-| US-51 | Desplegar los Web Services | T-17 | Redesplegar la Web Application en Firebase | .env.production apuntando al API desplegada y verificación E2E del stack público | 3 | Hernan Huayta | Done |
-| US-52 | Versionar el backend por merge | T-18 | CHANGELOG y tags por versión | Semver 0.1.0→1.0.0, un tag anotado por merge a develop y changelog del release | 3 | Hernan Huayta | Done |
-| US-53 | Documentar los servicios | T-19 | Documentar endpoints por bounded context | Tabla de servicios del sprint y ADRs del frontend (001-010) | 3 | Nicolás Castro y Enrique Ochoa | Done |
-| US-54 | Presentar el producto desde la Landing | T-20 | Actualizar la Landing Page hacia el producto desplegado | CTAs por rol en el hero, eliminación del checkout legacy, planes de prueba enlazados al registro del app desplegada | 3 | Hernan Huayta | Done |
+| US-50 | Endpoint de generación de token | T-01 | Implementar el bounded context IAM | Agregados User y Session, servicios de comando y consulta, hashing y tokens JWT | 6 | Hernan Huayta | Done |
+| US-40 | Autenticación del personal | T-02 | Exponer login y registro de personal con RBAC | UsersController y fachada REST con roles; sesiones para el cliente web | 5 | Hernan Huayta | Done |
+| US-51 | Contratación de plan institucional | T-03 | Implementar el bounded context Subscription | Agregados Subscription e Institution, portal de pago simulado, planes y checkout | 5 | Hernan Huayta | Done |
+| US-46 | Endpoint de cálculo de prioridad | T-04 | Implementar el motor NT-158 en el backend | NT158Engine con tabla normativa y agregado Classification con estados | 5 | Hernan Huayta | Done |
+| US-47 | Endpoint de confirmación de triaje | T-05 | Exponer /triage-classifications | ClassificationsController con creación, consulta por episodio y transiciones de estado | 4 | Hernan Huayta | Done |
+| US-49 | Endpoint de transmisión de alertas | T-06 | Implementar el dominio Alerting | Agregado Alert con métrica, nivel y estado; comandos de ciclo de vida | 4 | Nicolás Castro | Done |
+| US-29 | Auditoría de alertas emitidas | T-07 | Exponer /alerts con CRUD completo | AlertsController, recursos de entrada y assemblers; consultas de alertas activas en memoria | 5 | Nicolás Castro | Done |
+| US-30 | Recomendación de especialidad | T-08 | Implementar SpecialtyRules y catálogo | Reglas clínicas US30-US33, catálogo de dieciséis síntomas y semilla de especialidades | 4 | Hernan Huayta | Done |
+| US-31 | Asignación a consultorio | T-09 | Exponer derivaciones y comprobantes | Referrals con especialidad por nombre, síntoma e institución; vouchers persistidos | 5 | Hernan Huayta | Done |
+| US-44 | Endpoint de registro de paciente | T-10 | Exponer pacientes y episodios desde el backend | PatientRegistration con perfiles temporales, regularización y episodios con signos confirmados | 5 | Enrique Ochoa | Done |
+| US-45 | Endpoint captura de signos vía IoT | T-11 | Implementar el bounded context Devices | Agregado Device con estado online, vínculo a episodio e institución | 5 | Enrique Ochoa y Mitchell Adriano | Done |
+| US-45 | Endpoint captura de signos vía IoT | T-12 | Exponer CRUD de dispositivos con registro del frontend | DevicesController con create/put/delete alineados al record del cliente web | 4 | Enrique Ochoa | Done |
+| US-44 | Endpoint de registro de paciente | T-13 | Reconectar Patient Registration al API | Assemblers de paciente y episodio, sincronía de estados start-triage y referred, errores de validación | 5 | Enrique Ochoa | Done |
+| US-45 | Endpoint captura de signos vía IoT | T-14 | Alinear contratos de signos vitales y estados | Vitales persistidos en el episodio, estados Assigned/Confirmed y normalización RTDB acotada | 4 | Hernan Huayta | Done |
+| US-28 | Escalamiento de paciente crítico | T-15 | Ajustar la UX del centro de alertas | Reconocimiento directo sin confirmación; escalamiento con modal a Trauma Shock | 2 | Hernan Huayta | Done |
+| — | Tarea técnica: despliegue de la solución | T-16 | Contenedor Docker y despliegue en Render | Dockerfile multi-etapa .NET 10, Scalar público, base MySQL gestionada en Aiven | 4 | Hernan Huayta | Done |
+| — | Tarea técnica: despliegue de la solución | T-17 | Redesplegar la Web Application en Firebase | .env.production apuntando al API desplegada y verificación E2E del stack público | 3 | Hernan Huayta | Done |
+| — | Tarea técnica: versionado del backend | T-18 | CHANGELOG y tags por versión | Semver 0.1.0→1.0.0, un tag anotado por merge a develop y changelog del release | 3 | Hernan Huayta | Done |
+| — | Tarea técnica: documentación de servicios | T-19 | Documentar endpoints por bounded context | Tabla de servicios del sprint y ADRs del frontend (001-010) | 3 | Nicolás Castro y Enrique Ochoa | Done |
+| US-04 | Planes de suscripción | T-20 | Actualizar la Landing Page hacia el producto desplegado | CTAs por rol en el hero, eliminación del checkout legacy, planes de prueba enlazados al registro del app desplegada | 3 | Hernan Huayta | Done |
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
@@ -680,3 +684,30 @@ Para el desarrollo de este tercer sprint todos los miembros del equipo desarroll
 </div>
 
 Durante esta ventana, los cuatro integrantes registraron commits en el repositorio de Web Services: Nicolás Castro lideró el bounded context Alerting, Enrique Ochoa y Mitchell Adriano lideraron Devices y Vital Signs, y Hernan Huayta lideró IAM, Subscription, Triage Classification y Specialty Assignment, además del rol de integrador (merges, versionado semántico por merge y despliegue). En el Web Application, la reconexión al API real correspondió a Enrique Ochoa (Patient Registration) y Hernan Huayta (centro de alertas, contratos y despliegue).
+
+La siguiente tabla resume los commits (sin contar merges) registrados en la rama develop de cada repositorio entre el 9 de octubre y el 13 de noviembre de 2026, periodo que abarca desde el Sprint Planning 3 hasta la entrega del AV2:
+
+| Repositorio | Integrante (usuario de GitHub) | Commits |
+| :--- | :--- | :---: |
+| triaid-platform (Web Services) | Huayta Fuentes, Hernan Gabriel (Homesman) | 62 |
+| triaid-platform (Web Services) | Ochoa Prado, Enrique Augusto (EnriqueO-18) | 59 |
+| triaid-platform (Web Services) | Castro Solorza, Nicolás Eduardo (NicoCSE) | 35 |
+| triaid-platform (Web Services) | Alva Ayala, Mitchell Adriano (adn0307) | 20 |
+| SoliDevs-WebApplication_Tri-aid (Web Application) | Huayta Fuentes, Hernan Gabriel (Homesman) | 60 |
+| SoliDevs-WebApplication_Tri-aid (Web Application) | Ochoa Prado, Enrique Augusto (EnriqueO-18) | 30 |
+| landing-page (Landing Page) | Huayta Fuentes, Hernan Gabriel (Homesman) | 12 |
+| landing-page (Landing Page) | Castro Solorza, Nicolás Eduardo (NicoCSE) | 1 |
+
+En el mismo periodo, el repositorio de Web Services registró 15 merges, el de la Web Application 5 y el de la Landing Page 5, integrando el trabajo desde ramas feature y release según GitFlow.
+
+La siguiente captura corresponde a los insights de GitHub del repositorio de la Web Application, con las contribuciones de los cuatro integrantes a la rama main a lo largo del proyecto:
+
+<div align="center">
+  <img src="../assets/insights/fig-github-insights-webapp-sprint3.png">
+</div>
+
+La siguiente captura corresponde a los insights de GitHub del repositorio de la Landing Page, con las contribuciones a la rama main a lo largo del proyecto:
+
+<div align="center">
+  <img src="../assets/insights/fig-github-insights-landing-sprint3.png">
+</div>
