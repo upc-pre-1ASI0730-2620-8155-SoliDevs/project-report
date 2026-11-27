@@ -1,6 +1,6 @@
 ### 4.8. Database Design
 
-El diseño de la base de datos es un pilar central en la construcción de Tri-Aid, debido a que la plataforma debe resguardar lecturas continuas de signos vitales, clasificaciones de triaje, alertas y derivaciones con integridad referencial y trazabilidad temporal. El modelo relacional se implementó en SQL Server y se derivó directamente de los aggregates identificados en el Design-Level EventStorming: cada aggregate root corresponde a una tabla principal, los catálogos aseguran la validez de los estados y niveles, y las llaves foráneas materializan la comunicación entre Bounded Contexts a través del identificador del episodio de triaje (episode_id), que actúa como hilo conductor de la atención.
+El diseño de la base de datos es un pilar central en la construcción de Tri-Aid, debido a que la plataforma debe resguardar lecturas continuas de signos vitales, clasificaciones de triaje, incidentes y derivaciones con integridad referencial y trazabilidad temporal. El modelo relacional se implementó en SQL Server y se derivó directamente de los aggregates identificados en el Design-Level EventStorming: cada aggregate root corresponde a una tabla principal, los catálogos aseguran la validez de los estados y niveles, y las llaves foráneas materializan la comunicación entre Bounded Contexts a través del identificador del episodio de triaje (episode_id), que actúa como hilo conductor de la atención.
 
 ### 4.8.1. Database Diagrams
 
@@ -46,15 +46,15 @@ Este diagrama persiste la clasificación de prioridad NT-042 de cada episodio, i
 * **Columnas principales:** `suggested_level_id` (nivel calculado por el sistema) y `level_id` (nivel final asignado) permiten distinguir la sugerencia original de la decisión del personal; `justification` es obligatoria cuando existe override; `suggested_at` y `confirmed_at` registran las estampas de tiempo.
 * **Constraints o Relaciones:** `episode_id` es llave foránea y unique al mismo tiempo: cada episodio tiene exactamente una clasificación. Ambas referencias a niveles apuntan al catálogo `triage_levels`, que almacena los rangos de la guía NT-042.
 
-#### 5. Bounded Context: Alerting
-Este diagrama modela la persistencia de las alertas generadas por valores fuera de rango, su ciclo de vida y su auditoría.
+#### 5. Bounded Context: Incident
+Este diagrama modela la persistencia de los incidentes generados por valores fuera de rango, su ciclo de vida y su auditoría.
 
 <div align="center"><img src="../assets/erd_diagrams/erd_alerts.png" width ="100%"></div>
 
 **Explicación del esquema:**
-* **Tablas:** `alerts`, `alert_states`, `vital_metrics`.
-* **Columnas principales:** `observed_value` guarda el valor que disparó la alerta; `raised_at`, `acknowledged_at` y `resolved_at` documentan el ciclo de vida completo; `acknowledged_by` registra al usuario responsable de reconocer la alerta.
-* **Constraints o Relaciones:** Cada alerta se origina en una lectura (`reading_id`) de un episodio (`episode_id`). El catálogo `vital_metrics` almacena además los rangos seguros (`min_safe`, `max_safe`) que utiliza el sistema para la resolución automática de alertas.
+* **Tablas:** `incidens`, `incident_states`, `vital_metrics`.
+* **Columnas principales:** `observed_value` guarda el valor que disparó el incidente; `raised_at`, `acknowledged_at` y `resolved_at` documentan el ciclo de vida completo; `acknowledged_by` registra al usuario responsable de reconocer el incidente.
+* **Constraints o Relaciones:** Cada incidente se origina en una lectura (`reading_id`) de un episodio (`episode_id`). El catálogo `vital_metrics` almacena además los rangos seguros (`min_safe`, `max_safe`) que utiliza el sistema para la resolución automática de incidentes.
 
 #### 6. Bounded Context: Specialty Assignment
 Este diagrama define la persistencia de las derivaciones a especialidades, las colas por área y los comprobantes digitales.

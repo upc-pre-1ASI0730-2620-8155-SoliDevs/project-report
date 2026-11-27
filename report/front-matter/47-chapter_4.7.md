@@ -72,19 +72,19 @@ Este contexto gestiona la clasificación asistida de prioridad según la guía N
 * **Evento de dominio `ClassificationConfirmedEvent`:** Dispara la orquestación hacia Specialty Assignment.
 
 #### 5. Bounded Context: Alerting
-Este contexto gestiona la evaluación de rangos vitales, la generación, el reconocimiento y la resolución de alertas, y su difusión en tiempo real.
+Este contexto gestiona la evaluación de rangos vitales, la generación, el reconocimiento y la resolución de incidentes, y su difusión en tiempo real.
 
 <div align="center">
   <img src="../assets/class_diagrams/class_alerting.png" width ="100%">
 </div>
 
 **Diccionario de Clases de Dominio:**
-* **Clase `Alert` (Aggregate Root):** Representa una alerta generada por un valor fuera de rango.
+* **Clase `Alert` (Aggregate Root):** Representa un incidente generado por un valor fuera de rango.
     * *Atributos:* `- Id : int`, `- ReadingId : int`, `- EpisodeId : int`, `- Level : TriageLevel`, `- Metric : VitalMetric`, `- ObservedValue : decimal`, `- State : AlertState`, `- RaisedAt : DateTime`, `- AcknowledgedBy : int?`, `- AcknowledgedAt : DateTime?`
     * *Métodos:* `+ Acknowledge(userId: int) : void`, `+ ResolveIfSafe(safeRange: Range) : bool`
-* **Enum `AlertState`:** Ciclo de vida de la alerta (`Active`, `Acknowledged`, `Resolved`).
+* **Enum `AlertState`:** Ciclo de vida del incidente (`Active`, `Acknowledged`, `Resolved`).
 * **Enum `VitalMetric`:** Métrica monitoreada (`Systolic`, `Diastolic`, `SpO2`, `HeartRate`, `Temperature`).
-* **Servicios:** `IAlertingService` / `AlertingService` (evaluación y gestión de alertas) e `IAlertBroadcaster` / `SignalRAlertBroadcaster`, que difunde alertas y resoluciones en tiempo real mediante el hub de SignalR `AlertsHub`.
+* **Servicios:** `IAlertingService` / `AlertingService` (evaluación y gestión de incidentes) e `IAlertBroadcaster` / `SignalRAlertBroadcaster`, que difunde incidentes y resoluciones en tiempo real mediante el hub de SignalR `AlertsHub`.
 
 #### 6. Bounded Context: Specialty Assignment
 Este contexto gestiona la sugerencia de especialidad, la derivación con colas por área, las reasignaciones justificadas y la emisión de comprobantes.

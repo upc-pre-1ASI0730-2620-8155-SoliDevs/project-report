@@ -1,10 +1,11 @@
 ## 4.4. Web Applications UX/UI Design
 
-
-Los wireframes, mockups, wireflows y user flows presentados a continuacion fueron elaborados en **Figma** y pueden visualizarse en el siguiente enlace: https://shorturl.at/MMsBu
 ---
 
-El diseño UX/UI de la aplicación web de Tri-Aid se centra en dar soporte al proceso de triaje hospitalario: registrar pacientes, capturar signos vitales, clasificar la prioridad y derivar al paciente a la especialidad correcta. Desde la perspectiva UX se prioriza la reducción de pasos por paciente y la visibilidad inmediata de alertas; desde la perspectiva UI se emplea un sistema visual propio (papel con retícula de 44 px, tinta verde profunda y acento ECG) sobre componentes limpios y accesibles. A continuación se presentan los wireframes (versión estructural en blanco y negro), el wireflow general, los mock-ups de alta fidelidad y los user flows de los objetivos de usuario principales.
+Los wireframes, mockups, wireflows y user flows presentados a continuacion fueron elaborados en **Figma** y pueden visualizarse en el siguiente enlace: https://shorturl.at/MMsBu
+
+
+El diseño UX/UI de la aplicación web de Tri-Aid se centra en dar soporte al proceso de triaje hospitalario: registrar pacientes, capturar signos vitales, clasificar la prioridad y derivar al paciente a la especialidad correcta. Desde la perspectiva UX se prioriza la reducción de pasos por paciente y la visibilidad inmediata de incidentes; desde la perspectiva UI se emplea un sistema visual propio (papel con retícula de 44 px, tinta verde profunda y acento ECG) sobre componentes limpios y accesibles. A continuación se presentan los wireframes (versión estructural en blanco y negro), el wireflow general, los mock-ups de alta fidelidad y los user flows de los objetivos de usuario principales.
 
 ### 4.4.1. Web Applications Wireframes
 
@@ -17,7 +18,7 @@ Los wireframes en blanco y negro definen la estructura de cada pantalla sin la i
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-Los wireflows se organizan **por objetivo de usuario (user goal)**: cada diagrama conecta las pantallas de un objetivo mediante flechas de navegación etiquetadas con los disparadores de cada transición. Las flechas punteadas representan flujos alternativos (pago pendiente de actualización, suscripción vencida, cierre de sesión, atención de una alerta).
+Los wireflows se organizan **por objetivo de usuario (user goal)**: cada diagrama conecta las pantallas de un objetivo mediante flechas de navegación etiquetadas con los disparadores de cada transición. Las flechas punteadas representan flujos alternativos (pago pendiente de actualización, suscripción vencida, cierre de sesión, atención de un incidente).
 
 <p align="center">
   <img src="../assets/flows/goal1-suscripcion-wireflow.png" alt="Wireflow User Goal 1" style="width:1180px">
@@ -37,7 +38,7 @@ Los wireflows se organizan **por objetivo de usuario (user goal)**: cada diagram
 <p align="center">
   <img src="../assets/flows/goal4-alertas-wireflow.png" alt="Wireflow User Goal 4" style="width:1180px">
 </p>
-<p align="center"><i>Wireflow User Goal 4 — Monitorear y atender alertas</i></p>
+<p align="center"><i>Wireflow User Goal 4 — Monitorear y atender incidentes</i></p>
 
 <p align="center">
   <img src="../assets/flows/goal5-reportes-sesion-wireflow.png" alt="Wireflow User Goal 5" style="width:1180px">
@@ -80,7 +81,7 @@ Cada objetivo de usuario se documenta con su **user flow en mock-ups de alta fid
 <p align="center">
   <img src="../assets/flows/goal4-alertas-userflow.png" alt="User Flow User Goal 4" style="width:1180px">
 </p>
-<p align="center"><i>User Flow User Goal 4 — Monitorear y atender alertas</i></p>
+<p align="center"><i>User Flow User Goal 4 — Monitorear y atender incidentes</i></p>
 
 <p align="center">
   <img src="../assets/flows/goal5-reportes-sesion-userflow.png" alt="User Flow User Goal 5" style="width:1180px">
@@ -94,6 +95,6 @@ Cada objetivo de usuario se documenta con su **user flow en mock-ups de alta fid
 
 **User Goals cubiertos:**
 
-1. **Atender a un paciente desde su llegada** (Iniciar sesión → Cola de triaje → Registro → Ficha de signos vitales → Clasificación → Derivación → Comprobante). Flujos incluidos: registro de paciente nuevo o existente, valor fuera de rango → alerta (Centro de alertas) → atención, re-clasificación durante la espera.
+1. **Atender a un paciente desde su llegada** (Iniciar sesión → Cola de triaje → Registro → Ficha de signos vitales → Clasificación → Derivación → Comprobante). Flujos incluidos: registro de paciente nuevo o existente, valor fuera de rango → incidente (Centro de incidentes) → atención, re-clasificación durante la espera.
 2. **Gestionar la suscripción institucional** (Contratar plan → Pago → Confirmación de contratación → Mi suscripción). Flujos incluidos: contratación desde la landing, pago rechazado → actualizar método de pago, cambio de plan con prorrateo, cancelación con confirmación.
 3. **Consultar el estado de la atención como paciente** (Acceso → Mi estado → Mi turno → Mi comprobante). Flujos incluidos: consulta por DNI, estado y turno, descarga del comprobante; institución con plan inactivo → mensaje institucional (Portal no disponible).
