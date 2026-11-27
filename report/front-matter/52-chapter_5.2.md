@@ -501,21 +501,21 @@ En esta sección se presentan los commits que evidencian el trabajo realizado du
 | triaid-platform | feature/iam | 620914d | feat(iam): JWT TokenService and token settings | 04/11/2026 |
 | triaid-platform | feature/iam | cbf73ea | feat(iam): REST facade with RBAC | 05/11/2026 |
 | triaid-platform | feature/iam | fc750fb | feat(iam): wire JWT authentication and database context in the host | 05/11/2026 |
-| triaid-platform | feature/triage-classification | 22d6c84 | Merge branch 'feature/triage-classification' into develop (NT-158 engine, aggregate, REST facade) | 10/11/2026 |
-| triaid-platform | feature/specialty-assignment | 75792ce | Merge branch 'feature/specialty-assignment' into develop (SpecialtyRules US30-33, referrals, vouchers) | 10/11/2026 |
-| triaid-platform | feature/alerting | 1883310 | feat(alert): add CreateAlertCommand for clinical alert creation | 11/11/2026 |
-| triaid-platform | feature/alerting | e14235d | feat(alert): add ListAsync and GetByIdAsync methods to IAlertRepository for alert retrieval | 11/11/2026 |
-| triaid-platform | feature/alerting | 68b1eea | feat(alert): implement CreateAlertCommand and UpdateAlertCommand for alert state management | 11/11/2026 |
-| triaid-platform | feature/api-route-prefix | 4ea334c | feat(api): apply global api/v1 route prefix with camelCase enums | 11/11/2026 |
-| triaid-platform | feature/iam-sessions | eebab49 | feat(iam): add session management endpoints for the web client | 11/11/2026 |
-| triaid-platform | feature/iam-sessions | 8ad4601 | feat(iam): expose plain password and anonymous staff registration | 11/11/2026 |
-| triaid-platform | feature/clinical-contract | 8eec5cc | feat(specialty-assignment): add voucher persistence and symptom catalog | 11/11/2026 |
-| triaid-platform | feature/alerting-corrections-plus | 1b2e8ea | feat(alert): serve alerts under the alerts route with full crud | 11/11/2026 |
-| triaid-platform | feature/devices-management | 87cd7ae | feat(devices): accept the frontend device record on create | 11/11/2026 |
-| triaid-platform | feature/devices-management | 8594898 | feat(devices): add endpoint to update the full device record | 11/11/2026 |
-| triaid-platform | develop | 9b76f8a | fix(triage-classification): preserve the client approval state between approve and confirm | 11/11/2026 |
-| triaid-platform | develop | 6c034db | chore(deployment): add docker image configuration for cloud hosting | 12/11/2026 |
-| triaid-platform | develop | db9c32f | chore(persistence): restore the mysql provider with the aiven managed cloud database | 12/11/2026 |
+| triaid-platform | feature/triage-classification | 595c0c6 | Merge branch 'feature/triage-classification' into develop (NT-158 engine, aggregate, REST facade) | 10/11/2026 |
+| triaid-platform | feature/specialty-assignment | 306bf0e | Merge branch 'feature/specialty-assignment' into develop (SpecialtyRules US30-33, referrals, vouchers) | 10/11/2026 |
+| triaid-platform | feature/alerting | 6a0de88 | feat(alert): add CreateAlertCommand for clinical alert creation | 11/11/2026 |
+| triaid-platform | feature/alerting | 348781f | feat(alert): add ListAsync and GetByIdAsync methods to IAlertRepository for alert retrieval | 11/11/2026 |
+| triaid-platform | feature/alerting | eaeeaf2 | feat(alert): implement CreateAlertCommand and UpdateAlertCommand for alert state management | 11/11/2026 |
+| triaid-platform | feature/api-route-prefix | 7e80eeb | feat(api): apply global api/v1 route prefix with camelCase enums | 11/11/2026 |
+| triaid-platform | feature/iam-sessions | 0da20b8 | feat(iam): add session management endpoints for the web client | 11/11/2026 |
+| triaid-platform | feature/iam-sessions | c408f76 | feat(iam): expose plain password and anonymous staff registration | 11/11/2026 |
+| triaid-platform | feature/clinical-contract | b2f0303 | feat(specialty-assignment): add voucher persistence and symptom catalog | 11/11/2026 |
+| triaid-platform | feature/alerting-corrections-plus | 978d5ba | feat(alert): serve alerts under the alerts route with full crud | 11/11/2026 |
+| triaid-platform | feature/devices-management | c9228ac | feat(devices): accept the frontend device record on create | 11/11/2026 |
+| triaid-platform | feature/devices-management | 6526586 | feat(devices): add endpoint to update the full device record | 11/11/2026 |
+| triaid-platform | develop | f4e40be | fix(triage-classification): preserve the client approval state between approve and confirm | 11/11/2026 |
+| triaid-platform | develop | 97ea111 | chore(deployment): add docker image configuration for cloud hosting | 12/11/2026 |
+| triaid-platform | develop | 9965468 | chore(persistence): restore the mysql provider with the aiven managed cloud database | 12/11/2026 |
 | triaid-webapp | feature/patient-registration-backend | ec10b00 | feat(patient-registration): register patients and open triage episodes through the api | 11/11/2026 |
 | triaid-webapp | feature/patient-registration-backend | bc65bab | feat(patient-registration): sync episode state with start-triage and referred endpoints | 11/11/2026 |
 | triaid-webapp | feature/patient-registration-backend | 8a80e61 | feat(patient-registration): show api validation errors when registration fails | 11/11/2026 |
